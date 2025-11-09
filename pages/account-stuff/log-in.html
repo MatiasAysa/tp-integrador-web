@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+
+    <!-- Otros links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+    <link rel="stylesheet" href="../../css/globals/header.css">
+    <link rel="stylesheet" href="../../css/globals/footer.css">
+    <link rel="stylesheet" href="../../css/account-stuff/log-in.css">
+
+</head>
+
+<body>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+    <!---------- BARRA DE LA PAGINA ---------->
+    <header class="barra">
+        <!----Logo de Pagina---->
+        <div class="barra-logo">
+            <a href="../../index.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
+        </div>
+        <!---------------------->
+
+        <!---Barra de busqueda--->
+        <div class="barra-buscador">
+            <form action="" method="get" autocomplete="off" id="search-form">
+                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
+                <datalist id="cursos">
+                    <option value="Python & Data Science">
+                    <option value="HTML">
+                    <option value="JAVA"></option>
+
+                </datalist>
+                <!--Boton busqueda-->
+                <button type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <!------------------>
+            </form>
+        </div>
+        <!-------------------->
+
+        <!---Carrito--->
+        <div class="buscador-carrito iniciarSesion">
+            <a href="./log-in.html" aria-label="Carrito de compras">
+                INICIAR SESIÓN
+            </a>
+        </div>
+        <!------------->
+    </header>
+    <!------------------------------------------------>
+
+    <!----------------NAVEGADOR------------------>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="../contact/contact.html">Contacto</a></li>
+            <li><a href="../calendar/calendar.html">Calendario</a></li>
+        </ul>
+    </nav>
+    <!------------------------------------------------>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+
+
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
+    <main>
+        <section class="formWrap">
+            <form class="formWrap__form form" action="../homePage/homePage.html" method="get">
+
+                <div class="form__field">
+                    <label class="form__label" for="email">E-mail</label>
+                    <input class="form__input" type="email" id="email" name="email" maxlength="40" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="password">Contraseña</label>
+                    <input class="form__input" type="password" id="password" name="password" maxlength="20" required>
+                </div>
+
+                <button class="form__button">CONTINUAR</button>
+                <p class="formWrap__p">¿No tienes cuenta? <a href="./sign-up_email.html" class="formWrap__a">CREAR</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
+
+
+    <!------------------------------------ FOOTER ------------------------------------>
+    <footer class="pie-pagina">
+
+        <div class="pie-pagina-contenido">
+            <div class="pie-pagina-nosotros">
+                <h4>Team Queso</h4>
+                <div class="pie-pagina-nosotros-miembros">
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i>Matias&nbsp;Aysa - Dni:&nbsp;46987982</li>
+                        <li><i class="fa-solid fa-user"></i>León&nbsp;Rey - Dni:&nbsp;46874342</li>
+                        <li><i class="fa-solid fa-user"></i>Eric&nbsp;Barrios - Dni:&nbsp;46346348</li>
+                        <li><i class="fa-solid fa-user"></i>Ivan&nbsp;Gamboa&nbsp;- Dni:&nbsp;47791152</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pie-pagina-navegacion">
+                <div class="pie-pagina-navegacion-soporte">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="../pages/footer/soporteYlegal.html">Preguntas Frecuentes</a></li>
+                        <li><a href="">Contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="pie-pagina-navegacion-legal">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../pages/footer/soporteYlegal.html">Terminos y Condiciones</a></li>
+                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Cookies</a></li>
+                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pie-pagina-redes">
+                <h4>Redes Sociales</h4>
+                <div class="pie-pagina-redes-lista">
+                    <ul>
+                        <li><a href="https://www.instagram.com/teamquesogg/" target="_blank"><i
+                                    class="fa-brands fa-square-instagram"></i>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/TeamQueso/" target="_blank"><i
+                                    class="fa-brands fa-square-facebook"></i>Facebook</a></li>
+                        <li><a href="https://www.youtube.com/c/TeamQueso" target="_blank"><i
+                                    class="fa-brands fa-square-youtube"></i>Youtube</a></li>
+                        <li><a href="https://x.com/teamquesogg?lang=es" target="_blank"><i
+                                    class="fa-brands fa-square-x-twitter"></i>Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="pie-pagina-inferior">
+            <p>&copy; 2025 La Academia Team Queso. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+    <!------------------------------------ FOOTER ------------------------------------>
+
+</body>
+
+</html>

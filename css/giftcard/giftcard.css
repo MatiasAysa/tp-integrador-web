@@ -1,0 +1,275 @@
+.main__section {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    height: 100%;
+}
+
+
+/* ---------------------- VISTA PREVIA ---------------------- */
+
+.vistaPrevia__cardWrap {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card__background {
+    aspect-ratio: 1 / 1;
+    /* siempre cuadrado */
+    margin-top: 5%;
+    width: 11em;
+    background: darkgray;
+}
+
+.background__p {
+    height: 75%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.background__montoWrap{
+    text-align: right;
+}
+
+.montoWrap__p{
+    display: inline-block;
+    background-color: rgb(16, 12, 0);
+}
+
+.pWrap__p {
+    width: 3.5em;
+    background-color: black;
+}
+
+.background__p--titulo {
+    font-size: .4em;
+}
+
+.background__p--nombre {
+    font-weight: bold;
+}
+
+
+/* ---------------------- VISTA PREVIA ---------------------- */
+
+.titulos {
+    text-align: center;
+    font-weight: bold;
+    padding: 1%;
+}
+
+.form {
+    box-shadow: 5px 0px 0.8em black;
+    padding: 0px 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    height: 100%;
+}
+
+.form__titulos {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* ---------------------- RADIOS ---------------------- */
+
+.labelRadio__p {
+    user-select: none;
+    font-size: 50%;
+    margin-bottom: 20%;
+    color: gray;
+}
+
+.form__radioWrap {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.radioWrap__labelRadio input {
+    display: none;
+}
+
+.radioWrap__labelRadio {
+    text-align: center;
+}
+
+.labelRadio__check {
+    display: inline-block;
+    background-color: var(--color-texto);
+    width: .6em;
+    height: .6em;
+    border: .06em solid gray;
+    border-radius: 50%;
+    vertical-align: middle;
+
+    /* transition: border 0.5s ease; */
+}
+
+.labelRadio__check--clicked {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    /* transition: border 0.5s ease;
+    transition: background-color 0.5s ease; */
+}
+
+.radioWrap__labelRadio input:checked+.labelRadio__check {
+    border: .06em solid var(--color-secundarioDegradado);
+}
+
+.radioWrap__labelRadio input:checked+.labelRadio__check .labelRadio__check--clicked {
+    border: solid .1125rem var(--color-texto);
+    background-color: var(--color-secundario)
+}
+
+.labelRadio__color,
+.labelRadio__ubicacion,
+.labelRadio__background {
+    border: 1px lightgray solid;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+}
+
+.labelRadio__ubicacion,
+.labelRadio__background {
+    border-radius: 0;
+    background-size: cover;
+}
+
+.labelRadio__color--azul {
+    background-color: var(--color-principal)
+}
+
+.labelRadio__color--azul2 {
+    background-color: var(--color-principalDegradado)
+}
+
+.labelRadio__color--amarillo {
+    background-color: var(--color-secundario)
+}
+
+.labelRadio__color--amarillo2 {
+    background-color: var(--color-secundarioDegradado)
+}
+
+.labelRadio__color--blanco {
+    background-color: var(--color-texto)
+}
+
+.labelRadio__ubicacion--upRight {
+    background-image: url(../../img/giftcard/upRight.png);
+}
+
+.labelRadio__ubicacion--upLeft {
+    background-image: url(../../img/giftcard/upLeft.png);
+}
+
+.labelRadio__ubicacion--downRight {
+    background-image: url(../../img/giftcard/downRight.png);
+}
+
+.labelRadio__background--cr {
+    background-image: url(../../img/giftcard/crfondo.png);
+}
+
+.labelRadio__background--tq {
+    background-image: url(../../img/giftcard/teamquesoBG.jpg);
+}
+
+.labelRadio__background--queso {
+    background-image: url(../../img/giftcard/cheese.jpg);
+}
+
+/* ---------------------- RADIOS ---------------------- */
+
+
+/* ---------------------- TEXTOS (monto y destinatario) ---------------------- */
+
+.form__texto {
+    height: 1.2em;
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    flex-direction: row;
+    font-weight: bold;
+}
+
+.texto__input {
+    width: 50%;
+}
+
+/* ---------------------- TEXTOS (monto y destinatario) ---------------------- */
+
+.form_email{
+    width: 100%;
+}
+
+.form__button {
+    cursor: pointer;
+    width: 8em;
+    padding: 0.5em;
+    border-radius: 2em;
+    color: var(--color-secundario);
+    background-color: var(--color-principalDegradado);
+    border-color: var(--color-secundarioDegradado);
+    font-size: 0.6em;
+}
+
+.article__vistaPrevia--cell {
+    display: none;
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+/* --- CELUS ---*/
+@media (max-width: 480px) {
+    body {
+        font-size: 40%;
+    }
+
+    .form{
+        margin-top: 2em;
+    }
+
+    .article__vistaPrevia {
+        display: none;
+    }
+
+    .article__vistaPrevia--cell {
+        margin-top: 1em;
+        height: 80%;
+        font-size: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .article__vistaPrevia--cell .titulos {
+        font-size: 1rem;
+    }
+
+    .vistaPrevia__cardWrap{
+        margin-bottom: 2em;
+    }
+}
+
+
+/* --- TABLETS ---*/
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 70%;
+    }
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
