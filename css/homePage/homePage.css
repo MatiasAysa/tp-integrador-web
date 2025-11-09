@@ -1,0 +1,993 @@
+/*---------------MAIN-------------------*/
+/*---------------SECTION 1-------------------*/
+.main__seccion1 {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+}
+
+/*Banner1*/
+.main__seccion1__banner1 {
+    display: flex;
+    width: 100%;
+    background-image: url(../../img/homePage/fondo.webp);
+}
+
+/*Textos banner1*/
+.main__seccion1-contenido {
+    width: 50%;
+    padding: 5em 0 5em 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: auto;
+}
+
+.main__seccion1-info {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 1em 1em;
+    background: rgba(60, 122, 158, 0.6);
+}
+
+.main__seccion1-info h1 {
+    line-height: 1.2;
+    /* color: white; */
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+
+.main__seccion1-info p {
+    line-height: 1.5;
+    /* color: #f1eaea; */
+    font-size: 1.1em;
+}
+
+/*Imagen banner1*/
+.main__seccion1-foto {
+    display: flex;
+    align-items: center;
+}
+
+.main__seccion1-foto img {
+    object-fit: contain;
+    height: 30em;
+}
+
+/*---------------SECTION Gift Card-------------------*/
+.main_seccionGiftCard {
+    width: 100%;
+    display: flex;
+    padding: 1em 5em;
+    background: var(--color-principal);
+    gap: 2em;
+    align-items: center;
+    height: 30em;
+    justify-content: center;
+}
+
+.seccionGirfCard-imagen {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.seccionGirfCard-imagen a {
+    display: inline-block;
+    height: 100%;
+    box-shadow: 2px 2px 2px rgb(18, 47, 135,0.5);
+}
+.seccionGirfCard-imagen a:hover{
+    box-shadow: 2px 2px 10px rgba(18, 47, 135);
+}
+
+.seccionGirfCard-imagen img {
+    display: flex;
+    object-fit: scale-down;
+    height: 100%;
+}
+
+.seccionGirfCard-contenido {
+    display: flex;
+    width: 35em;
+    flex-direction: column;
+    color: var(--color-texto);
+}
+
+.seccionGirfCard-contenido h2 {
+    margin-bottom: 1em;
+    font-size: 1.3em;
+}
+
+.seccionGirfCard-contenido p {
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+}
+
+#contenido-pregunta {
+    font-weight: 600;
+}
+
+#contenido-regalar a {
+    color: #19bbe8;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+#contenido-regalar a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*-------------------------------------------*/
+/*---------------SECTION TIPO DE CURSADA-------------------*/
+.main_seccionTipoCursada {
+    background: #fefbf7;
+    height: 30em;
+    padding: 1em 5em;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.seccionTipoCursadaImagen {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.seccionTipoCursadaImagen a {
+    height: 100%;
+    display: inline-block;
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+.seccionTipoCursadaImagen a:hover{
+    box-shadow: 2px 2px 10px rgb(255, 255, 255);
+}
+.seccionTipoCursadaImagen a img {
+    display: flex;
+    object-fit: scale-down;
+    height: 100%;
+}
+
+.seccionTipoCursadaContenido {
+    display: flex;
+    width: 35em;
+    flex-direction: column;
+    color: var(--color-principal);
+}
+.seccionTipoCursadaContenido h2{
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+.seccionTipoCursadaContenido p {
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+}
+#pregunta-cursada {
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+#contenido-cursada a {
+    color: #19bbe8;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+#contenido-cursada a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+/*-------------------------------------------*/
+/*---------------SECTION 2-------------------*/
+.main_seccion2 {
+    width: 100%;
+    padding: 3em 2em;
+    background: var(--color-principal)
+}
+
+/*Titulo section2*/
+.main_seccion2__texto {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.main_seccion2__texto h2 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+
+.main_seccion2__texto p {
+    color: #b0adad;
+    font-size: 1.2em;
+    width: 25em;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/*Contenedor de la parte informativa de section 2*/
+.main_seccion2__contenido {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+/*Subcontenedor con info*/
+.paso-card {
+    background: white;
+    padding: 2em;
+    width: 30%;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+.paso-card:hover {
+    transform: translateY(-10px);
+}
+
+/*Nuemro de paso*/
+.paso-card-numero {
+    position: absolute;
+    top: -0.7em;
+    left: 45%;
+    background: var(--color-secundario);
+    color: var(--color-principal);
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/*Contenido de la card*/
+.paso-card-icono {
+    margin-bottom: 0.4em;
+    font-size: 2.5em;
+    color: var(--color-principal);
+}
+
+.paso-contenido h3 {
+    color: var(--color-principal);
+    font-size: 1.3em;
+    margin-bottom: 0.6em;
+}
+
+.paso-contenido p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+
+/*---------------SECTION 3-------------------*/
+.main__seccion3 {
+    width: 100%;
+    padding: 2em 3em;
+    background-color: white;
+}
+
+/*Titulo seccion 3*/
+.main__seccion3__texto {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.main__seccion3__texto h2 {
+    margin-bottom: 0.5em;
+    color: var(--color-principal);
+    font-size: 2.5em;
+}
+
+.main__seccion3__texto p {
+    width: 75%;
+    line-height: 1.5;
+    color: #666;
+    font-size: 1.1em;
+}
+
+/*Contenido de la seccion3*/
+.main__seccion3__cards {
+    display: flex;
+    width: 100%;
+    padding: 0 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+/*Diseño de cada card*/
+.curso-card {
+    width: 21.875em;
+    background: #f7f6f6d8;
+    border-radius: 0.8em;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.curso-card:hover {
+    transform: translateY(-8px);
+    border: 0.063em solid var(--color-secundario);
+
+}
+
+.curso-card__imagen {
+    height: 9em;
+    width: 100%;
+    overflow: hidden;
+}
+
+.curso-card__imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.curso-card__contenido {
+    padding: 1.5em;
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.95em;
+    flex: 1;
+}
+
+.curso-card__contenido h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.8em;
+    color: var(--color-principal);
+    line-height: 1.3;
+}
+
+.curso-card__duracion {
+    padding: 1em;
+    border-bottom: 2px solid #3d3d3d18;
+}
+
+.curso-card__duracion span {
+    color: #666;
+    font-size: 1em;
+}
+
+.curso-card__precio {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-principal);
+    padding: 1em 1em;
+}
+
+.curso-card__botones {
+    display: flex;
+    padding: 0.5em;
+    gap: 1em;
+}
+
+.curso-card__botones a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.95em;
+    border-radius: 8px;
+    padding: 0.75em 1.25em;
+    flex: 1;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.boton_añadir {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+}
+
+.boton_añadir:hover {
+    background-color: var(--color-secundarioDegradado);
+    transform: translateY(-2px);
+}
+
+.boton_detalle {
+    background-color: transparent;
+    border: 0.2em solid var(--color-principal);
+    color: var(--color-principal);
+}
+
+.boton_detalle:hover {
+    background: var(--color-principal);
+    color: white;
+}
+
+/*---------------SECTION 4-------------------*/
+.main__seccion4 {
+    width: 100%;
+    padding: 3.5em 2em;
+    background: var(--color-principal);
+}
+
+/*Titulo seccion 4*/
+.main__seccion4__texto {
+    text-align: center;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__seccion4__texto h2 {
+    color: white;
+    font-size: 2.3em;
+    margin-bottom: 0.5em;
+}
+
+.main__seccion4__texto p {
+    color: #d7d2d2;
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/*Contenido seccion 4*/
+.main__seccion4__metodos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5em;
+    width: auto;
+    margin: 0 2em;
+}
+
+/*Diseño de cada card*/
+.metodos-carta {
+    width: 20%;
+    background: white;
+    padding: 1.5em 0.5em;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid;
+}
+
+.metodos-carta i {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+.metodos-carta span {
+    font-weight: bold;
+    color: black;
+    font-size: 0.95em;
+}
+
+/*Colores para los iconos de las cards*/
+.fa-cc-visa {
+    color: #1a1f71;
+}
+
+.fa-cc-mastercard {
+    color: #eb001b;
+}
+
+.fa-cc-amex {
+    color: #2e77bc;
+}
+
+.fa-paypal {
+    color: #ff6000;
+}
+
+.fa-wallet {
+    color: #19bbe8;
+}
+
+.fa-building-columns {
+    color: #1a1f71;
+}
+
+/*--------------------------------------*/
+/* --- -------CELUS----------- ---*/
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875em;
+    }
+
+    /*Seccion 1*/
+    .main__seccion1__banner1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+        padding-bottom: 3em;
+    }
+
+    .main__seccion1-info h1 {
+        font-size: 1.3em;
+    }
+
+    .main__seccion1-info p {
+        font-size: 1em;
+        line-height: 1.3;
+    }
+
+    .main__seccion1-info {
+        padding: 0.8em;
+    }
+
+    .main__seccion1-foto {
+        order: 1;
+        padding: 1em 3em 0 3em;
+    }
+
+    .main__seccion1-foto img {
+        height: 20em;
+    }
+
+    .main__seccion1-contenido {
+        gap: 0.8em;
+        padding: 0 0.5em;
+        flex-direction: row;
+        width: 100%;
+        order: 2;
+    }
+
+    /*Seccion 2*/
+    .main_seccion2 {
+        padding: 2em 1em;
+    }
+
+    .main_seccion2__texto {
+        margin-bottom: 2em;
+    }
+
+    .main_seccion2__texto h2 {
+        font-size: 1.8em;
+        margin-bottom: 0.5em;
+        padding: 0 0.5em;
+    }
+
+    .main_seccion2__texto p {
+        font-size: 1em;
+        width: 95%;
+        line-height: 1.4;
+        padding: 0 0.5em;
+    }
+
+    .main_seccion2__contenido {
+        margin: 0;
+        gap: 1.5em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paso-card {
+        width: 90%;
+        padding: 1.5em 1em;
+    }
+
+    .paso-card-numero {
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 1.2em;
+    }
+
+    .paso-card-icono {
+        font-size: 2.5em;
+        margin-bottom: 0.3em;
+    }
+
+    .paso-contenido h3 {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+    }
+
+    .paso-contenido p {
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
+/*---------------SECTION Gift Card-------------------*/
+.main_seccionGiftCard {
+    padding: 1em 0.5em;
+    gap: 0.5em;
+    flex-direction: column-reverse;
+    height: auto;
+}
+.seccionGirfCard-contenido {
+    width: 100%;
+}
+.seccionGirfCard-contenido h2 {
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+}
+
+.seccionGirfCard-contenido p {
+    margin-bottom: 0.5em;
+    font-size: 0.5em;
+}
+
+#contenido-regalar a {
+    font-size: 0.5em;
+}
+.seccionGirfCard-imagen{
+    height: 10em;
+}
+
+/*-------------------------------------------*/
+/*---------------SECTION TIPO DE CURSADA-------------------*/
+.main_seccionTipoCursada {
+    padding: 1em 0.5em;
+    gap: 0.5em;
+    flex-direction: column;
+    height: auto;
+}
+.seccionTipoCursadaContenido{
+    width: 100%;
+}
+.seccionTipoCursadaContenido h2{
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+}
+.seccionTipoCursadaContenido p {
+    margin-bottom: 0.5em;
+    font-size: 0.5em;
+}
+
+#contenido-cursada a {
+    font-size: 0.5em;
+}
+#pregunta-cursada{
+    font-size: 0.6em;
+    display: none;
+}
+.seccionTipoCursadaImagen{
+    height: 10em;
+}
+/*-------------------------------------------*/
+    /*Seccion 3*/
+    .main__seccion3 {
+        padding: 1em 0.5em;
+    }
+
+    .main__seccion3__texto {
+        margin-bottom: 2em;
+    }
+
+    .main__seccion3__texto h2 {
+        font-size: 2em;
+        padding: 0 0.5em;
+    }
+
+    .main__seccion3__texto p {
+        width: 95%;
+        font-size: 1em;
+        line-height: 1.2;
+    }
+
+    .main__seccion3__cards {
+        gap: 1em;
+        padding: 0 0.7em;
+    }
+
+    .curso-card {
+        width: 100%;
+    }
+
+    .curso-card__imagen {
+        height: 15em;
+    }
+
+    .curso-card__contenido {
+        padding: 1em;
+    }
+
+    .curso-card__contenido h3 {
+        font-size: 1.1em;
+        margin-bottom: 0.6em;
+    }
+
+    .curso-card__contenido p {
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
+
+    .curso-card__duracion,
+    .curso-card__precio {
+        padding: 0.5em 1em;
+    }
+
+    .curso-card__duracion span {
+        font-size: 0.9em;
+    }
+
+    .curso-card__precio {
+        font-size: 1.2em;
+    }
+
+    .curso-card__botones {
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 0.8em;
+    }
+
+    .curso-card__botones button,
+    .curso-card__botones a {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 0.9em;
+    }
+
+    /*Seccion 4*/
+    .main__seccion4 {
+        padding: 2em 1em;
+    }
+
+    .main__seccion4__texto {
+        margin-bottom: 2em;
+    }
+
+    .main__seccion4__texto h2 {
+        font-size: 1.7em;
+        margin-bottom: 0.5em;
+    }
+
+    .main__seccion4__texto p {
+        width: 90%;
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+
+    .main__seccion4__metodos {
+        gap: 1em;
+        margin: 0;
+    }
+
+    .metodos-carta {
+        width: 40%;
+        padding: 1.5em 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .metodos-carta i {
+        font-size: 2.2em;
+        margin-bottom: 0.3em;
+    }
+
+    .metodos-carta span {
+        font-size: 0.9em;
+    }
+}
+
+/* --- TABLETS ---*/
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+
+    /*Seccion 1*/
+    .main__seccion1__banner1 {
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .main__seccion1-contenido {
+        width: 55%;
+        padding: 1em 0.5em;
+    }
+
+    .main__seccion1-info {
+        padding: 1.2em;
+    }
+
+    .main__seccion1-info h1 {
+        font-size: 1.4em;
+        line-height: 1.3;
+        margin-bottom: 0.4em;
+    }
+
+    .main__seccion1-info p {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+
+    .main__seccion1-foto {
+        width: 45%;
+        height: 100%;
+        padding: 1em 0;
+    }
+
+    .main__seccion1-foto img {
+        max-width: 100%;
+    }
+
+    /*Seccion 2*/
+    .main_seccion2 {
+        padding: 2.5em 1.5em;
+    }
+
+    .main_seccion2__contenido {
+        width: 100%;
+        padding: 1em 1.2em;
+        margin: 0;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .main_seccion2__texto h2 {
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+    }
+
+    .main_seccion2__texto p {
+        font-size: 0.8em;
+        width: 100%;
+    }
+
+    .paso-card {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .paso-card-numero {
+        width: 1.6em;
+        height: 1.6em;
+        font-size: 1.3em;
+        left: 44%;
+    }
+
+    .paso-card-icono {
+        font-size: 3em;
+        margin-bottom: 0.3em;
+    }
+
+    .paso-contenido h3 {
+        font-size: 1.3em;
+        margin-bottom: 0.5em;
+    }
+
+    .paso-contenido p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+/*---------------SECTION Gift Card-------------------*/
+.main_seccionGiftCard {
+    padding: 1em 2em;
+    gap: 1em;
+    height: 20em;
+}
+
+.seccionGirfCard-contenido h2 {
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+.seccionGirfCard-contenido p {
+    margin-bottom: 0.5em;
+    font-size: 0.7em;
+}
+
+#contenido-regalar a {
+    font-size: 0.7em;
+}
+
+/*-------------------------------------------*/
+/*---------------SECTION TIPO DE CURSADA-------------------*/
+.main_seccionTipoCursada {
+    padding: 1em 2em;
+    gap: 1em;
+    height: 20em;
+}
+
+.seccionTipoCursadaContenido h2{
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+.seccionTipoCursadaContenido p {
+    margin-bottom: 0.5em;
+    font-size: 0.7em;
+}
+
+#contenido-cursada a {
+    font-size: 0.7em;
+}
+
+/*-------------------------------------------*/
+    /*Seccion 3*/
+    .main__seccion3 {
+        padding: 1.5em 1.5em;
+    }
+
+    .main__seccion3__texto h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    .main__seccion3__texto p {
+        width: 85%;
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    .main__seccion3__cards {
+        padding: 0;
+    }
+
+    .curso-card {
+        width: 45%;
+    }
+
+    .curso-card__contenido {
+        padding: 1.2em;
+    }
+
+    .curso-card__contenido h3 {
+        font-size: 1.2em;
+    }
+
+    .curso-card__contenido p {
+        font-size: 0.9em;
+    }
+
+    .curso-card__duracion,
+    .curso-card__precio {
+        padding: 0.8em 1.2em;
+    }
+
+    .curso-card__precio {
+        font-size: 1.3em;
+    }
+
+    .curso-card__botones {
+        padding: 0.8em;
+        gap: 0.8em;
+    }
+
+    .curso-card__botones button,
+    .curso-card__botones a {
+        padding: 10px 16px;
+        font-size: 0.9em;
+    }
+
+    /*Seccion 4*/
+    .main__seccion4 {
+        padding: 2.5em 1.5em;
+    }
+
+    .main__seccion4__texto h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    .main__seccion4__texto p {
+        width: 70%;
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    .main__seccion4__metodos {
+        margin: 0 1em;
+    }
+
+    .metodos-carta {
+        width: 45%;
+        padding: 1.2em 0.8em;
+    }
+
+    .metodos-carta i {
+        font-size: 2.5em;
+        margin-bottom: 0.4em;
+    }
+
+    .metodos-carta span {
+        font-size: 0.9em;
+    }
+}

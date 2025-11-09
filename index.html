@@ -15,13 +15,12 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/globals/globalStyles.css">
+    <link rel="stylesheet" href="./css/homePage/homePage.css">
     <link rel="stylesheet" href="./css/globals/header.css">
     <link rel="stylesheet" href="./css/globals/footer.css">
-
 </head>
 
 <body>
-
     <!------------------------------------ HEADER ------------------------------------>
 
     <!---------- BARRA DE LA PAGINA ---------->
@@ -40,6 +39,7 @@
                     <option value="Python & Data Science">
                     <option value="HTML">
                     <option value="JAVA"></option>
+
                 </datalist>
                 <!--Boton busqueda-->
                 <button type="submit" aria-label="Buscar">
@@ -51,10 +51,9 @@
         <!-------------------->
 
         <!---Carrito--->
-        <div class="buscador-carrito">
-            <a href="./index.html" aria-label="Carrito de compras">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>1</span>
+        <div class="buscador-carrito iniciarSesion">
+            <a href="./pages/account-stuff/log-in.html" aria-label="Carrito de compras">
+                INICIAR SESIÓN
             </a>
         </div>
         <!------------->
@@ -65,19 +64,331 @@
     <nav class="navbar">
         <ul>
             <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./pages/contact.html">Contacto</a></li>
-            <li><a href="./pages/giftcard.html">Giftcard</a></li>
-            <li><a href="./pages/calendar.html">Calendario</a></li>
+            <li><a href="./pages/contact/contact.html">Contacto</a></li>
+            <li><a href="./pages/calendar/calendar.html">Calendario</a></li>
         </ul>
     </nav>
     <!------------------------------------------------>
 
     <!------------------------------------ HEADER ------------------------------------>
 
-
+    <!----------------CONTENIDO PRINCIPAL------------------>
     <main>
-        <h1>Lol</h1>
+        <!---Seccion 1-Noticias/bienvenida de la pagina---->
+        <section class="main__seccion1">
+            <div class="main__seccion1__banner1">
+                <div class="main__seccion1-contenido">
+                    <div class="main__seccion1-info">
+                        <h1>¡Último día para disfrutar de estos descuentos!</h1>
+                        <p>Tienes cursos para superar
+                            los desafíos del presente
+                            (y del futuro) desde solo $10000 pesos.</p>
+                    </div>
+                    <div class="main__seccion1-info">
+                        <h1>¡Aprende a usar la terminal!</h1>
+                        <p>Del miedo al comando: 5 sesiones con Alvaro y la terminal es tu aliada.
+                        </p>
+                    </div>
+                </div>
+                <div class="main__seccion1-foto">
+                    <img src="./img/profes/profeAlvaro.png" alt="Imagen profesor">
+                </div>
+            </div>
+        </section>
+
+        <!---Seccion 2-Pasos para comprar un curso---->
+        <section class="main_seccion2">
+            <!---Titulo de la seccion 2--->
+            <div class="main_seccion2__texto">
+                <h2>Comienza tu aprendizaje en 3 simples pasos</h2>
+                <p>Únete a miles de estudiantes que están transformando
+                    sus carreras con nuestros cursos</p>
+            </div>
+            <!---Contenido de la seccion 2--->
+            <div class="main_seccion2__contenido">
+                <!--Bloque 1,crear cuenta-->
+                <a href="./pages/account-stuff/sign-up.html" class="paso-card">
+                    <span class="paso-card-numero">1</span>
+                    <div class="paso-card-icono">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <div class="paso-contenido">
+                        <h3>Crea tu cuenta gratuita</h3>
+                        <p>Regístrate en segundos con tu email o redes sociales. Tendrás acceso inmediato a cursos
+                            gratuitos y recursos de aprendizaje.</p>
+                    </div>
+                </a>
+                <!--Bloque 2,explorar y elegir un curso-->
+                <a href="./pages/courses/cursos.html" class="paso-card">
+                    <span class="paso-card-numero">2</span>
+                    <div class="paso-card-icono">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="paso-contenido">
+                        <h3>Explora y elegí tu curso</h3>
+                        <p>Descubrí más de 10 cursos en programación, diseño, data science y mucho más.Encontrá el que
+                            se ajusta a tus objetivos
+                            y realizá el pago seguro con tarjeta, PayPal o transferencia bancaria.</p>
+                    </div>
+                </a>
+                <!--Bloque 3,a ser el mejor programador-->
+                <a href="./pages/account-stuff/log-in.html" class="paso-card">
+                    <span class="paso-card-numero">3</span>
+                    <div class="paso-card-icono">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="paso-contenido">
+                        <h3>¡Comienza a aprender!</h3>
+                        <p>Accede inmediatamente al contenido, únete a la comunidad y obtén tu certificado al completar
+                            el curso.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!----Seccion Cursos destacados----->
+        <section class="main__seccion3">
+            <!---Titulo de la seccion 3--->
+            <div class="main__seccion3__texto">
+                <h2>Cursos destacados de Team Queso</h2>
+                <p>Creamos rutas de aprendizaje especialmente para guiarte en las
+                    herramientas y conocimientos más demandados en el mercado laboral.</p>
+                <p>¿Con cuál vas a empezar?</p>
+            </div>
+            <!---Contenido de la seccion 3--->
+            <div class="main__seccion3__cards">
+                <!--Curso-->
+                <article class="curso-card">
+                    <div class="curso-card__imagen">
+                        <img src="./img/cursos/jpeg.jpg" alt="Imagen curso Java">
+                    </div>
+                    <div class="curso-card__contenido">
+                        <h3>Desarrolador HTML</h3>
+                        <p>Dominá el lenguaje base de la web. En este curso aprenderás a
+                            estructurar páginas profesionales, aplicar buenas prácticas de accesibilidad y
+                            preparar tu perfil para el mundo del diseño y desarrollo front-end.</p>
+                    </div>
+                    <div class="curso-card__duracion">
+                        <span><i class="fa-solid fa-clock"></i> Duracion: 20 horas</span>
+                    </div>
+                    <div class="curso-card__precio">
+                        <span>$18990</span>
+                    </div>
+                    <div class="curso-card__botones">
+                        <a class="boton_añadir" href="./pages/account-stuff/log-in.html">
+                            <i class="fas fa-shopping-cart"></i>Añadir
+                        </a>
+                        <a href="./pages/courses/Detalles de Curso 1.html" class="boton_detalle">Ver detalles</a>
+                    </div>
+                </article>
+                <!--Curso-->
+                <article class="curso-card">
+                    <div class="curso-card__imagen">
+                        <img src="./img/cursos/Python.jpg" alt="Imagen curso Java">
+                    </div>
+                    <div class="curso-card__contenido">
+                        <h3>Curso de Python</h3>
+                        <p>Un programa de estudios intensivo y online que te conectará con el mundo laboral.
+                            En pocos meses sé parte de un mundo lleno de oportunidades.</p>
+                    </div>
+                    <div class="curso-card__duracion">
+                        <span><i class="fa-solid fa-clock"></i> Duracion: 75 horas</span>
+                    </div>
+                    <div class="curso-card__precio">
+                        <span>$29990</span>
+                    </div>
+                    <div class="curso-card__botones">
+                        <a class="boton_añadir" href="./pages/account-stuff/log-in.html">
+                            <i class="fas fa-shopping-cart"></i>Añadir
+                        </a>
+                        <a href="./pages/courses/Detalles de Curso 2.html" class="boton_detalle">Ver detalles</a>
+                    </div>
+                </article>
+                <!--Curso-->
+                <article class="curso-card">
+                    <div class="curso-card__imagen">
+                        <img src="./img/cursos/cursoJAVA.jpg" alt="Imagen curso Java">
+                    </div>
+                    <div class="curso-card__contenido">
+                        <h3>Java Developer Professional</h3>
+                        <p>Domina Java desde cero hasta nivel avanzado. Spring Boot, APIs REST y más.</p>
+                    </div>
+                    <div class="curso-card__duracion">
+                        <span><i class="fa-solid fa-clock"></i> Duracion: 45 horas</span>
+                    </div>
+                    <div class="curso-card__precio">
+                        <span>$10000</span>
+                    </div>
+                    <div class="curso-card__botones">
+                        <a class="boton_añadir" href="./pages/account-stuff/log-in.html">
+                            <i class="fas fa-shopping-cart"></i>Añadir
+                        </a>
+                        <a href="./pages/courses/Detalles de Curso 2.html" class="boton_detalle">Ver detalles</a>
+                    </div>
+                </article>
+                <!--Curso-->
+                <article class="curso-card">
+                    <div class="curso-card__imagen">
+                        <img src="./img/cursos/cursoPYTHON.jpg" alt="Imagen curso Java">
+                    </div>
+                    <div class="curso-card__contenido">
+                        <h3>Experto en Python</h3>
+                        <p>Aprendé a programar con uno de los lenguajes más poderosos y versátiles del mundo.
+                            Este curso te lleva desde los fundamentos hasta técnicas avanzadas en automatización,
+                            análisis de datos y desarrollo de aplicaciones.</p>
+                    </div>
+                    <div class="curso-card__duracion">
+                        <span><i class="fa-solid fa-clock"></i> Duracion: 50 horas</span>
+                    </div>
+                    <div class="curso-card__precio">
+                        <span>$10000</span>
+                    </div>
+                    <div class="curso-card__botones">
+                        <a class="boton_añadir" href="./pages/account-stuff/log-in.html">
+                            <i class="fas fa-shopping-cart"></i>Añadir
+                        </a>
+                        <a href="./pages/courses/Detalles de Curso 2.html" class="boton_detalle">Ver detalles</a>
+                    </div>
+
+                </article>
+                <!--Curso-->
+                <article class="curso-card">
+                    <div class="curso-card__imagen">
+                        <img src="./img/cursos/cursoSQL.jpg" alt="Imagen curso Java">
+                    </div>
+                    <div class="curso-card__contenido">
+                        <h3>Profesional en SQL</h3>
+                        <p>En este curso aprenderás lo que es una base de datos y los tipos de bases de datos que
+                            existen.</p>
+                    </div>
+                    <div class="curso-card__duracion">
+                        <span><i class="fa-solid fa-clock"></i> Duracion: 60 horas</span>
+                    </div>
+                    <div class="curso-card__precio">
+                        <span>$10000</span>
+                    </div>
+                    <div class="curso-card__botones">
+                        <a class="boton_añadir" href="./pages/account-stuff/log-in.html">
+                            <i class="fas fa-shopping-cart"></i>Añadir
+                        </a>
+                        <a href="./pages/courses/Detalles de Curso 1.html" class="boton_detalle">Ver detalles</a>
+                    </div>
+                </article>
+                <!--Curso-->
+                <article class="curso-card">
+                    <div class="curso-card__imagen">
+                        <img src="./img/cursos/sharpCurso.jpg" alt="Imagen curso Java">
+                    </div>
+                    <div class="curso-card__contenido">
+                        <h3>C# desde Cero</h3>
+                        <p>Sumergite en el mundo de la programación orientada a objetos con C#.
+                            Aprendé a crear aplicaciones robustas,
+                            seguras y escalables para escritorio, web y más.</p>
+                    </div>
+                    <div class="curso-card__duracion">
+                        <span><i class="fa-solid fa-clock"></i> Duracion: 45 horas</span>
+                    </div>
+                    <div class="curso-card__precio">
+                        <span>$10000</span>
+                    </div>
+                    <div class="curso-card__botones">
+                        <a class="boton_añadir" href="./pages/account-stuff/log-in.html">
+                            <i class="fas fa-shopping-cart"></i>Añadir
+                        </a>
+                        <a href="./pages/courses/Detalles de Curso 1.html" class="boton_detalle">Ver detalles</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!--------Seccion para Gift Card---------->
+        <section class="main_seccionGiftCard">
+            <div class="seccionGirfCard-contenido">
+                <h2>Regalá conocimiento con nuestras Gift Cards personalizables</h2>
+                <p id="contenido-pregunta">¿Buscás un regalo diferente, personalizado y con impacto real? </p>
+                <p>Crea tu propia giftcard escogiendo el fondo, el color y tamaño de la fuente y un nombre para esa
+                    persona que quieras sorprender.</p>
+                <p>Nuestras Gift Cards son la manera más simple de sorprender a
+                    alguien con la posibilidad de aprender.</p>
+                <p>Conocé nuestras Gift Cards y empezá a regalar educación hoy mismo.</p>
+                <span id="contenido-regalar"><a href="./pages/account-stuff/log-in.html"><i class="fa-solid fa-gift"></i>
+                        Regalar Gift Card <i class="fa-solid fa-arrow-right"></i></a></span>
+            </div>
+            <div class="seccionGirfCard-imagen">
+                <a href="./pages/account-stuff/log-in.html"><img src="./img/homePage/giftCard.png" alt="Imagen de la Gift Card">
+                </a>
+            </div>
+        </section>
+        <!-------------------------------------------->
+
+        <!--------Seccion para chamuyar sobre poder comprar cursos para varios---------->
+        <section class="main_seccionTipoCursada">
+            <div class="seccionTipoCursadaImagen">
+                <a href="./pages/courses/cursos.html"><img src="./img/homePage/tipoCursada.png" alt="Imagen de tipo cursada">
+                </a>
+            </div>
+            <div class="seccionTipoCursadaContenido">
+                <h2>Comprá tu curso para vos o para tu grupo: invitá a un amigo, a tu equipo o a tus estudiantes</h2>
+                <p id="pregunta-cursada">¿Querés crecer a tu ritmo o compartir la experiencia con otros? Con nuestros
+                    cursos podés elegir:</p>
+                <p><strong>Para vos: </strong>comprá tu curso y avanzá a tu ritmo, con total libertad.</p>
+                <p><strong>En grupo: </strong>sumá a un amigo, a tu equipo o a tus estudiantes y compartan el
+                    aprendizaje.</p>
+                <p>Ya sea como desafío personal o como experiencia compartida, nuestros cursos se adaptan a cada
+                    necesidad.
+                    Porque aprender no es solo crecer: es también motivarse y disfrutar en compañía.</p>
+                <span id="contenido-cursada"><a href="./pages/courses/cursos.html">
+                        Ver lista de cursos <i class="fa-solid fa-arrow-right"></i></a></span>
+            </div>
+        </section>
+        <!-------------------------------------------->
+
+        <!----Seccion 4-Metodos de pago----->
+        <section class="main__seccion4">
+            <!---Titulo de la seccion 4--->
+            <div class="main__seccion4__texto">
+                <h2>Métodos de pago</h2>
+                <p>Aceptamos múltiples formas de pago para tu comodidad.
+                    Elige la que mejor se adapte a tus necesidades.
+                </p>
+            </div>
+            <!---Contenido de la seccion 4--->
+            <div class="main__seccion4__metodos">
+
+                <div class="metodos-carta">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <span>Visa</span>
+                </div>
+
+                <div class="metodos-carta">
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <span>Mastercard</span>
+                </div>
+
+                <div class="metodos-carta">
+                    <i class="fa-brands fa-cc-amex"></i>
+                    <span>American Express</span>
+                </div>
+
+                <div class="metodos-carta">
+                    <i class="fa-brands fa-paypal"></i>
+                    <span>PayPal</span>
+                </div>
+
+                <div class="metodos-carta">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Mercado Pago</span>
+                </div>
+
+                <div class="metodos-carta">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span>Transferencias</span>
+                </div>
+
+            </div>
+        </section>
     </main>
+    <!------------------------------------------->
 
 
     <!------------------------------------ FOOTER ------------------------------------>
@@ -88,10 +399,14 @@
                 <h4>Team Queso</h4>
                 <div class="pie-pagina-nosotros-miembros">
                     <ul>
-                        <li><i class="fa-solid fa-user"></i>Matias&nbsp;Aysa - Dni:&nbsp;46987982</li>
-                        <li><i class="fa-solid fa-user"></i>León&nbsp;Rey - Dni:&nbsp;46874342</li>
-                        <li><i class="fa-solid fa-user"></i>Eric&nbsp;Barrios - Dni:&nbsp;46346348</li>
-                        <li><i class="fa-solid fa-user"></i>Ivan&nbsp;Gamboa&nbsp;-     Dni:&nbsp;47791152</li>
+                        <li><i class="fa-solid fa-user"></i>Matias Aysa </li>
+                        <li>Dni:46987982</li>
+                        <li><i class="fa-solid fa-user"></i>Leon Rey </li>
+                        <li>Dni:46874342</li>
+                        <li><i class="fa-solid fa-user"></i>Eric Barrios</li>
+                        <li>Dni:46346348</li>
+                        <li><i class="fa-solid fa-user"></i>Ivan Gamboa </li>
+                        <li>Dni:47791152</li>
                     </ul>
                 </div>
             </div>
@@ -100,16 +415,16 @@
                 <div class="pie-pagina-navegacion-soporte">
                     <h4>Soporte</h4>
                     <ul>
-                        <li><a href="./pages/footer/soporteYlegal.html#preguntas">Preguntas Frecuentes</a></li>
+                        <li><a href="./pages/footer/soporteYlegal.html">Preguntas Frecuentes</a></li>
                         <li><a href="">Contactanos</a></li>
                     </ul>
                 </div>
                 <div class="pie-pagina-navegacion-legal">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="./pages/footer/soporteYlegal.html#terminos">Terminos y Condiciones</a></li>
-                        <li><a href="./pages/footer/soporteYlegal.html#cookies">Politica de Cookies</a></li>
-                        <li><a href="./pages/footer/soporteYlegal.html#privacidad">Politica de Privacidad</a></li>
+                        <li><a href="./pages/footer/soporteYlegal.html">Terminos y Condiciones</a></li>
+                        <li><a href="./pages/footer/soporteYlegal.html">Politica de Cookies</a></li>
+                        <li><a href="./pages/footer/soporteYlegal.html">Politica de Privacidad</a></li>
                     </ul>
                 </div>
             </div>
@@ -137,7 +452,6 @@
 
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
-
 </body>
 
 </html>
