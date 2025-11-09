@@ -1,0 +1,170 @@
+main {
+    padding: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.back {
+    font-size: .8em;
+    margin-right: 49em;
+    margin-top: 2em;
+    position: absolute;
+}
+
+.botonBack {
+    height: 3em;
+    width: 3em;
+    padding: 0.5em;
+    border-radius: 50%;
+    color: var(--color-secundario);
+    background-color: var(--color-principalDegradado);
+    border-color: var(--color-secundarioDegradado);
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.botonBack:hover {
+    background-color: var(--color-secundarioDegradado);
+}
+
+/* ------------------ PERFIL ------------------ */
+
+.perfilGrid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    background-color: var(--color-principalDegradado);
+    padding: 4em;
+    border-radius: 15px;
+    gap: 2em;
+}
+
+.perfil__item {
+    /* border: solid 1px; */
+}
+
+.titulo {
+    text-align: center;
+}
+
+.perfil__imgWrap {
+    display: flex;
+    align-items: center;
+    /* width: auto; */
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    /* que se expanda */
+
+}
+
+.perfil__img {
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+}
+
+.perfil__datosWrap {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.perfil__datos {
+    padding: .3em 0;
+}
+
+.perfil__datos--titulo {
+    font-weight: bold;
+    color: var(--color-secundario);
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.perfil__metodosPago {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.perfil__tarjetas {
+    display: flex;
+}
+
+.perfil__tarjetas i {
+    margin-top: .45em;
+    user-select: none;
+    cursor: pointer;
+    color: red;
+}
+
+.perfil__button {
+    margin-top: .7em;
+
+    text-align: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 14em;
+    padding: 0.5em;
+    border-radius: 2em;
+    background-color: var(--color-principalDegradado);
+    border-color: var(--color-secundarioDegradado);
+    color: var(--color-secundario);
+
+    transition: background-color 0.3s;
+}
+
+.perfil__button:hover {
+    background-color: var(--color-secundarioDegradado);
+}
+
+.perfil__button a {
+    user-select: none;
+    display: block;
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+.perfil__button--cerrarSesion {
+    grid-column: 1/3;
+    grid-row: 3/4;
+
+    border-radius: 0;
+    width: 100%;
+    border: 2px solid red;
+}
+
+.perfil__button--cerrarSesion:hover {
+    background-color: red;
+}
+
+/* ------------------ PERFIL ------------------ */
+
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+
+/* --- TABLETS ---*/
+@media (max-width: 768px) {
+
+    .back {
+        margin-right: 25em;
+        margin-top: 2em;
+    }
+
+    .perfil__button{
+        width: 100%;
+    }
+
+    .perfilGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil__item {
+        grid-column: 1/2;
+        grid-row: auto;
+    }
+
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */

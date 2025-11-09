@@ -140,6 +140,7 @@
 }
 
 .ver_calendario a {
+    color: var(--color-principal);
     text-decoration: none;
     width: 100%;
     height: 100%;

@@ -17,11 +17,10 @@
     <link rel="stylesheet" href="../../css/globals/globalStyles.css">
     <link rel="stylesheet" href="../../css/globals/header.css">
     <link rel="stylesheet" href="../../css/globals/footer.css">
-    <link rel="stylesheet" href="../../css/courses/carrito.css">
+    <link rel="stylesheet" href="../../css/courses/resumenCompra.css">
 </head>
 
 <body>
-
     <!------------------------------------ HEADER ------------------------------------>
 
     <!---------- BARRA DE LA PAGINA ---------->
@@ -77,101 +76,81 @@
     <!------------------------------------------------>
 
     <!------------------------------------ HEADER ------------------------------------>
-
-
-    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
-    <main class="main">
+    <main>
         <div class="main_titulo">
-            <h1>Carrito <i class="fa-solid fa-cart-arrow-down"></i></h1>
+            <h1>Revisa y confirma tu compra</h1>
         </div>
         <div class="main_contenido">
-            <div class="main_productosCarrito">
-                <section class="main_producto">
-                    <div class="divProductoImagen">
-                        <img class="imagenProducto" src="../../img/cursos/cursoJAVA.jpg" alt="Imagen de producto">
+            <div class="main_informacion">
+                <div class="detalle_compra">
+                    <h3>Detalle de compra</h3>
+                    <a href="./carrito.html">modificar</a>
+                    <div class="detalle_compra_info">
+                        <section class="compra_curso">
+                            <article class="curso_imagen">
+                                <img src="../../img/cursos/cursoJAVA.jpg" alt="Curso Java">
+                            </article>
+                            <article class="curso_informacion">
+                                <p>Java desde Cero</p>
+                                <p>Tipo de curso : <span>Individual</span></p>
+                            </article>
+                        </section>
+                        <section class="compra_curso">
+                            <article class="curso_imagen">
+                                <img src="../../img/cursos/cursoJAVA.jpg" alt="Curso Java">
+                            </article>
+                            <article class="curso_informacion">
+                                <p>Java desde Cero</p>
+                                <p>Tipo de curso : <span>Individual</span></p>
+                            </article>
+                        </section>
+                        <section class="compra_curso">
+                            <article class="curso_imagen">
+                                <img src="../../img/cursos/cursoJAVA.jpg" alt="Curso Java">
+                            </article>
+                            <article class="curso_informacion">
+                                <p>Java desde Cero</p>
+                                <p>Tipo de curso : <span>Individual</span></p>
+                            </article>
+                        </section>
                     </div>
-                    <div class="productoDescripcion">
-                        <span class="descripcionIcono"><i class="fa-solid fa-user"></i></span>
-                        <div class="productoDescripcionInfo">
-                            <h4>Desarrollador de Java</h4>
-                            <span>Profesor : Gustavito Goat</span>
-                            <span>Horas : 35.5</span>
-                            <span class="InfoEliminar">Eliminar</span>
-                        </div>
-                        <div class="productoDescripcion_precio">
-                            <span>$3000</span>
-                        </div>
-                    </div>
-                </section>
-                <section class="main_producto">
-                    <div class="divProductoImagen">
-                        <img class="imagenProducto" src="../../img/cursos/cursoJAVA.jpg" alt="Imagen de producto">
-                    </div>
-                    <div class="productoDescripcion">
-                        <span class="descripcionIcono"><i class="fa-solid fa-user"></i></span>
-                        <div class="productoDescripcionInfo">
-                            <h4>Desarrollador de Java</h4>
-                            <span>Profesor : Gustavito Goat</span>
-                            <span>Horas : 35.5</span>
-                            <span class="InfoEliminar">Eliminar</span>
-                        </div>
-                        <div class="productoDescripcion_precio">
-                            <span>$3000</span>
-                        </div>
-                    </div>
-                </section>
-                <section class="main_producto">
-                    <div class="divProductoImagen">
-                        <img class="imagenProducto" src="../../img/cursos/cursoJAVA.jpg" alt="Imagen de producto">
-                    </div>
-                    <div class="productoDescripcion">
-                        <span class="descripcionIcono"><i class="fa-solid fa-users"></i></span>
-                        <div class="productoDescripcionInfo">
-                            <h4>Desarrollador de Java</h4>
-                            <span>Profesor : Gustavito Goat</span>
-                            <span>Horas : 35.5</span>
-                            <span>Participantes : 3</span>
-                            <span>Precio c/u : $3000</span>
-                            <span class="InfoEliminar">Eliminar</span>
-                        </div>
-                        <div class="productoDescripcion_precio">
-                            <span>$9000</span>
-                        </div>
-                    </div>
-                </section>
-            </div>
+                </div>
 
+                <div class="detalle_pago">
+                    <h3>Detalle metodo de pago</h3>
+                    <div class="detalle_pago_info">
+                        <section class="metodo_pago">
+                            <article class="pago_imagen">
+                                <img src="../../img/metodosPago/mastercard.svg" alt="Curso Java">
+                            </article>
+                            <article class="pago_informacion">
+                                <p class="item item1">Mastercard</p>
+                                <p class="item item2">Tarjeta terminada en 4576</p>
+                                <span class="item item3"><a href="./metodoPago.html">Modificar</a></span>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
             <div class="main_montoTotal">
                 <h3>Resumen de compra</h3>
                 <div class="montoTotal_Descripcion">
                     <div class="montoTotal_elemento">
-                        <span>Cantidad de curso/s</span>
+                        <span>Cantidad de producto/s</span>
                         <span>3</span>
                     </div>
-                    <div class="montoTotal_elemento">
-                        <span>Subtotal</span>
-                        <span id="subtotal"><s>$30.000</s>$17.500</span>
-                    </div>
-                    <div class="montoTotal_elemento">
-                        <span>Descuento</span>
-                        <span>-23%</span>
-                    </div>
                     <div class="montoTotal_elemento total">
-                        <span>Total</span>
+                        <span>Pagas</span>
                         <span>$10000</span>
                     </div>
                     <div class="montoTotal_elementoComprar">
-                        <a href="./metodoPago.html">Continuar compra</a>
+                        <a href="./succes-compraRealizada.html">Realizar compra</a>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
-
-    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
-
-
     <!------------------------------------ FOOTER ------------------------------------>
     <footer class="pie-pagina">
 

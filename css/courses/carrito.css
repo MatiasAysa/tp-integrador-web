@@ -20,7 +20,7 @@
     color: var(--color-principal);
 }
 
-.main_productosCarrito{
+.main_productosCarrito {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -34,19 +34,22 @@
     display: flex;
     border-radius: 0.5em;
 }
-.divProductoImagen{
+
+.divProductoImagen {
     width: 35%;
     display: flex;
     height: 100%;
     border-right: 2px solid #e9e7e7;
     padding: 0.5em;
 }
-.imagenProducto{
+
+.imagenProducto {
     width: 100%;
     height: 100%;
     object-fit: scale-down;
 }
-.productoDescripcion{
+
+.productoDescripcion {
     display: flex;
     position: relative;
     flex: 1;
@@ -55,19 +58,22 @@
     padding: 1em;
 
 }
-.descripcionIcono{
+
+.descripcionIcono {
     position: absolute;
     left: 93%;
     top: 4%;
 }
-.productoDescripcionInfo{
+
+.productoDescripcionInfo {
     gap: 0.2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
 }
-.productoDescripcion_precio{
+
+.productoDescripcion_precio {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,49 +81,58 @@
     font-size: 1.2em;
     font-weight: 600;
 }
-.InfoEliminar{
+
+.InfoEliminar {
     color: red;
 }
-.main_montoTotal{
+
+.main_montoTotal {
     background: #f7f6f6;
     height: 20em;
     border: 2px solid #e9e7e7;
     border-radius: 0.5em;
     width: 40%;
 }
-.main_montoTotal h3{
-    padding:1em;
+
+.main_montoTotal h3 {
+    padding: 1em;
     border-bottom: 2px solid #e9e7e7;
 }
-.montoTotal_Descripcion{
-    padding:1em;
+
+.montoTotal_Descripcion {
+    padding: 1em;
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
-.montoTotal_elemento{
+
+.montoTotal_elemento {
     display: flex;
     justify-content: space-between;
 }
-#subtotal{
+
+#subtotal {
     display: flex;
     gap: 0.9em;
 }
-.total{
+
+.total {
     border-top: 2px solid #e9e7e7;
 }
-.total span{
+
+.total span {
     font-size: 1.3em;
     font-weight: bold;
     padding-top: 0.5em;
 }
 
-.montoTotal_elementoComprar{
+.montoTotal_elementoComprar {
     height: 3em;
     margin-top: 0.5em;
     display: flex;
 }
-.montoTotal_elementoComprar a{
+
+.montoTotal_elementoComprar a {
     text-decoration: none;
     font-weight: bold;
     display: flex;
@@ -129,12 +144,13 @@
     font-size: 1.3em;
     background: var(--color-secundario);
 }
-.montoTotal_elementoComprar a:hover{
+
+.montoTotal_elementoComprar a:hover {
     background: var(--color-principal);
 }
 
 /*CELUS*/
-@media (max-width: 480px) {
+@media (max-width: 484px) {
     .main_contenido {
         flex-direction: column;
         width: 100%;
@@ -142,61 +158,74 @@
         margin-bottom: 2em;
         padding: 1.5em 1em;
     }
-    .main_montoTotal{
-    width: 100%;
-}
-.main_producto{
-    height: 12em;
-}
-.divProductoImagen{
-    width: 40%;
-}
+
+    .main_montoTotal {
+        width: 100%;
+    }
+
+    .main_producto {
+        height: 12em;
+    }
+
+    .divProductoImagen {
+        width: 40%;
+    }
 }
 
 /*TABLETS*/
-@media (min-width: 481px) and (max-width: 780px) {
+@media (min-width: 485px) and (max-width: 790px) {
     .main_contenido {
         padding: 1em 1em;
-    gap: 1em;
+        gap: 1em;
 
     }
-    .productoDescripcion{
-    padding: 0.5em;
 
-}
-.productoDescripcionInfo{
-font-size: 0.9em;
-}
-    .productoDescripcion_precio{
+    .productoDescripcion {
+        padding: 0.5em;
+
+    }
+
+    .productoDescripcionInfo {
+        font-size: 0.9em;
+    }
+
+    .productoDescripcion_precio {
+        font-size: 1.1em;
+    }
+
+    .main_montoTotal {
+        height: 17em;
+        width: 35%;
+    }
+
+    .main_montoTotal h3 {
         font-size: 1.2em;
     }
-    .main_montoTotal{
-    height: 16em;
-    width: 35%;
-}
-.main_montoTotal h3{
-    font-size: 1.2em;
-}
-.montoTotal_Descripcion{
-    padding:0.5em;
-    gap: 0.6em;
-}
-.montoTotal_elemento{
-    font-size: 0.9em;
-}
-#subtotal{
-    gap: 0.7em;
-}
-.total span{
-    font-size: 1.2em;
-    padding-top: 0.3em;
-}
 
-.montoTotal_elementoComprar{
-    height: 2em;
-    display: flex;
-}
-.montoTotal_elementoComprar a{
-    font-size: 1em;
-}
+    .montoTotal_Descripcion {
+        padding: 0.5em;
+        gap: 0.6em;
+    }
+
+    .montoTotal_elemento {
+        font-size: 0.9em;
+    }
+
+    #subtotal {
+        gap: 0.7em;
+    }
+
+    .total span {
+        font-size: 1.2em;
+        padding-top: 0.3em;
+    }
+
+    .montoTotal_elementoComprar {
+        height: 2em;
+        display: flex;
+    }
+
+    .montoTotal_elementoComprar a {
+        font-size: 1em;
+    }
 }

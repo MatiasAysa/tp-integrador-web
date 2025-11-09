@@ -1,0 +1,88 @@
+.formWrap {
+    display: flex;
+    justify-content: center;
+    margin: 5% 5%;
+}
+
+.formWrap__form {
+    box-shadow: 10px 10px 0.8em black;
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+    gap: 2em;
+    background-color: var(--color-principalDegradado);
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input {
+    font-size: 1.2em;
+    width: 20em;
+    height: 3em;
+}
+
+/* sacar las flechitas horribles del input number en Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* sacar las flechitas horribles del input number en Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+input:focus {
+    border: 2.3px solid var(--color-secundarioDegradado);
+    outline: none;
+}
+
+.form__label {
+    font-weight: bold;
+}
+
+.form__button {
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 2em;
+    color: var(--color-secundario);
+    background-color: var(--color-principalDegradado);
+    border-color: var(--color-secundarioDegradado);
+
+    transition: background-color 0.3s;
+}
+
+.form__button:hover {
+    background-color: var(--color-secundarioDegradado);
+}
+
+.formWrap__a {
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+/* --- CELUS ---*/
+@media (max-width: 480px) {
+
+    .formWrap {
+        margin-top: 25%;
+        margin-bottom: 25%;
+    }
+
+    .formWrap__form {
+        font-size: 75%;
+    }
+
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */

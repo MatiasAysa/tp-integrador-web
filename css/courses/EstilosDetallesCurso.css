@@ -1,0 +1,339 @@
+/* --------------------- CSS propio ---------------------------- */
+* {
+    padding: 0;
+}
+h2 {
+    color: var(--color-secundario);
+}
+.contenedoresPresentacion {
+    display: flex;
+    flex-direction: row;
+    height: 40em;
+    margin: 2em 2em 1.5em;
+
+}
+
+.contenedorImagen {
+    padding: 1em;
+    height: 100%;
+    width: 55%;
+    margin-right: 1em;
+    display: flex;
+    position: relative;
+
+}
+.contenedorImagen__textoPresentacion {
+    display: flex;
+    padding: 20% 0 20% 30%;
+    flex-direction: column;
+    color: var(--color-texto);
+    position: absolute;
+    height: 90%;
+    width: 90%;
+}
+.contenedorImagen__imagenCurso {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    border-radius: 0.5em;
+}
+
+.contenedorTexto {
+    line-height: 1.2;
+    width: 53.5em;
+    margin: 1em 0;
+    color: var(--color-texto);
+
+}
+
+.titulo {
+    font-size: 2em;
+    line-height: 1.2em;
+}
+
+.subtitulo {
+    font-size: 1em;
+}
+.contenedorTexto__descripcionCurso {
+    height: auto;
+    min-height: 19em;
+}
+
+.contenedorTexto__duracionCurso {
+    height: 3.75em;
+}
+
+.contenedorTexto__modalidadCurso {
+    height: 3.75em;
+}
+.contenedorTexto__VerPrograma{ 
+    display: flex;
+    align-items: center;
+    height: 4.5em;
+    width: 100%;
+}
+
+.boton {
+    height: 3em;
+    width: 10em;
+    padding: 0.5em;
+    border-radius: 2em;
+    color: var(--color-secundario);
+    background-color: var(--color-principalDegradado);
+    border-color: var(--color-secundarioDegradado);
+    font-size: 85%;
+    cursor: pointer;
+}
+
+.contenedorCompra {
+    padding: 1em;
+    margin: 0.5em 1em 0em 0em;
+    border-radius: 1em;
+    background-color: var(--color-principalDegradado);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedorCompra__textoChico{
+    font-size: 0.5em;
+    color: var(--color-texto);
+    margin-bottom: 1em;
+}
+.contenedoresInfo {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin: 0 2em 1.5em;
+
+}
+.contenedoresInfo__infoPrincipal {
+    width: 80%;
+    height: 90%;
+    margin-right: 2em;
+}
+.objetivo{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+}
+.objetivo__texto{
+    margin: 1em;
+}
+.objetivo__lista{
+    margin: 1em 0 0 4em;
+}
+.objetivo__lista--espacio{
+    margin: 1em 0;
+}
+
+.contenedoresInfo__infoSecundaria {
+    background-color: var(--color-principalDegradado);
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction: column;
+    height: 50em;
+    width: 20%;
+    margin: 0 3em 0 1em;
+}
+.cursosAlt {
+    position: relative;
+    background-color: var(--color-principal);
+    padding: 0.5em;
+    border-radius: 1em;
+    margin: 1em;
+    height: 33%;
+    width: 90%;
+    cursor: pointer;
+}
+
+.cursosAlt__imagen {
+    border-radius: 1em;
+    width: 100%;
+    height: 90%;
+}
+.cursosAlt__texto {
+    display: flex;
+    position: absolute;
+    width: 90%;
+    justify-content: center;
+}
+.tituloInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.programaEdu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70%;
+}
+.programa__niveles{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    margin: 2em 1em;
+    padding: 1em 2em;
+    background-color: var(--color-principalDegradado);
+    border-radius: 0.5em;
+}
+.niveles__divide{
+    display: flex;
+    flex-direction: row;
+    height: 33%;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+.niveles__divide--numNivel{
+    padding-top: 1em;
+}
+.niveles__divide--column{ 
+    width: 50%;
+    padding: 0.3em;
+    border-bottom: 1px solid var(--color-secundarioDegradado);
+}
+.niveles__divide--column-1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 480px) {
+    body {
+        font-size: 50%;
+    }
+    .contenedoresPresentacion{
+        height: 70em;
+        flex-direction: column;
+    }
+    .contenedorImagen{
+        padding: 1em 0;
+        width: 100%;
+        height: 30%;
+    }
+    .contenedorImagen__imagenCurso{
+        width: 100%;
+    }
+    .contenedorTexto{
+        width: 100%;
+        height: 70%;
+    }
+    .contenedorTexto__descripcionCurso{
+        height: auto;
+        margin-bottom: 1em;
+    }
+    .contenedorTexto__VerPrograma{
+        justify-content: center;
+        align-items: baseline;
+    }
+    .contenedorImagen__textoPresentacion{
+      padding-left: 27%;  
+    }
+    .contenedoresInfo{
+        flex-direction: column;
+        height: auto;
+    }
+    .contenedoresInfo__infoSecundaria{
+        width: 100%;
+        height: 11em;
+        flex-direction: row;
+        margin: 0;
+    }
+    .cursosAlt{
+        height: 90%;
+        width: 33%;
+        margin: 0.5em;
+    }
+    .cursosAlt__texto{
+        letter-spacing: normal;
+        line-height: normal;
+    }
+    .contenedoresInfo__infoPrincipal{
+        width: 100%;
+    }
+    .programaEdu{
+        flex-direction: column;
+    }
+    .programa__niveles{
+        margin: 2em 2em 2em 0;
+        width: 100%;
+        height: 50%;
+    }
+    .objetivo__lista{
+        margin-left: 1em;
+    }
+}
+
+/* --- TABLETS ---*/
+@media (min-width: 481px) and (max-width: 1000px) {
+    body {
+        font-size: 70%;
+    }
+    .contenedoresPresentacion{
+        height: auto;
+        flex-direction: column;
+    }
+    .contenedorImagen{
+        padding: 1em 0;
+        width: 100%;
+        height: 40em;
+    }
+    .contenedorImagen__imagenCurso{
+        width: 100%;
+    }
+    .contenedorImagen__textoPresentacion{
+        padding: 20% 0 20% 27%;
+    }
+    .contenedorTexto{
+        width: 100%;
+        height: auto;
+    }
+    .contenedorTexto__descripcionCurso{
+        height: auto;
+        margin-bottom: 1em;
+    }
+    .contenedorTexto__VerPrograma{
+        justify-content: center;
+        align-items: baseline;
+    }
+    .contenedoresInfo{
+        flex-direction: column;
+        height: auto;
+    }
+    .contenedoresInfo__infoSecundaria{
+        width: 90%;
+        height: 15em;
+        flex-direction: row;
+        margin: 0 auto;
+    }
+    .cursosAlt{
+        height: 90%;
+        width: 33%;
+        margin: 0.5em;
+    }
+    .cursosAlt__texto{
+        letter-spacing: normal;
+        line-height: normal;
+    }
+    .contenedoresInfo__infoPrincipal{
+        width: 100%;
+    }
+    .programa__niveles{
+        margin: 2em 1.5em;
+        width: 100%;
+        height: 50%;
+    }
+    .objetivo__lista{
+        margin-left: 1em;
+    }
+}
