@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario</title>
+    <title>Mis cursos</title>
 
     <!-- Otros links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../../css/globals/globalStyles.css">
     <link rel="stylesheet" href="../../css/globals/header.css">
     <link rel="stylesheet" href="../../css/globals/footer.css">
-    <link rel="stylesheet" href="../../css/courses/succes-registration.css">
+    <link rel="stylesheet" href="../../css/courses/my-courses.css">
 
 </head>
 
@@ -80,14 +80,69 @@
     <!------------------------------------ HEADER ------------------------------------>
 
 
-    <!---------------------- CONETNIDO ---------------------->
+
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
 
     <main>
-        <h1>¡Inscripción grupal realizada con éxito!<br></h1>
-        <div class="a"><a href="./cursos.html">Ver mas cursos</a></div>
+
+        <div class="back">
+            <a href="../homePage/homePage.html">
+                <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
+            </a>
+        </div>
+
+        <section class="sectionWrap cursando">
+
+            <h1 class="sectionWrap__titulo">CURSANDO ACTUALMENTE</h1>
+
+            <div class="cursoWrap">
+                <div class="curso">
+                    <a href="./misCursos.html" class="curso__nombre">Introducción a HTML y CSS</a>
+                    <p class="curso__progreso">Progreso: 25%</p>
+                    <div class="curso__barra">
+                        <div class="curso__barra--progreso1"></div>
+                    </div>
+                </div>
+                <div class="curso">
+                    <a href="./misCursos.html" class="curso__nombre">Python desde cero</a>
+                    <p class="curso__progreso">Progreso: 0%</p>
+                    <div class="curso__barra">
+                        <div class="curso__barra--progreso2"></div>
+                    </div>
+                </div>
+                <div class="curso">
+                    <a href="./misCursos.html" class="curso__nombre">Diseño Web responsivo</a>
+                    <p class="curso__progreso">Progreso: 85%</p>
+                    <div class="curso__barra">
+                        <div class="curso__barra--progreso3"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="sectionWrap porCursar">
+
+            <h1 class="sectionWrap__titulo">POR CURSAR</h1>
+
+            <div class="cursoWrap">
+                <div class="curso">
+                    <a href="./misCursos.html" class="curso__nombre">SQL desde cero</a>
+                    <p class="curso__progreso">Fecha de inicio: 20/10/2025</p>
+                </div>
+                <div class="curso">
+                    <a href="./misCursos.html" class="curso__nombre">POO Java</a>
+                    <p class="curso__progreso">Fecha de inicio: 03/11/2025</p>
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <!---------------------- CONETNIDO ---------------------->
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
 
 
     <!------------------------------------ FOOTER ------------------------------------>

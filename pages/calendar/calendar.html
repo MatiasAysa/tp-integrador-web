@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cursos</title>
+  <title>Calendario</title>
 
   <!-- Otros links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../../css/globals/globalStyles.css">
   <link rel="stylesheet" href="../../css/globals/header.css">
   <link rel="stylesheet" href="../../css/globals/footer.css">
-  <link rel="stylesheet" href="../../css/courses/grupal-registration.css">
+  <link rel="stylesheet" href="../../css/calendar/calendar.css">
 
 </head>
 
@@ -80,94 +80,161 @@
     <!------------------------------------ HEADER ------------------------------------>
 
 
-  <!---------------------- CONETNIDO ---------------------->
+  <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
 
-  <main class="container">
+  <main class="mainCalendar">
 
     <div class="back">
-      <a href="./add.html">
+      <a href="../homePage/homePage.html">
         <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
       </a>
     </div>
 
-    <form class="form" method="get" action="../courses/carrito.html">
-      <h1 class="form__title">TITULO CURSO</h1>
-      <p class="form__subtitle">Inscripción grupal</p>
-      <section class="personas">
+    <section class="calendar">
 
-        <!--Persona 1-->
-        <article class="person">
-
-          <div class="person__header">
-            <span class="person__index">Persona 1</span>
-            <button type="button" class="btn btn--remove">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-
-          <div class="form__field">
-            <label class="form__label" for="persona1_nombre">
-              <p class="form__p">Ingrese el mail de la persona</p>
-            </label>
-            <input class="form__input" type="email" id="persona1_nombre" name="persona1_nombre" required maxlength="40">
-          </div>
-
-        </article>
-
-        <!--Persona 2-->
-        <article class="person">
-
-          <div class="person__header">
-            <span class="person__index">Persona 2</span>
-            <button type="button" class="btn btn--remove">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-
-          <div class="form__field">
-            <label class="form__label" for="persona1_nombre">
-              <p class="form__p">Ingrese el mail de la persona</p>
-            </label>
-            <input class="form__input" type="email" id="persona2_nombre" name="persona2_nombre" required maxlength="40">
-          </div>
-
-        </article>
-
-        <!--Persona3-->
-        <article class="person">
-
-          <div class="person__header">
-            <span class="person__index">Persona 3</span>
-            <button type="button" class="btn btn--remove">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-
-          <div class="form__field">
-            <label class="form__label" for="persona1_nombre">
-              <p class="form__p">Ingrese el mail de la persona</p>
-            </label>
-            <input class="form__input" type="email" id="persona3_nombre" name="persona3_nombre" required maxlength="40">
-          </div>
-
-        </article>
-
-      </section>
-
-      <button type="button" class="btn btn--add"> Agregar Persona</button>
-
-      <div class="form__total">
-        <p class="form__total-label">Total a pagar:</p>
-        <p class="form__total-amount">$10000.00</p>
+      <div class="calendar_header">
+        <div class="calender__arrows">
+          <a><i class="hidden fa-regular fa-circle-left"></i></a>
+          <h2 class="calendar_month">Octubre</h2>
+          <a href="./calendarNext.html"><i class="fa-regular fa-circle-right"></i></a>
+        </div>
+        <span class="calendar_year">2025</span>
       </div>
 
-      <button type="submit" class="form__button">INSCRIBIR</button>
+      <div class="calendar__weekdays">
+        <p>Lun</p>
+        <p>Mar</p>
+        <p>Mié</p>
+        <p>Jue</p>
+        <p>Vie</p>
+        <p>Sáb</p>
+        <p>Dom</p>
+      </div>
 
-    </form>
+      <ol class="calendar__days">
+        <li class="calendar__day empty"></li>
+        <li class="calendar__day empty"></li>
+        <li class="calendar__day ">
+          <h4>1</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>2</h4>
+        </li>
+        <li class="calendar__day ">
+          <h4>3</h4>
+        </li>
+        <li class="calendar__day calendar__day--rojo">
+          <h4>5</h4>
+          <div class="events">
+            <a href="./caducado.html" title="JAVA Programación orientada a objetos">
+              <h4 class="event">JAVA POO</h4>
+            </a>
+          </div>
+        </li>
+        <li class="calendar__day">
+          <h4>5</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>6</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>7</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>8</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>9</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>10</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>11</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>12</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>13</h4>
+        </li>
+        <li class="calendar__day calendar__day--rojo" ">
+          <h4>14</h4>
+          <div class="events">
+            <a href="./caducado.html" title="React">
+              <h4 class="event">React</h4>
+            </a>
+          </div>
+        </li>
+        <li class="calendar__day  today">
+          <h4>15</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>16</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>17</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>18</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>19</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>20</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>21</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>22</h4>
+          <div class="events">
+            <a href="../courses/Detalles de Curso 1.html" title="Curso de HTML y CSS nivel inicial">
+              <h4 class="event">HTML y CSS</h4>
+            </a>
+          </div>
+          <div class="events">
+            <a href="../courses/Detalles de Curso 1.html" title="Curso de HTML y CSS nivel inicial">
+              <h4 class="event">SQL</h4>
+            </a>
+          </div>
+        </li>
+        <li class="calendar__day">
+          <h4>23</h4>
+
+        </li>
+        <li class="calendar__day">
+          <h4>24</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>25</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>26</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>27</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>28</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>29</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>30</h4>
+        </li>
+        <li class="calendar__day">
+          <h4>31</h4>
+        </li>
+      </ol>
+
+    </section>
 
   </main>
 
-  <!------------------------- CONETNIDO ------------------------->
+  <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
 
 
   <!------------------------------------ FOOTER ------------------------------------>
@@ -227,7 +294,6 @@
 
   </footer>
   <!------------------------------------ FOOTER ------------------------------------>
-
 
 </body>
 

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giftcard</title>
+
+    <!-- Otros links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+    <link rel="stylesheet" href="../../css/giftcard/giftcard.css">
+    <link rel="stylesheet" href="../../css/globals/header.css">
+    <link rel="stylesheet" href="../../css/globals/footer.css">
+</head>
+
+<body>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+    <!---------- BARRA DE LA PAGINA ---------->
+    <header class="barra">
+        <!----Logo de Pagina---->
+        <div class="barra-logo">
+            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
+        </div>
+        <!---------------------->
+
+        <!---Barra de busqueda--->
+        <div class="barra-buscador">
+            <form action="" method="get" autocomplete="off" id="search-form">
+                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
+                <datalist id="cursos">
+                    <option value="Python & Data Science">
+                    <option value="HTML">
+                    <option value="JAVA"></option>
+
+                </datalist>
+                <!--Boton busqueda-->
+                <button type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <!------------------>
+            </form>
+        </div>
+        <!-------------------->
+
+        <!---Carrito--->
+        <div class="buscador-carrito">
+            <a href="../courses/carrito.html" aria-label="Carrito de compras">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>1</span>
+            </a>
+        </div>
+        <!------------->
+    </header>
+    <!------------------------------------------------>
+
+    <!----------------NAVEGADOR------------------>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../homePage/homePage.html">Inicio</a></li>
+            <li><a href="../contact/contact.html">Contacto</a></li>
+            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
+            <li><a href="../courses/cursos.html">Cursos</a></li>
+            <li><a href="../calendar/calendar.html">Calendario</a></li>
+            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
+            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
+        </ul>
+    </nav>
+    <!------------------------------------------------>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+
+
+    <!---------------- CONTENIDO PRINCIPAL ------------------>
+    <main class="main">
+
+        <section class="main__section section">
+
+            <!----Vista previa de la giftcard---->
+
+            <article class="article__vistaPrevia vistaPrevia">
+                <p class="titulos">VISTA PREVIA</p>
+                <div class="vistaPrevia__cardWrap cardWrap">
+                    <div class="cardWrap__card card">
+                        <div class="card__background background">
+                            <div class="background__montoWrap montoWrap">
+                                <p class="montoWrap__p">$0000</p>
+                            </div>
+                            <div class="background__p">
+                                <p class="background__p--titulo">GIFTCARD para</p>
+                                <p class="background__p--nombre">Nombre</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!----Vista previa de la giftcard---->
+
+
+            <!----Personalización de la giftcard---->
+
+            <article class="main__formWrap">
+                <form class="form" name="giftcard" action="./succesGiftcard.html">
+
+                    <p class="titulos">PERSONALIZACIÓN</p>
+
+                    <!----Destinatario---->
+                    <label class="form__texto texto">
+                        <p class="form__titulos">Nombre</p>
+                        <input class="texto__input" type="text">
+                    </label>
+                    <!----Destinatario---->
+
+
+                    <!----Color---->
+                    <div class="form__color">
+                        <div class="form__radioWrap radioWrap">
+                            <p class="form__titulos">Color</p>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__color labelRadio__color--azul"></div>
+                                <input type="radio" name="color" value="azul">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__color labelRadio__color--azul2"></div>
+                                <input type="radio" name="color" value="azul2">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__color labelRadio__color--amarillo"></div>
+                                <input type="radio" name="color" value="amarillo">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__color labelRadio__color--amarillo2"></div>
+                                <input type="radio" name="color" value="amarillo2">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__color labelRadio__color--blanco"></div>
+                                <input type="radio" name="color" value="blanco">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!----Color---->
+
+
+                    <!----Tamaño del texto---->
+                    <div class="form__fontSize">
+                        <p class="form__titulos">Tamaño del texto</p>
+                        <div class="form__radioWrap radioWrap">
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <p class="labelRadio__p">20px</p>
+                                <input type="radio" name="fontSize" value="azul">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <p class="labelRadio__p">28px</p>
+                                <input type="radio" name="fontSize" value="azul">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <p class="labelRadio__p">32px</p>
+                                <input type="radio" name="fontSize" value="azul">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <p class="labelRadio__p">48px</p>
+                                <input type="radio" name="fontSize" value="azul">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <p class="labelRadio__p">60px</p>
+                                <input type="radio" name="fontSize" value="azul">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!----Tamaño del texto---->
+
+
+                    <!----Monto---->
+                    <label class="form__texto texto">
+                        <p class="form__titulos">Monto $</p>
+                        <input class="texto__input" type="number" required>
+                    </label>
+                    <!----Monto---->
+
+
+                    <!----Ubicación del monto---->
+                    <div class="form__ubicacion">
+                        <div class="form__radioWrap radioWrap">
+                            <p class="form__titulos">Ubicación</p>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__ubicacion labelRadio__ubicacion--upRight"></div>
+                                <input type="radio" name="ubicacion" value="downRight">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__ubicacion labelRadio__ubicacion--upLeft"></div>
+                                <input type="radio" name="ubicacion" value="azul">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__ubicacion labelRadio__ubicacion--downRight"></div>
+                                <input type="radio" name="ubicacion" value="azul">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!----Ubicación del monto---->
+
+
+                    <!----Color de fondo---->
+                    <div class="form__background">
+                        <div class="form__radioWrap radioWrap">
+                            <p class="form__titulos">Fondo</p>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__background labelRadio__background--cr"></div>
+                                <input type="radio" name="background" value="clashroyale">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__background labelRadio__background--tq"></div>
+                                <input type="radio" name="background" value="teamqueso">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__background labelRadio__background--queso"></div>
+                                <input type="radio" name="background" value="queso">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!----Color de fondo---->
+
+                    <!----Email del destinatario---->
+                    <label class="form__texto texto">
+                        <input class="form__email" type="email" placeholder="Email del destinatario" required>
+                    </label>
+                    <!----Email del destinatario---->
+
+                    <button class="form__button">CONFIRMAR</button>
+                </form>
+            </article>
+
+            <!----Personalización de la giftcard---->
+
+
+        </section>
+
+
+        <!----Vista previa de la giftcard (en celular)---->
+
+        <section class="main__section">
+            <article class="article__vistaPrevia--cell vistaPrevia">
+                <p class="titulos">VISTA PREVIA</p>
+                <div class="vistaPrevia__cardWrap cardWrap">
+                    <div class="cardWrap__card card">
+                        <div class="card__background background">
+                            <div class="background__montoWrap montoWrap">
+                                <p class="montoWrap__p">$0000</p>
+                            </div>
+                            <div class="background__p">
+                                <p class="background__p--titulo">GIFTCARD para</p>
+                                <p class="background__p--nombre">Nombre</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!----Vista previa de la giftcard (en celular)---->
+
+    </main>
+    <!------------------------------------------------>
+
+
+    <!------------------------------------ FOOTER ------------------------------------>
+    <footer class="pie-pagina">
+
+        <div class="pie-pagina-contenido">
+            <div class="pie-pagina-nosotros">
+                <h4>Team Queso</h4>
+                <div class="pie-pagina-nosotros-miembros">
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i>Matias Aysa </li>
+                        <li>Dni:46987982</li>
+                        <li><i class="fa-solid fa-user"></i>Leon Rey </li>
+                        <li>Dni:46874342</li>
+                        <li><i class="fa-solid fa-user"></i>Eric Barrios</li>
+                        <li>Dni:46346348</li>
+                        <li><i class="fa-solid fa-user"></i>Ivan Gamboa </li>
+                        <li>Dni:47791152</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pie-pagina-navegacion">
+                <div class="pie-pagina-navegacion-soporte">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="../../pages/politicaDeCookies.html">Preguntas Frecuentes</a></li>
+                        <li><a href="">Contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="pie-pagina-navegacion-legal">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../../pages/politicaDeCookies.html">Terminos y Condiciones</a></li>
+                        <li><a href="../../pages/politicaDeCookies.html">Politica de Cookies</a></li>
+                        <li><a href="../../pages/politicaDeCookies.html">Politica de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pie-pagina-redes">
+                <h4>Redes Sociales</h4>
+                <div class="pie-pagina-redes-lista">
+                    <ul>
+                        <li><a href="https://www.instagram.com/teamquesogg/" target="_blank"><i
+                                    class="fa-brands fa-square-instagram"></i>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/TeamQueso/" target="_blank"><i
+                                    class="fa-brands fa-square-facebook"></i>Facebook</a></li>
+                        <li><a href="https://www.youtube.com/c/TeamQueso" target="_blank"><i
+                                    class="fa-brands fa-square-youtube"></i>Youtube</a></li>
+                        <li><a href="https://x.com/teamquesogg?lang=es" target="_blank"><i
+                                    class="fa-brands fa-square-x-twitter"></i>Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="pie-pagina-inferior">
+            <p>&copy; 2025 La Academia Team Queso. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+    <!------------------------------------ FOOTER ------------------------------------>
+</body>
+
+</html>

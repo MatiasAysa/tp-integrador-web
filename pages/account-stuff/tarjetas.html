@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario</title>
+    <title>Registrar tarjeta</title>
 
     <!-- Otros links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,12 +17,11 @@
     <link rel="stylesheet" href="../../css/globals/globalStyles.css">
     <link rel="stylesheet" href="../../css/globals/header.css">
     <link rel="stylesheet" href="../../css/globals/footer.css">
-    <link rel="stylesheet" href="../../css/courses/succes-registration.css">
+    <link rel="stylesheet" href="../../css/account-stuff/tarjetas.css">
 
 </head>
 
 <body>
-
     <!------------------------------------ HEADER ------------------------------------>
 
     <!---------- BARRA DE LA PAGINA ---------->
@@ -80,14 +79,82 @@
     <!------------------------------------ HEADER ------------------------------------>
 
 
-    <!---------------------- CONETNIDO ---------------------->
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
 
-    <main>
-        <h1>¡Inscripción grupal realizada con éxito!<br></h1>
-        <div class="a"><a href="./cursos.html">Ver mas cursos</a></div>
+    <main class="contenido">
+
+        <form action="./succes-tarjeta.html" method="get" class="formWrap">
+
+            <!-- <div class="back">
+                <a href="./my-profile.html">
+                    <button type="button" class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
+                </a>
+            </div> -->
+
+            <section class="formWrap__form">
+                <h2>INFORMACIÓN DE LA TARJETA</h2>
+
+                <div class="form__field">
+                    <label class="form__label" for="tipo">Tipo</label>
+                    <select class="form__input" id="tipo">
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                    </select>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="numero">Número de Tarjeta</label>
+                    <input class="form__input" type="number" id="numero" name="numero" maxlength="20" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="cvv">Código de Seguridad (CVV)</label>
+                    <input class="form__input form__input--small" type="password" id="cvv" name="cvv" maxlength="3"
+                        required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="vencimiento">Fecha de Vencimiento (MM/AA)</label>
+                    <input class="form__input form__input--date" type="month" id="vencimiento" name="vencimiento"
+                        placeholder="MM/AA" required>
+                </div>
+
+            </section>
+
+            <section class="formWrap__form">
+
+                <h2>INFORMACIÓN DE FACTURACIÓN</h2>
+
+                <div class="form__field">
+                    <label class="form__label" for="direccion">Dirección</label>
+                    <input class="form__input" type="text" id="direccion" name="direccion" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="cvv">Código postal</label>
+                    <input class="form__input form__input--small" type="number" id="cp" name="cp" maxlength="8"
+                        required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="nombre">Nombre del titular</label>
+                    <input class="form__input" type="text" id="name" name="nombre" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="nombre">Apellido del titular</label>
+                    <input class="form__input" type="text" id="surname" name="nombre" required>
+                </div>
+
+                <button type="submit" class="form__button">CONTINUAR</button>
+
+            </section>
+
+        </form>
+
     </main>
 
-    <!---------------------- CONETNIDO ---------------------->
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
 
 
     <!------------------------------------ FOOTER ------------------------------------>

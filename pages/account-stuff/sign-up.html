@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario</title>
+    <title>Registrarse</title>
 
     <!-- Otros links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="../../css/globals/globalStyles.css">
     <link rel="stylesheet" href="../../css/globals/header.css">
     <link rel="stylesheet" href="../../css/globals/footer.css">
-    <link rel="stylesheet" href="../../css/courses/succes-registration.css">
+    <link rel="stylesheet" href="../../css/account-stuff/log-in.css">
+    <link rel="stylesheet" href="../../css/account-stuff/sign-up.css">
 
 </head>
 
@@ -29,7 +30,7 @@
     <header class="barra">
         <!----Logo de Pagina---->
         <div class="barra-logo">
-            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
+            <a href="../../index.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
         </div>
         <!---------------------->
 
@@ -53,10 +54,9 @@
         <!-------------------->
 
         <!---Carrito--->
-        <div class="buscador-carrito">
-            <a href="../courses/carrito.html" aria-label="Carrito de compras">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>1</span>
+        <div class="buscador-carrito iniciarSesion">
+            <a href="./log-in.html" aria-label="Carrito de compras">
+                INICIAR SESIÓN
             </a>
         </div>
         <!------------->
@@ -66,13 +66,9 @@
     <!----------------NAVEGADOR------------------>
     <nav class="navbar">
         <ul>
-            <li><a href="../homePage/homePage.html">Inicio</a></li>
+            <li><a href="../../index.html">Inicio</a></li>
             <li><a href="../contact/contact.html">Contacto</a></li>
-            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
-            <li><a href="../courses/cursos.html">Cursos</a></li>
             <li><a href="../calendar/calendar.html">Calendario</a></li>
-            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
-            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
         </ul>
     </nav>
     <!------------------------------------------------>
@@ -80,14 +76,49 @@
     <!------------------------------------ HEADER ------------------------------------>
 
 
-    <!---------------------- CONETNIDO ---------------------->
+
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
 
     <main>
-        <h1>¡Inscripción grupal realizada con éxito!<br></h1>
-        <div class="a"><a href="./cursos.html">Ver mas cursos</a></div>
+        <section class="formWrap">
+            <form class="formWrap__form form" action="./succes-sign-up.html" method="get">
+
+                <div class="form__field">
+                    <label class="form__label" for="name">Ingresa tu nombre</label>
+                    <input class="form__input" type="text" id="name" name="name" maxlength="40" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="surname">Ingresa tu apellido </label>
+                    <input class="form__input" type="text" id="surname" name="surname" maxlength="40" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="dni">Ingresa tu DNI (sin puntos)</label>
+                    <input class="form__input form__input--number" type="number" id="dni" name="dni" min="1000"
+                        max="999999999" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="username">Ingresa un nombre de usuario</label>
+                    <input class="form__input" type="text" id="username" name="username" maxlength="40" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="password">Ingresa una contraseña</label>
+                    <input class="form__input" type="password" id="password" name="password" minlength="8"
+                        maxlength="20" required>
+                </div>
+
+                <button class="form__button">CONTINUAR</button>
+                <p class="formWrap__p">¿Ya tienes una cuenta? <a href="./log-in.html" class="formWrap__a">INICIÁ
+                        SESIÓN</a></p>
+            </form>
+        </section>
     </main>
 
-    <!---------------------- CONETNIDO ---------------------->
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
 
 
     <!------------------------------------ FOOTER ------------------------------------>
