@@ -1,0 +1,214 @@
+.mainCalendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3em 0 4em 0;
+}
+
+.back {
+  font-size: .8em;
+  margin-right: 55em;
+  margin-bottom: 36em;
+  position: absolute;
+}
+
+.botonBack {
+  height: 3em;
+  width: 3em;
+  padding: 0.5em;
+  border-radius: 50%;
+  color: var(--color-secundario);
+  background-color: var(--color-principalDegradado);
+  border-color: var(--color-secundarioDegradado);
+  font-size: 2em;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.botonBack:hover {
+  background-color: var(--color-secundarioDegradado);
+}
+
+.calendar {
+  background: #ffffff;
+  border-radius: 1em;
+  max-width: 50rem;
+  width: 95%;
+  overflow: auto;
+  color: #000000;
+  box-shadow: 1em 1em 1em var(--color-principalDegradado);
+}
+
+.calender__arrows {
+  display: flex;
+}
+
+.calender__arrows i {
+  color: var(--color-principal);
+  font-size: 1.5em;
+  margin: 0 1em;
+  margin-top: .65em;
+}
+
+.calender__arrows i:hover {
+  color: var(--color-principalDegradado);
+  cursor: pointer;
+}
+
+.hidden {
+  opacity: 0;
+  cursor: default;
+}
+
+.calendar_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--color-secundario);
+}
+
+.calendar_month {
+  font-size: 2.5em;
+}
+
+.calendar_year {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+
+.calendar__weekdays {
+  padding: 0 0.5em 0 0.5em;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+}
+
+.calendar__weekdays p {
+  font-size: 1em;
+  padding: 0.75em 0;
+}
+
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  list-style: none;
+  padding: 0.5em;
+}
+
+.calendar__day {
+  min-height: 3.125rem;
+  border-radius: 0.8em;
+  border: .0625rem solid #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.3em;
+  overflow: hidden;
+}
+
+.calendar__day .events {
+  margin-top: 0.3em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.calendar__day.empty {
+  border: none;
+  cursor: auto;
+}
+
+.calendar__day h4 {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+.calendar__day:not(.empty):hover {
+  background-color: #f1f1f1;
+}
+
+.calendar__day.today {
+  border: .125rem solid var(--color-secundario);
+}
+
+.calendar__day .events {
+  margin-top: 0.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  width: 100%;
+}
+
+
+.calendar__day .event {
+  background-color: var(--color-principal);
+  padding: 0.12em;
+  border-radius: 0.4em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calendar__day--rojo .event {
+  background-color: red;
+}
+
+.calendar__day .event:hover {
+  background-color: var(--color-secundario);
+}
+
+
+.calendar__day a {
+  text-decoration: none;
+}
+
+/* ------------- MEDIA QUERIES ------------- */
+
+@media (min-width:400px) {
+  .calendar__day {
+    min-height: 5rem;
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+  .back {
+    margin-top: -3.5em;
+  }
+}
+
+
+@media (max-width: 840px) {
+
+  .back {
+    margin-right: 80%;
+  }
+
+}
+
+/* --- CELUS ---*/
+@media (max-width: 481px) {
+
+  .back {
+    font-size: .6em;
+    margin-top: -30em;
+  }
+
+}
+
+@media (max-width: 399px) {
+
+  .back {
+    margin-top: -11em;
+  }
+
+}
+
+
+/* ------------- MEDIA QUERIES ------------- */
