@@ -5,42 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+
+    <!-- Otros links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/succes.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+    <link rel="stylesheet" href="../../css/globals/header.css">
+    <link rel="stylesheet" href="../../css/globals/footer.css">
+    <link rel="stylesheet" href="../../css/contact/succes-contact.css">
+
 </head>
 
 <body>
 
-    <!-------------------BARRA DE LA PAGINA ------------->
+    <!------------------------------------ HEADER ------------------------------------>
+
+    <!---------- BARRA DE LA PAGINA ---------->
     <header class="barra">
         <!----Logo de Pagina---->
         <div class="barra-logo">
-            <a href="../index.html"><img src="../img/iconoPage.png" alt="Logo Team Queso"></a>
+            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
         </div>
         <!---------------------->
 
         <!---Barra de busqueda--->
         <div class="barra-buscador">
-            <form action="/buscar" method="get" autocomplete="off" id="search-form">
+            <form action="" method="get" autocomplete="off" id="search-form">
                 <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
                 <datalist id="cursos">
-                    <option value="Java Developer Professional">
                     <option value="Python & Data Science">
-                    <option value="SQL Master: Bases de Datos">
-                    <option value="JavaScript Moderno">
-                    <option value="React.js desde Cero">
-                    <option value="Node.js Backend">
-                    <option value="Diseño UX/UI">
-                    <option value="Machine Learning">
-                    <option value="DevOps Fundamentals">
-                    <option value="Mobile Apps con Flutter">
+                    <option value="HTML">
+                    <option value="JAVA"></option>
+
                 </datalist>
                 <!--Boton busqueda-->
                 <button type="submit" aria-label="Buscar">
@@ -53,7 +54,7 @@
 
         <!---Carrito--->
         <div class="buscador-carrito">
-            <a href="/carrito" aria-label="Carrito de compras">
+            <a href="../courses/carrito.html" aria-label="Carrito de compras">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>1</span>
             </a>
@@ -65,21 +66,33 @@
     <!----------------NAVEGADOR------------------>
     <nav class="navbar">
         <ul>
-            <li><a href="./contact.html">Contacto</a></li>
-            <li><a href="./giftcard.html">Giftcard</a></li>
-            <li><a href="./calendar.html">Calendario</a></li>
-
+            <li><a href="../homePage/homePage.html">Inicio</a></li>
+            <li><a href="../contact/contact.html">Contacto</a></li>
+            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
+            <li><a href="../courses/cursos.html">Cursos</a></li>
+            <li><a href="../calendar/calendar.html">Calendario</a></li>
+            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
+            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
         </ul>
     </nav>
     <!------------------------------------------------>
 
+    <!------------------------------------ HEADER ------------------------------------>
+
+
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
     <main>
         <h1>¡Gracias!<br>Recibimos tu mensaje.</h1>
         <p>Te contactaremos pronto.</p>
-        <div class="a"><a href="../index.html">Volver al inicio</a></div>
+        <div class="a"><a href="../homePage/homePage.html">Volver al inicio</a></div>
     </main>
 
-    <!---------------Pie de pagina-------------->
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
+
+
+    <!------------------------------------ FOOTER ------------------------------------>
     <footer class="pie-pagina">
 
         <div class="pie-pagina-contenido">
@@ -87,14 +100,10 @@
                 <h4>Team Queso</h4>
                 <div class="pie-pagina-nosotros-miembros">
                     <ul>
-                        <li><i class="fa-solid fa-user"></i>Matias Aysa </li>
-                        <li>Dni:46987982</li>
-                        <li><i class="fa-solid fa-user"></i>Leon Rey </li>
-                        <li>Dni:46874342</li>
-                        <li><i class="fa-solid fa-user"></i>Eric Barrios</li>
-                        <li>Dni:46346348/li>
-                        <li><i class="fa-solid fa-user"></i>Ivan Gamboa </li>
-                        <li>Dni:47791152</li>
+                        <li><i class="fa-solid fa-user"></i>Matias&nbsp;Aysa - Dni:&nbsp;46987982</li>
+                        <li><i class="fa-solid fa-user"></i>León&nbsp;Rey - Dni:&nbsp;46874342</li>
+                        <li><i class="fa-solid fa-user"></i>Eric&nbsp;Barrios - Dni:&nbsp;46346348</li>
+                        <li><i class="fa-solid fa-user"></i>Ivan&nbsp;Gamboa&nbsp;- Dni:&nbsp;47791152</li>
                     </ul>
                 </div>
             </div>
@@ -103,16 +112,16 @@
                 <div class="pie-pagina-navegacion-soporte">
                     <h4>Soporte</h4>
                     <ul>
-                        <li><a href="../pages/politicaDeCookies.html">Preguntas Frecuentes</a></li>
+                        <li><a href="../pages/footer/soporteYlegal.html">Preguntas Frecuentes</a></li>
                         <li><a href="">Contactanos</a></li>
                     </ul>
                 </div>
                 <div class="pie-pagina-navegacion-legal">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="../pages/politicaDeCookies.html">Terminos y Condiciones</a></li>
-                        <li><a href="../pages/politicaDeCookies.html">Politica de Cookies</a></li>
-                        <li><a href="../pages/politicaDeCookies.html">Politica de Privacidad</a></li>
+                        <li><a href="../pages/footer/soporteYlegal.html">Terminos y Condiciones</a></li>
+                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Cookies</a></li>
+                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Privacidad</a></li>
                     </ul>
                 </div>
             </div>
@@ -139,6 +148,7 @@
         </div>
 
     </footer>
+    <!------------------------------------ FOOTER ------------------------------------>
 </body>
 
 </html>
