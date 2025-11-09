@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles Del Curso</title>
+    <link rel="stylesheet" href="../../css/courses/EstilosDetallesCurso.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/globals/header.css">
+    <link rel="stylesheet" href="../../css/globals/footer.css">
+</head>
+
+<body>
+    <!------------------------------------ HEADER ------------------------------------>
+
+    <!---------- BARRA DE LA PAGINA ---------->
+    <header class="barra">
+        <!----Logo de Pagina---->
+        <div class="barra-logo">
+            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
+        </div>
+        <!---------------------->
+
+        <!---Barra de busqueda--->
+        <div class="barra-buscador">
+            <form action="" method="get" autocomplete="off" id="search-form">
+                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
+                <datalist id="cursos">
+                    <option value="Python & Data Science">
+                    <option value="HTML">
+                    <option value="JAVA"></option>
+
+                </datalist>
+                <!--Boton busqueda-->
+                <button type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <!------------------>
+            </form>
+        </div>
+        <!-------------------->
+
+        <!---Carrito--->
+        <div class="buscador-carrito">
+            <a href="../courses/carrito.html" aria-label="Carrito de compras">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>1</span>
+            </a>
+        </div>
+        <!------------->
+    </header>
+    <!------------------------------------------------>
+
+    <!----------------NAVEGADOR------------------>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../homePage/homePage.html">Inicio</a></li>
+            <li><a href="../contact/contact.html">Contacto</a></li>
+            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
+            <li><a href="../courses/cursos.html">Cursos</a></li>
+            <li><a href="../calendar/calendar.html">Calendario</a></li>
+            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
+            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
+        </ul>
+    </nav>
+    <!------------------------------------------------>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+
+    <main>
+        <section>
+            <section class="contenedoresPresentacion">
+                <div class="contenedorImagen">
+                    <img src="../../img/cursos/reactCurso.jpg" alt="Imagen de Curso HTML y CSS" class="contenedorImagen__imagenCurso">
+                    <div class="contenedorImagen__textoPresentacion">
+                        <h2 class="subtitulo">nivel avanzado </h2>
+                        <h1 class="titulo">Curso de <br>React</h1>
+                    </div>
+                </div>
+
+                <div class="contenedorTexto">
+                    <div class="contenedorTexto__duracionCurso">
+                        <h2>Duracion del Curso:</h2>
+                        16 meses
+                    </div>
+                    <div class="contenedorTexto__modalidadCurso">
+                        <h2>Modalidad:</h2>
+                        Virtual
+                    </div>
+                    <div class="contenedorTexto__descripcionCurso">
+                        <h2>Descripcion:</h2>
+                        React es uno de las bibliotecas de javascript más importantes en la actualidad. Su
+                        sintaxis sencilla y clara lo convierte en una excelente opción tanto para principiantes como
+                        para profesionales. En este curso aprenderás desde los conceptos básicos hasta herramientas
+                        avanzadas que te permitirán desarrollar aplicaciones, automatizar tareas y trabajar con datos de
+                        manera eficiente. <br><br>Este curso está diseñado para que avances paso a paso, con ejemplos
+                        claros y ejercicios que consolidarán tus conocimientos. Al finalizar, tendrás las bases
+                        necesarias para crear tus propios proyectos y seguir creciendo en el mundo de la programación.
+                    </div>
+                    <div class="contenedorTexto__VerPrograma">
+                        <a href="#seccionPrograma"><button name="VerPrograma" id="VerPrograma" class="boton">Ver
+                                Programa</button></a>
+                    </div>
+                    <div class="contenedorCompra">
+                        <div class="flex-row">
+                            <h2>Valor Del curso: $29,990<del class="contenedorCompra__textoChico">$59,990</del></h2>
+                        </div><a href="./add.html">
+                        <button name="inscribirme" id="inscribirme" class="boton"> inscribirme</button></a>
+                    </div>
+                </div>
+
+            </section>
+            <section class="contenedoresInfo">
+                <section class="contenedoresInfo__infoPrincipal">
+                    <div class="objetivo">
+                        <div class="tituloInfo">
+                            <h1> Objetivos de la Cursada</h1>
+                        </div>
+                        <div class="objetivo__texto">
+                            <div>
+                                <p>El objetivo principal de este curso es proporcionar a los participantes los
+                                    conocimientos y habilidades necesarios para programar en React de manera efectiva.
+                                    Al finalizar, los estudiantes serán capaces de comprender la sintaxis y estructura
+                                    del lenguaje, desarrollar programas funcionales, aplicar conceptos de programación
+                                    orientada a objetos, manipular datos y utilizar bibliotecas populares para análisis
+                                    y visualización.<br><br> Algunos de los temas que se abordaran son:</p>
+                            </div>
+                            <div class="objetivo__lista">
+                                <ul>
+                                    <li class="objetivo__lista--espacio">Comprender los fundamentos de React: sintaxis,
+                                        estructuras de control, funciones y manejo de datos.</li>
+                                    <li class="objetivo__lista--espacio">Aplicar programación orientada a objetos para
+                                        crear soluciones modulares y escalables.</li>
+                                    <li class="objetivo__lista--espacio">Manipular y analizar datos utilizando listas,
+                                        diccionarios y archivos.</li>
+                                    <li class="objetivo__lista--espacio">Utilizar bibliotecas esenciales como pandas,
+                                        numpy y matplotlib para análisis y visualización.</li>
+                                    <li class="objetivo__lista--espacio">Desarrollar scripts y proyectos prácticos que
+                                        resuelvan problemas reales.</li>
+                                    <li class="objetivo__lista--espacio">Adoptar buenas prácticas de programación para
+                                        escribir código limpio, eficiente y mantenible.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tituloInfo" name="seccionPrograma" id="seccionPrograma">
+                        <h1>Programa Educativo</h1>
+                        <div class="programaEdu">
+                            <div class="programa__niveles">
+                                <div class="niveles__divide">
+                                    <h2 class="niveles__divide--numNivel">nivel 1</h2>
+                                </div>
+                                <div class="niveles__divide">
+                                    <div class="niveles__divide--column">
+                                        <div class="niveles__divide--column-1">
+                                            <h3>Primer <br> Cuatrimestre</h3>
+                                        </div>
+                                    </div>
+                                    <div class="niveles__divide--column">
+                                        <div class="niveles__divide--column-2">
+                                            <ul>
+                                                <li>Introducción a la programación y al lenguaje React. </li>
+                                                <li>Sintaxis básica: variables, tipos de datos, operadores.</li>
+                                                <li>Proyecto práctico: Calculadora y scripts simples.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="niveles__divide">
+                                    <div class="niveles__divide--column">
+                                        <div class="niveles__divide--column-1">
+                                            <h3>Segundo <br> Cuatrimestre</h3>
+                                        </div>
+                                    </div>
+                                    <div class="niveles__divide--column">
+                                        <div class="niveles__divide--column-2">
+                                            <ul>
+                                                <li>Listas, tuplas, diccionarios y conjuntos.</li>
+                                                <li>Comprensiones de listas y expresiones lambda.
+                                                </li>
+                                                <li>Introducción a la Programación Orientada a Objetos</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="programa__niveles">
+                                <div class="niveles__divide">
+                                    <h2 class="niveles__divide--numNivel">nivel 2</h2>
+                                </div>
+                                <div class="niveles__divide">
+                                    <div class="niveles__divide--column">
+                                        <div class="niveles__divide--column-1">
+                                            <h3>Tercer <br> Cuatrimestre</h3>
+                                        </div>
+                                    </div>
+                                    <div class="niveles__divide--column">
+                                        <div class="niveles__divide--column-2">
+                                            <ul>
+                                                <li>Librerías esenciales: NumPy, Pandas.</li>
+                                                <li>Análisis y manipulación de datos.</li>
+                                                <li>Introducción a la automatización con os y shutil.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="niveles__divide">
+                                    <div class="niveles__divide--column">
+                                        <div class="niveles__divide--column-1">
+                                            <h3>Cuarto <br> Cuatrimestre</h3>
+                                        </div>
+                                    </div>
+                                    <div class="niveles__divide--column">
+                                        <div class="niveles__divide--column-2">
+                                            <ul>
+                                                <li>Programación Orientada a Objetos avanzada.</li>
+                                                <li>Desarrollo de aplicaciones web con Flask o FastAPI.
+                                                </li>
+                                                <li>Proyecto final: Aplicación completa</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <aside class="contenedoresInfo__infoSecundaria">
+                    <div>
+
+                    </div>
+                    <div class="cursosAlt">
+                        <img src="../../img/courses/Java.png" alt="Imagen de Curso Alt" class="cursosAlt__imagen">
+                        <h5 class="cursosAlt__texto">Curso de Java</h5>
+                    </div>
+                    <div class="cursosAlt">
+                        <img src="../../img/courses/SQL.jpg" alt="Imagen de Curso Alt" class="cursosAlt__imagen">
+                        <h5 class="cursosAlt__texto">Curso de SQL</h5>
+                    </div>
+                    <div class="cursosAlt">
+                        <a href="./Detalles de Curso 1.html" target="_self">
+                            <img src="../../img/courses/jpeg.jpg" alt="Imagen de Curso Alt" class="cursosAlt__imagen">
+                            <h5 class="cursosAlt__texto"> HTML y CSS</h5>
+                        </a>
+                    </div>
+                </aside>
+
+            </section>
+        </section>
+
+    </main>
+
+    <!------------------------------------ FOOTER ------------------------------------>
+    <footer class="pie-pagina">
+
+        <div class="pie-pagina-contenido">
+            <div class="pie-pagina-nosotros">
+                <h4>Team Queso</h4>
+                <div class="pie-pagina-nosotros-miembros">
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i>Matias&nbsp;Aysa - Dni:&nbsp;46987982</li>
+                        <li><i class="fa-solid fa-user"></i>León&nbsp;Rey - Dni:&nbsp;46874342</li>
+                        <li><i class="fa-solid fa-user"></i>Eric&nbsp;Barrios - Dni:&nbsp;46346348</li>
+                        <li><i class="fa-solid fa-user"></i>Ivan&nbsp;Gamboa&nbsp;- Dni:&nbsp;47791152</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pie-pagina-navegacion">
+                <div class="pie-pagina-navegacion-soporte">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="../pages/footer/soporteYlegal.html">Preguntas Frecuentes</a></li>
+                        <li><a href="">Contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="pie-pagina-navegacion-legal">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../pages/footer/soporteYlegal.html">Terminos y Condiciones</a></li>
+                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Cookies</a></li>
+                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pie-pagina-redes">
+                <h4>Redes Sociales</h4>
+                <div class="pie-pagina-redes-lista">
+                    <ul>
+                        <li><a href="https://www.instagram.com/teamquesogg/" target="_blank"><i
+                                    class="fa-brands fa-square-instagram"></i>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/TeamQueso/" target="_blank"><i
+                                    class="fa-brands fa-square-facebook"></i>Facebook</a></li>
+                        <li><a href="https://www.youtube.com/c/TeamQueso" target="_blank"><i
+                                    class="fa-brands fa-square-youtube"></i>Youtube</a></li>
+                        <li><a href="https://x.com/teamquesogg?lang=es" target="_blank"><i
+                                    class="fa-brands fa-square-x-twitter"></i>Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="pie-pagina-inferior">
+            <p>&copy; 2025 La Academia Team Queso. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+    <!------------------------------------ FOOTER ------------------------------------>
+
+</body>
+
+</html>

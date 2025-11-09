@@ -119,6 +119,14 @@
     background-color: var(--color-secundario);
 }
 
+.iniciarSesion:hover {
+    background-color: initial;
+}
+
+.iniciarSesion a:hover {
+    color: var(--color-secundario);
+}
+
 .buscador-carrito a i {
     font-size: 1em;
 }
@@ -139,7 +147,6 @@
 .navbar {
     display: flex;
     width: 100%;
-    height: 2em;
     background-color: white;
 }
 
@@ -148,7 +155,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
+    padding: 0.7em 0;
     gap: 1em;
     width: 100%;
     height: 100%;
@@ -176,7 +183,7 @@
 /*-------------------------------------------*/
 
 /*CELUS*/
-@media (max-width: 480px) {
+@media (max-width: 484px) {
 
     /* HEADER*/
     .barra {
@@ -216,7 +223,7 @@
     }
 
     .barra-buscador button i {
-    font-size: 0.8em;
+        font-size: 0.8em;
     }
 
     .buscador-carrito {
@@ -239,10 +246,21 @@
         /* top: 12%;
         left: 70%; */
     }
+
+    .navbar ul {
+        padding: 0.7em 0.5em;
+        gap: 0.8em;
+        flex-wrap: wrap;
+
+    }
+
+    .navbar ul li a {
+        font-size: 0.9em;
+    }
 }
 
 /*TABLETS*/
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 485px) and (max-width: 768px) {
 
     /*Header*/
     .barra {
@@ -260,7 +278,7 @@
     }
 
     .barra-buscador button i {
-    font-size: 0.7em;
+        font-size: 0.7em;
     }
 
     input::placeholder {
@@ -271,5 +289,16 @@
         /* top: 7%;
         left: 78%; */
         font-size: 0.6em;
+    }
+
+    .navbar ul {
+        padding: 0.7em 0;
+        gap: 0.8em;
+        flex-wrap: wrap;
+
+    }
+
+    .navbar ul li a {
+        font-size: 0.9em;
     }
 }

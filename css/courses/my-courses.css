@@ -1,0 +1,105 @@
+main {
+    padding: 5em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.back {
+    font-size: 0.5em;
+    margin-right: 113em;
+    margin-top: 1.6em;
+    position: absolute;
+}
+
+.botonBack {
+    height: 2.5em;
+    width: 2.5em;
+    padding: 0.5em;
+    border-radius: 50%;
+    color: var(--color-secundario);
+    background-color: var(--color-principalDegradado);
+    border-color: var(--color-secundarioDegradado);
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.botonBack:hover {
+    background-color: var(--color-secundarioDegradado);
+}
+
+.sectionWrap {
+    background-color: var(--color-principalDegradado);
+    padding: 4em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.sectionWrap__titulo {
+    color: var(--color-secundario);
+}
+
+.cursoWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.curso__nombre {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.curso__barra {
+    width: 100%;
+    height: .6em;
+    border-radius: 15px;
+    background-color: var(--color-terciario);
+}
+
+.curso__barra--progreso1 {
+    width: 25%;
+    height: .6em;
+    border-radius: 15px;
+    background-color: var(--color-secundario);
+}
+
+.curso__barra--progreso3 {
+    width: 80%;
+    height: .6em;
+    border-radius: 15px;
+    background-color: var(--color-secundario);
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+@media (max-width: 970px) { /* para que el boton de volver quede en la esquina a pesar del wrap*/
+
+    main .back {
+        margin-right: 68em;
+    }
+    
+    .sectionWrap{
+        width: 40em;
+    }
+
+}
+
+/* --- CELUS ---*/
+@media (max-width: 480px) {
+
+    .sectionWrap{
+        width: 30em;
+    }
+
+        main .back {
+        margin-right: 50em;
+    }
+
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */

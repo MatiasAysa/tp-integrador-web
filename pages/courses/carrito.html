@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario</title>
- 
+    <title>Carrito</title>
+
     <!-- Otros links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="../../css/globals/globalStyles.css">
     <link rel="stylesheet" href="../../css/globals/header.css">
     <link rel="stylesheet" href="../../css/globals/footer.css">
-    <link rel="stylesheet" href="../../css/calendar/caducado.css">
-
+    <link rel="stylesheet" href="../../css/courses/carrito.css">
 </head>
 
 <body>
@@ -69,7 +68,7 @@
             <li><a href="../homePage/homePage.html">Inicio</a></li>
             <li><a href="../contact/contact.html">Contacto</a></li>
             <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
-            <li><a href="../courses/cursos.html">Cursos</a></li>            
+            <li><a href="../courses/cursos.html">Cursos</a></li>
             <li><a href="../calendar/calendar.html">Calendario</a></li>
             <li><a href="../courses/my-courses.html">Mis cursos</a></li>
             <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
@@ -80,18 +79,97 @@
     <!------------------------------------ HEADER ------------------------------------>
 
 
-
     <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
-
     <main class="main">
-        <section class="section">
-            <h1 class="section__h1">Curso caducado</h1>
-            <a class="section__a" href="./calendar.html">VOLVER AL CALENDARIO</a>
-        </section>
+        <div class="main_titulo">
+            <h1>Carrito <i class="fa-solid fa-cart-arrow-down"></i></h1>
+        </div>
+        <div class="main_contenido">
+            <div class="main_productosCarrito">
+                <section class="main_producto">
+                    <div class="divProductoImagen">
+                        <img class="imagenProducto" src="../../img/cursos/cursoJAVA.jpg" alt="Imagen de producto">
+                    </div>
+                    <div class="productoDescripcion">
+                        <span class="descripcionIcono"><i class="fa-solid fa-user"></i></span>
+                        <div class="productoDescripcionInfo">
+                            <h4>Desarrollador de Java</h4>
+                            <span>Profesor : Gustavito Goat</span>
+                            <span>Horas : 35.5</span>
+                            <span class="InfoEliminar">Eliminar</span>
+                        </div>
+                        <div class="productoDescripcion_precio">
+                            <span>$3000</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="main_producto">
+                    <div class="divProductoImagen">
+                        <img class="imagenProducto" src="../../img/cursos/cursoJAVA.jpg" alt="Imagen de producto">
+                    </div>
+                    <div class="productoDescripcion">
+                        <span class="descripcionIcono"><i class="fa-solid fa-user"></i></span>
+                        <div class="productoDescripcionInfo">
+                            <h4>Desarrollador de Java</h4>
+                            <span>Profesor : Gustavito Goat</span>
+                            <span>Horas : 35.5</span>
+                            <span class="InfoEliminar">Eliminar</span>
+                        </div>
+                        <div class="productoDescripcion_precio">
+                            <span>$3000</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="main_producto">
+                    <div class="divProductoImagen">
+                        <img class="imagenProducto" src="../../img/cursos/cursoJAVA.jpg" alt="Imagen de producto">
+                    </div>
+                    <div class="productoDescripcion">
+                        <span class="descripcionIcono"><i class="fa-solid fa-users"></i></span>
+                        <div class="productoDescripcionInfo">
+                            <h4>Desarrollador de Java</h4>
+                            <span>Profesor : Gustavito Goat</span>
+                            <span>Horas : 35.5</span>
+                            <span>Participantes : 3</span>
+                            <span>Precio c/u : $3000</span>
+                            <span class="InfoEliminar">Eliminar</span>
+                        </div>
+                        <div class="productoDescripcion_precio">
+                            <span>$9000</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="main_montoTotal">
+                <h3>Resumen de compra</h3>
+                <div class="montoTotal_Descripcion">
+                    <div class="montoTotal_elemento">
+                        <span>Cantidad de curso/s</span>
+                        <span>3</span>
+                    </div>
+                    <div class="montoTotal_elemento">
+                        <span>Subtotal</span>
+                        <span id="subtotal"><s>$30.000</s>$17.500</span>
+                    </div>
+                    <div class="montoTotal_elemento">
+                        <span>Descuento</span>
+                        <span>-23%</span>
+                    </div>
+                    <div class="montoTotal_elemento total">
+                        <span>Total</span>
+                        <span>$10000</span>
+                    </div>
+                    <div class="montoTotal_elementoComprar">
+                        <a href="./metodoPago.html">Continuar compra</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
-
 
 
     <!------------------------------------ FOOTER ------------------------------------>
@@ -102,10 +180,14 @@
                 <h4>Team Queso</h4>
                 <div class="pie-pagina-nosotros-miembros">
                     <ul>
-                        <li><i class="fa-solid fa-user"></i>Matias&nbsp;Aysa - Dni:&nbsp;46987982</li>
-                        <li><i class="fa-solid fa-user"></i>León&nbsp;Rey - Dni:&nbsp;46874342</li>
-                        <li><i class="fa-solid fa-user"></i>Eric&nbsp;Barrios - Dni:&nbsp;46346348</li>
-                        <li><i class="fa-solid fa-user"></i>Ivan&nbsp;Gamboa&nbsp;- Dni:&nbsp;47791152</li>
+                        <li><i class="fa-solid fa-user"></i>Matias Aysa </li>
+                        <li>Dni:46987982</li>
+                        <li><i class="fa-solid fa-user"></i>Leon Rey </li>
+                        <li>Dni:46874342</li>
+                        <li><i class="fa-solid fa-user"></i>Eric Barrios</li>
+                        <li>Dni:46346348</li>
+                        <li><i class="fa-solid fa-user"></i>Ivan Gamboa </li>
+                        <li>Dni:47791152</li>
                     </ul>
                 </div>
             </div>
@@ -114,16 +196,16 @@
                 <div class="pie-pagina-navegacion-soporte">
                     <h4>Soporte</h4>
                     <ul>
-                        <li><a href="../pages/footer/soporteYlegal.html">Preguntas Frecuentes</a></li>
+                        <li><a href="../pages/politicaDeCookies.html">Preguntas Frecuentes</a></li>
                         <li><a href="">Contactanos</a></li>
                     </ul>
                 </div>
                 <div class="pie-pagina-navegacion-legal">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="../pages/footer/soporteYlegal.html">Terminos y Condiciones</a></li>
-                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Cookies</a></li>
-                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Privacidad</a></li>
+                        <li><a href="../pages/politicaDeCookies.html">Terminos y Condiciones</a></li>
+                        <li><a href="../pages/politicaDeCookies.html">Politica de Cookies</a></li>
+                        <li><a href="../pages/politicaDeCookies.html">Politica de Privacidad</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,7 +233,6 @@
 
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
-
 </body>
 
 </html>

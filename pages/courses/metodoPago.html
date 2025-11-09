@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario</title>
- 
+    <title>Carrito</title>
+
     <!-- Otros links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +17,10 @@
     <link rel="stylesheet" href="../../css/globals/globalStyles.css">
     <link rel="stylesheet" href="../../css/globals/header.css">
     <link rel="stylesheet" href="../../css/globals/footer.css">
-    <link rel="stylesheet" href="../../css/calendar/caducado.css">
-
+    <link rel="stylesheet" href="../../css/courses/metodoPago.css">
 </head>
 
 <body>
-
     <!------------------------------------ HEADER ------------------------------------>
 
     <!---------- BARRA DE LA PAGINA ---------->
@@ -69,7 +67,7 @@
             <li><a href="../homePage/homePage.html">Inicio</a></li>
             <li><a href="../contact/contact.html">Contacto</a></li>
             <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
-            <li><a href="../courses/cursos.html">Cursos</a></li>            
+            <li><a href="../courses/cursos.html">Cursos</a></li>
             <li><a href="../calendar/calendar.html">Calendario</a></li>
             <li><a href="../courses/my-courses.html">Mis cursos</a></li>
             <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
@@ -78,22 +76,53 @@
     <!------------------------------------------------>
 
     <!------------------------------------ HEADER ------------------------------------>
+    <main>
+        <div class="main_titulo">
+            <h1>Elegi como pagar <i class="fa-solid fa-hand-holding-dollar"></i></h1>
+        </div>
+        <div class="main_contenido">
+            <form action="./resumenCompra.html" method="get" class="main_metodoPago">
+                <h3>Selecciona un metodo de pago</h3>
+                <div class="metodoPago_Opciones">
+                    <section class="metodo_opcion">
+                        <input type="radio" name="metodo-pago" id="visa1" required>
+                        <label for="visa1">
+                            <i class="fa-brands fa-cc-visa"></i>
+                            Visa terminada en 4512
+                        </label>
+                    </section>
+                    <section class="metodo_opcion">
+                        <input type="radio" name="metodo-pago" id="mastercard" required>
+                        <label for="mastercard">
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                            Mastercard terminada en 4512
+                        </label>
+                    </section>
+                </div>
+                <a href="../account-stuff/tarjetas.html" class="boton_agregar">
+                    Agregar Metodo de Pago
+                </a>
+                <button type="submit" class="boton_pagar">
+                    <i class="fa-solid fa-lock"></i>
+                    Continuar con el pago
+                </button>
+            </form>
 
-
-
-    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
-
-    <main class="main">
-        <section class="section">
-            <h1 class="section__h1">Curso caducado</h1>
-            <a class="section__a" href="./calendar.html">VOLVER AL CALENDARIO</a>
-        </section>
+            <div class="main_montoTotal">
+                <h3>Resumen de compra</h3>
+                <div class="montoTotal_Descripcion">
+                    <div class="montoTotal_elemento">
+                        <span>Cantidad de producto/s</span>
+                        <span>3</span>
+                    </div>
+                    <div class="montoTotal_elemento total">
+                        <span>Pagas</span>
+                        <span>$10000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
-
-
-
     <!------------------------------------ FOOTER ------------------------------------>
     <footer class="pie-pagina">
 
@@ -102,10 +131,14 @@
                 <h4>Team Queso</h4>
                 <div class="pie-pagina-nosotros-miembros">
                     <ul>
-                        <li><i class="fa-solid fa-user"></i>Matias&nbsp;Aysa - Dni:&nbsp;46987982</li>
-                        <li><i class="fa-solid fa-user"></i>León&nbsp;Rey - Dni:&nbsp;46874342</li>
-                        <li><i class="fa-solid fa-user"></i>Eric&nbsp;Barrios - Dni:&nbsp;46346348</li>
-                        <li><i class="fa-solid fa-user"></i>Ivan&nbsp;Gamboa&nbsp;- Dni:&nbsp;47791152</li>
+                        <li><i class="fa-solid fa-user"></i>Matias Aysa </li>
+                        <li>Dni:46987982</li>
+                        <li><i class="fa-solid fa-user"></i>Leon Rey </li>
+                        <li>Dni:46874342</li>
+                        <li><i class="fa-solid fa-user"></i>Eric Barrios</li>
+                        <li>Dni:46346348</li>
+                        <li><i class="fa-solid fa-user"></i>Ivan Gamboa </li>
+                        <li>Dni:47791152</li>
                     </ul>
                 </div>
             </div>
@@ -114,16 +147,16 @@
                 <div class="pie-pagina-navegacion-soporte">
                     <h4>Soporte</h4>
                     <ul>
-                        <li><a href="../pages/footer/soporteYlegal.html">Preguntas Frecuentes</a></li>
+                        <li><a href="../pages/politicaDeCookies.html">Preguntas Frecuentes</a></li>
                         <li><a href="">Contactanos</a></li>
                     </ul>
                 </div>
                 <div class="pie-pagina-navegacion-legal">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="../pages/footer/soporteYlegal.html">Terminos y Condiciones</a></li>
-                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Cookies</a></li>
-                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Privacidad</a></li>
+                        <li><a href="../pages/politicaDeCookies.html">Terminos y Condiciones</a></li>
+                        <li><a href="../pages/politicaDeCookies.html">Politica de Cookies</a></li>
+                        <li><a href="../pages/politicaDeCookies.html">Politica de Privacidad</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,7 +184,6 @@
 
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
-
 </body>
 
 </html>

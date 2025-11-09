@@ -1,0 +1,127 @@
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.main_confirmacion {
+    margin: 2em auto;
+    padding: 2em;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+}
+
+.confirmacion_exito {
+    width: 100%;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.exito_circulo {
+    width: 6em;
+    height: 6em;
+    border-radius: 50px;
+    background: #00a650;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: animacionCirculo;
+    animation-duration: 1s;
+}
+
+.exito_circulo i {
+    font-size: 2em;
+    animation-name: animacionCirculo;
+    animation-duration: 1s;
+}
+
+.confirmacion_mensaje h2 {
+    color: #00a650;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    animation-name: animacionComienzo;
+    animation-duration: 1.5s;
+}
+
+.confirmacion_mensaje p {
+    color: var(--color-principal);
+    font-size: 1.1em;
+    animation-name: animacionComienzo;
+    animation-duration: 2s;
+    margin-bottom: 0.5em;
+}
+
+.numero_orden {
+    animation-name: animacionComienzo;
+    animation-duration: 2.5s;
+}
+
+.confirmacion_boton {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+    animation-name: animacionComienzo;
+    animation-duration: 3s;
+    justify-content: center;
+}
+
+.btn-primario,
+.btn-secundario {
+    padding: 1em 2em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.btn-primario {
+    background: var(--color-principal);
+    color: white;
+}
+
+.btn-primario:hover {
+    background: var(--color-principalDegradado);
+}
+
+.btn-secundario {
+    background: white;
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
+}
+
+.btn-secundario:hover {
+    background: var(--color-principal);
+    color: white;
+}
+
+@keyframes animacionComienzo {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animacionCirculo {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
