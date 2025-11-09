@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos</title>
+    <title>Mis cursos</title>
     <link rel="stylesheet" href="../../css/courses/misCursos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,15 +23,14 @@
     <header class="barra">
         <!----Logo de Pagina---->
         <div class="barra-logo">
-            <a href="../../index.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
+            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
         </div>
         <!---------------------->
 
         <!---Barra de busqueda--->
         <div class="barra-buscador">
             <form action="" method="get" autocomplete="off" id="search-form">
-                <input class="form__input" type="search" name="Buscador" id="buscador" list="cursos"
-                    placeholder="Buscar cursos...">
+                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
                 <datalist id="cursos">
                     <option value="Python & Data Science">
                     <option value="HTML">
@@ -49,7 +48,7 @@
 
         <!---Carrito--->
         <div class="buscador-carrito">
-            <a href="../index.html" aria-label="Carrito de compras">
+            <a href="../courses/carrito.html" aria-label="Carrito de compras">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>1</span>
             </a>
@@ -61,25 +60,30 @@
     <!----------------NAVEGADOR------------------>
     <nav class="navbar">
         <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./contact.html">Contacto</a></li>
-            <li><a href="./giftcard.html">Giftcard</a></li>
-            <li><a href="./calendar.html">Calendario</a></li>
+            <li><a href="../homePage/homePage.html">Inicio</a></li>
+            <li><a href="../contact/contact.html">Contacto</a></li>
+            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
+            <li><a href="../courses/cursos.html">Cursos</a></li>
+            <li><a href="../calendar/calendar.html">Calendario</a></li>
+            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
+            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
         </ul>
     </nav>
     <!------------------------------------------------>
 
     <!------------------------------------ HEADER ------------------------------------>
+
+
     <main>
         <section class="contenido">
             <div class="contenedorGen">
                 <div class="back">
-                    <a href="../index.html">
+                    <a href="./my-courses.html">
                         <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
                     </a>
                 </div>
                 <div class="contenedor contenedor1">
-                    <h1>Base de datos</h1>
+                    <h1>SQL Desde cero</h1>
                     <div class="contenedor1__descripcion">
                         <div class="contenedor1__profesor">
                             <h2 class="contenedor1__profesor-titulo">Profesor</h2>

@@ -1,0 +1,135 @@
+.back {
+  margin-right: 65em;
+  margin-top: 7em;
+  position: absolute;
+}
+
+.botonBack {
+  height: 3em;
+  width: 3em;
+  padding: 0.5em;
+  border-radius: 2em;
+  color: var(--color-secundario);
+  background-color: var(--color-principalDegradado);
+  border-color: var(--color-secundarioDegradado);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.botonBack:hover {
+  background-color: var(--color-secundarioDegradado);
+}
+
+.formWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.formWrap__form {
+  box-shadow: 10px 10px 0.8em black;
+  display: flex;
+  flex-direction: column;
+  padding: 5em;
+  padding-bottom: 8em;
+  gap: 2em;
+  background-color: var(--color-principalDegradado);
+  margin: 5em 0;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  font-size: 1.2em;
+  width: 20em;
+  height: 3em;
+}
+
+/* sacar las flechitas horribles del input number en Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* sacar las flechitas horribles del input number en Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+input:focus {
+  border: 2.3px solid var(--color-secundarioDegradado);
+  outline: none;
+}
+
+.form__label {
+  font-weight: bold;
+}
+
+.form__input--small {
+  width: 7em;
+  height: 1.5em;
+}
+
+.form__input--date {
+  width: 12em;
+}
+
+.form__button {
+  position: absolute;
+  margin-left: 15em;
+  margin-top: 25.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+  width: 10em;
+  height: 3em;
+  padding: 0.5em;
+  border-radius: 2em;
+  color: var(--color-secundario);
+  background-color: var(--color-principalDegradado);
+  border-color: var(--color-secundarioDegradado);
+
+  transition: background-color 0.3s;
+}
+
+.form__button:hover {
+  background-color: var(--color-secundarioDegradado);
+}
+
+.formWrap__a {
+  text-decoration: none;
+  color: var(--color-secundario);
+  font-weight: bold;
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+@media (max-width: 410px) {
+  /* para que los forms no ocupen todo el ancho */
+
+  main {
+    font-size: .8em;
+  }
+
+  .botonBack {
+    font-size: 1em;
+  }
+
+}
+
+
+@media (max-width: 1126px) {
+  /* para que el boton de volver quede en la esquina a pesar del wrap */
+
+  main .back {
+    margin-right: 29em;
+    margin-top: 7em;
+  }
+
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */

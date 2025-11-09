@@ -23,15 +23,14 @@
     <header class="barra">
         <!----Logo de Pagina---->
         <div class="barra-logo">
-            <a href="../../index.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
+            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
         </div>
         <!---------------------->
 
         <!---Barra de busqueda--->
         <div class="barra-buscador">
             <form action="" method="get" autocomplete="off" id="search-form">
-                <input class="form__input" type="search" name="Buscador" id="buscador" list="cursos"
-                    placeholder="Buscar cursos...">
+                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
                 <datalist id="cursos">
                     <option value="Python & Data Science">
                     <option value="HTML">
@@ -49,7 +48,7 @@
 
         <!---Carrito--->
         <div class="buscador-carrito">
-            <a href="../index.html" aria-label="Carrito de compras">
+            <a href="../courses/carrito.html" aria-label="Carrito de compras">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>1</span>
             </a>
@@ -61,10 +60,13 @@
     <!----------------NAVEGADOR------------------>
     <nav class="navbar">
         <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./contact.html">Contacto</a></li>
-            <li><a href="./giftcard.html">Giftcard</a></li>
-            <li><a href="./calendar.html">Calendario</a></li>
+            <li><a href="../homePage/homePage.html">Inicio</a></li>
+            <li><a href="../contact/contact.html">Contacto</a></li>
+            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
+            <li><a href="../courses/cursos.html">Cursos</a></li>
+            <li><a href="../calendar/calendar.html">Calendario</a></li>
+            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
+            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
         </ul>
     </nav>
     <!------------------------------------------------>
@@ -166,7 +168,8 @@
                         </h1>
                         <a href="./Detalles de Curso 1.html"><button id="Mas Informacion" name="Mas Informacion"
                                 class="boton"> Mas Informacion</button></a>
-                        <button id="Mas Informacion" name="Mas Informacion" class="boton"> Añadir al Carrito</button>
+                        <a href="./add.html"><button id="Mas Informacion" name="Mas Informacion" class="boton"> Añadir
+                                al Carrito</button></a>
                     </div>
                 </div>
                 <div class="cursos__contenedor">
@@ -195,7 +198,8 @@
                         </h1>
                         <a href="./Detalles de Curso 2.html"><button id="Mas Informacion" name="Mas Informacion"
                                 class="boton"> Mas Informacion</button></a>
-                        <a><button id="Mas Informacion" name="Mas Informacion" class="boton"> Añadir al
+                        <a href="./add.html"><button id="Mas Informacion" name="Mas Informacion" class="boton"> Añadir
+                                al
                                 Carrito</button></a>
                     </div>
                 </div>
@@ -223,8 +227,10 @@
                         <h1 class="precio">
                             $25990
                         </h1>
-                        <button id="Mas Informacion" name="Mas Informacion" class="boton"> Mas Informacion</button>
-                        <button id="Mas Informacion" name="Mas Informacion" class="boton"> Añadir al Carrito</button>
+                        <a href="./Detalles de Curso 1.html"><button id="Mas Informacion" name="Mas Informacion" class="boton"> Mas
+                                Informacion</button></a>
+                        <a href="./add.html"><button id="Mas Informacion" name="Mas Informacion" class="boton"> Añadir
+                                al Carrito</button></a>
                     </div>
 
                 </div>

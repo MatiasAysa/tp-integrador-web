@@ -23,15 +23,14 @@
     <header class="barra">
         <!----Logo de Pagina---->
         <div class="barra-logo">
-            <a href="../../index.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
+            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
         </div>
         <!---------------------->
 
         <!---Barra de busqueda--->
         <div class="barra-buscador">
             <form action="" method="get" autocomplete="off" id="search-form">
-                <input class="form__input" type="search" name="Buscador" id="buscador" list="cursos"
-                    placeholder="Buscar cursos...">
+                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
                 <datalist id="cursos">
                     <option value="Python & Data Science">
                     <option value="HTML">
@@ -49,7 +48,7 @@
 
         <!---Carrito--->
         <div class="buscador-carrito">
-            <a href="../index.html" aria-label="Carrito de compras">
+            <a href="../courses/carrito.html" aria-label="Carrito de compras">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>1</span>
             </a>
@@ -61,20 +60,25 @@
     <!----------------NAVEGADOR------------------>
     <nav class="navbar">
         <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./contact.html">Contacto</a></li>
-            <li><a href="./giftcard.html">Giftcard</a></li>
-            <li><a href="./calendar.html">Calendario</a></li>
+            <li><a href="../homePage/homePage.html">Inicio</a></li>
+            <li><a href="../contact/contact.html">Contacto</a></li>
+            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
+            <li><a href="../courses/cursos.html">Cursos</a></li>
+            <li><a href="../calendar/calendar.html">Calendario</a></li>
+            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
+            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
         </ul>
     </nav>
     <!------------------------------------------------>
 
     <!------------------------------------ HEADER ------------------------------------>
+
+
     <main>
         <section>
             <section class="contenedoresPresentacion">
                 <div class="contenedorImagen">
-                    <img src="../img/Python.jpg" alt="Imagen de Curso HTML y CSS" class="contenedorImagen__imagenCurso">
+                    <img src="../../img/courses/Python.jpg" alt="Imagen de Curso HTML y CSS" class="contenedorImagen__imagenCurso">
                     <div class="contenedorImagen__textoPresentacion">
                         <h2 class="subtitulo">nivel avanzado </h2>
                         <h1 class="titulo">Curso de <br>Python</h1>
@@ -107,8 +111,8 @@
                     <div class="contenedorCompra">
                         <div class="flex-row">
                             <h2>Valor Del curso: $29,990<del class="contenedorCompra__textoChico">$59,990</del></h2>
-                        </div>
-                        <button name="inscribirme" id="inscribirme" class="boton"> inscribirme</button>
+                        </div><a href="./add.html">
+                        <button name="inscribirme" id="inscribirme" class="boton"> inscribirme</button></a>
                     </div>
                 </div>
 
