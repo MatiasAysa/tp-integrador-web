@@ -97,7 +97,7 @@
                             </div>
                             <div class="background__p">
                                 <p class="background__p--titulo">GIFTCARD para</p>
-                                <p class="background__p--nombre">Nombre</p>
+                                <p class="background__p--nombre" id="background__p--nombre-js" >Nombre</p>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                     <!----Destinatario---->
                     <label class="form__texto texto">
                         <p class="form__titulos">Nombre</p>
-                        <input class="texto__input" type="text">
+                        <input class="texto__input" id="texto__input-js" type="text" maxlength="24">
                     </label>
                     <!----Destinatario---->
 
@@ -127,35 +127,35 @@
                             <p class="form__titulos">Color</p>
                             <label class="radioWrap__labelRadio labelRadio">
                                 <div class="labelRadio__color labelRadio__color--azul"></div>
-                                <input type="radio" name="color" value="azul">
+                                <input class="color__input" type="radio" name="color" value="azul">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
                             <label class="radioWrap__labelRadio labelRadio">
                                 <div class="labelRadio__color labelRadio__color--azul2"></div>
-                                <input type="radio" name="color" value="azul2">
+                                <input class="color__input" type="radio" name="color" value="azul2">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
                             <label class="radioWrap__labelRadio labelRadio">
                                 <div class="labelRadio__color labelRadio__color--amarillo"></div>
-                                <input type="radio" name="color" value="amarillo">
+                                <input class="color__input" class="color__input" type="radio" name="color" value="amarillo">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
                             <label class="radioWrap__labelRadio labelRadio">
                                 <div class="labelRadio__color labelRadio__color--amarillo2"></div>
-                                <input type="radio" name="color" value="amarillo2">
+                                <input class="color__input" type="radio" name="color" value="amarillo2">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
                             <label class="radioWrap__labelRadio labelRadio">
                                 <div class="labelRadio__color labelRadio__color--blanco"></div>
-                                <input type="radio" name="color" value="blanco">
+                                <input class="color__input" type="radio" name="color" value="blanco">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
@@ -356,6 +356,8 @@
 
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
+
+    <script src="../../js/pages/giftcard/giftcard.js" type="module"></script>
 </body>
 
 </html>

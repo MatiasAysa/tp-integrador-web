@@ -31,13 +31,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    word-break: break-word;  
 }
 
-.background__montoWrap{
+.background__montoWrap {
     text-align: right;
 }
 
-.montoWrap__p{
+.montoWrap__p {
     display: inline-block;
     background-color: rgb(16, 12, 0);
 }
@@ -212,7 +213,7 @@
 
 /* ---------------------- TEXTOS (monto y destinatario) ---------------------- */
 
-.form_email{
+.form_email {
     width: 100%;
 }
 
@@ -249,11 +250,11 @@
         font-size: 1rem;
     }
 
-    .vistaPrevia__cardWrap{
+    .vistaPrevia__cardWrap {
         margin-bottom: 2em;
     }
 
-    .main__formWrap{
+    .main__formWrap {
         margin-bottom: 3.5em;
     }
 
