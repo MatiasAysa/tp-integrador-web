@@ -5,9 +5,6 @@ import { Monto } from './montoCant.js';
 import { MontoPosicion } from './montoPos.js';
 import { FondoGF } from './background.js';
 
-const fondoGF = new FondoGF();
-fondoGF.render();
-
 const nombreView = document.querySelector("#background__p--nombre-js");
 
 const NOMBREGF = new NombreGiftacrd();
@@ -20,7 +17,7 @@ const FONTSIZEGF = new FontSizeGF();
 FONTSIZEGF.render(nombreView);
 
 const MONTO = new Monto();
-MONTO.render(); 
+MONTO.render();
 
 const MONTOPOSICION = new MontoPosicion();
 MONTOPOSICION.render();
