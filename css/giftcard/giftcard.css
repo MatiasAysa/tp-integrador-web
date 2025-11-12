@@ -25,6 +25,9 @@
     margin-top: 5%;
     width: 11em;
     background: darkgray;
+    background-image: url(../../img/giftcard/crfondo.png);
+    background-size: cover;
+
 }
 
 .background__p {
@@ -205,7 +208,7 @@
 }
 
 .labelRadio__background--tq {
-    background-image: url(../../img/giftcard/teamquesoBG.jpg);
+    background-image: url(../../img/giftcard/teamquesoBG.png);
 }
 
 .labelRadio__background--queso {

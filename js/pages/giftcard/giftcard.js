@@ -3,6 +3,10 @@ import { ColoresGF } from './coloresGF.js';
 import { FontSizeGF } from './fontSizeGF.js';
 import { Monto } from './montoCant.js';
 import { MontoPosicion } from './montoPos.js';
+import { FondoGF } from './background.js';
+
+const fondoGF = new FondoGF();
+fondoGF.render();
 
 const nombreView = document.querySelector("#background__p--nombre-js");
 
@@ -20,4 +24,7 @@ MONTO.render();
 
 const MONTOPOSICION = new MontoPosicion();
 MONTOPOSICION.render();
+
+const FONDOGF = new FondoGF();
+FONDOGF.render();
 
