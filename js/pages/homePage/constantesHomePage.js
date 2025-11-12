@@ -64,14 +64,14 @@ export const proximosCursos = [
         descripcion:"Aprendé React desde cero con proyectos reales, explicaciones claras y recursos descargables. Ideal para quienes quieren dar el salto al desarrollo front-end con una de las tecnologías más demandadas del mercado.",
         img:"../../img/cursos/reactCurso.jpg",
         url:"../courses/Detalles de curso 3.html"},
-    {titulo:"Curso Completo de GTA",
+    {titulo:"Curso Completo de React",
         fechaDispinible:{dia:4,mes:"Enero"},
-        descripcion:"",
-        img:"Aprende a usan un arma y aprende a disparar.Aguente el agura y dormir.",
-        url:""},
-    {titulo:"Aguante Messi",
-        fechaDispinible:{dia:4,mes:"asda"},
-        descripcion:"asd",
+        descripcion:"Aprendé React desde cero con proyectos reales, explicaciones claras y recursos descargables. Ideal para quienes quieren dar el salto al desarrollo front-end con una de las tecnologías más demandadas del mercado.",
         img:"../../img/cursos/reactCurso.jpg",
-        url:"asdasd"}
+        url:"../courses/Detalles de curso 3.html"},
+    {titulo:"Curso Completo de React",
+        fechaDispinible:{dia:4,mes:"asda"},
+        descripcion:"Aprendé React desde cero con proyectos reales, explicaciones claras y recursos descargables. Ideal para quienes quieren dar el salto al desarrollo front-end con una de las tecnologías más demandadas del mercado.",
+        img:"../../img/cursos/reactCurso.jpg",
+        url:"../courses/Detalles de curso 3.html"}
 ];
