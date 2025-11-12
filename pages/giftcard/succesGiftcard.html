@@ -15,6 +15,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+    <!-- Reusar estilos de giftcard para la vista previa -->
+    <link rel="stylesheet" href="../../css/giftcard/giftcard.css">
     <link rel="stylesheet" href="../../css/giftcard/succesGiftcard.css">
     <link rel="stylesheet" href="../../css/globals/header.css">
     <link rel="stylesheet" href="../../css/globals/footer.css">
@@ -78,11 +80,38 @@
 
     <!------------------------------------ HEADER ------------------------------------>
 
+
+    <!------------------------------------ CONTENIDO DE LA PÁGINA ------------------------------------>
     <main>
         <h1>¡Giftcard completada!</h1>
         <p>El destinatario la recibirá pronto.</p>
-        <div class="a"><a href="../homePage/homePage.html">Volver al inicio</a></div>
+        <!-- Vista previa personalizada -->
+        <section class="main__section section">
+            <article class="article__vistaPrevia vistaPrevia">
+                <p class="titulos">VISTA PREVIA</p>
+                <div class="vistaPrevia__cardWrap cardWrap">
+                    <div class="cardWrap__card card">
+                        <div id="card__background-js" class="card__background background">
+                            <div class="montoWrap__upRight">
+                                <p class="montoWrap__p"><span class="form__titulos-plata">$</span> <span
+                                        id="monto-js">0</span></p>
+                            </div>
+                            <div class="background__p">
+                                <p id="background__p--titulo-js" class="background__p--titulo">GIFTCARD para</p>
+                                <p id="background__p--nombre-js" class="background__p--nombre">Nombre</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="perfil__buttonWrap">
+            <a href="../homePage/homePage.html">
+                <button class="perfil__button">VOLVER AL INICIO</i></button>
+            </a>
+        </div>
     </main>
+    <!------------------------------------ CONTENIDO DE LA PÁGINA ------------------------------------>
 
 
     <!------------------------------------ FOOTER ------------------------------------>
@@ -146,6 +175,7 @@
 
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
+    <script type="module" src="../../js/pages/giftcard/succesGiftcard.js"></script>
 </body>
 
 </html>
