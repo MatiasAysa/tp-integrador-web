@@ -5,6 +5,7 @@
     justify-content: center;
     gap: 2%;
     height: 100%;
+    margin: 2em 0em;
 }
 
 
@@ -18,6 +19,7 @@
 }
 
 .card__background {
+    position: relative;
     aspect-ratio: 1 / 1;
     /* siempre cuadrado */
     margin-top: 5%;
@@ -26,16 +28,33 @@
 }
 
 .background__p {
-    height: 75%;
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    word-break: break-word;  
+    word-break: break-word;
 }
 
-.background__montoWrap {
+.montoWrap__upRight {
     text-align: right;
+    position: absolute;
+    bottom: 1;
+    right: 0;
+}
+
+.montoWrap__upLeft {
+    text-align: right;
+    position: absolute;
+    bottom: 1;
+    right: 1;
+}
+
+.montoWrap__downRight {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .montoWrap__p {
@@ -49,7 +68,7 @@
 }
 
 .background__p--titulo {
-    font-size: .4em;
+    font-size: 50%;
 }
 
 .background__p--nombre {
@@ -211,6 +230,10 @@
     width: 50%;
 }
 
+.form__titulos-plata {
+    color: rgb(18, 76, 14);
+}
+
 /* ---------------------- TEXTOS (monto y destinatario) ---------------------- */
 
 .form_email {
@@ -266,6 +289,7 @@
     body {
         font-size: 70%;
     }
+
 }
 
 /* -------------------- MEDIA QUERIES -------------------- */

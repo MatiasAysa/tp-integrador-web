@@ -92,8 +92,8 @@
                 <div class="vistaPrevia__cardWrap cardWrap">
                     <div class="cardWrap__card card">
                         <div class="card__background background">
-                            <div class="background__montoWrap montoWrap">
-                                <p class="montoWrap__p">$0000</p>
+                            <div class="montoWrap__upRight">
+                                <p class="montoWrap__p"><span class="form__titulos-plata">$</span> <span id="monto-js">0000</span></p>
                             </div>
                             <div class="background__p">
                                 <p class="background__p--titulo">GIFTCARD para</p>
@@ -116,7 +116,7 @@
                     <!----Destinatario---->
                     <label class="form__texto texto">
                         <p class="form__titulos">Nombre</p>
-                        <input class="texto__input" id="texto__input-js" type="text" maxlength="24">
+                        <input class="texto__input" id="texto__input-js" type="text" maxlength="19">
                     </label>
                     <!----Destinatario---->
 
@@ -125,37 +125,37 @@
                     <div class="form__color">
                         <div class="form__radioWrap radioWrap">
                             <p class="form__titulos">Color</p>
-                            <label class="radioWrap__labelRadio labelRadio">
+                            <label class="radioWrap__labelRadio radioWrap__labelRadio-js labelRadio">
                                 <div class="labelRadio__color labelRadio__color--azul"></div>
                                 <input class="color__input" type="radio" name="color" value="azul">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
-                            <label class="radioWrap__labelRadio labelRadio">
+                            <label class="radioWrap__labelRadio radioWrap__labelRadio-js labelRadio">
                                 <div class="labelRadio__color labelRadio__color--azul2"></div>
                                 <input class="color__input" type="radio" name="color" value="azul2">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
-                            <label class="radioWrap__labelRadio labelRadio">
+                            <label class="radioWrap__labelRadio radioWrap__labelRadio-js labelRadio">
                                 <div class="labelRadio__color labelRadio__color--amarillo"></div>
                                 <input class="color__input" class="color__input" type="radio" name="color" value="amarillo">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
-                            <label class="radioWrap__labelRadio labelRadio">
+                            <label class="radioWrap__labelRadio radioWrap__labelRadio-js labelRadio">
                                 <div class="labelRadio__color labelRadio__color--amarillo2"></div>
                                 <input class="color__input" type="radio" name="color" value="amarillo2">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
-                            <label class="radioWrap__labelRadio labelRadio">
+                            <label class="radioWrap__labelRadio radioWrap__labelRadio-js labelRadio">
                                 <div class="labelRadio__color labelRadio__color--blanco"></div>
-                                <input class="color__input" type="radio" name="color" value="blanco">
+                                <input class="color__input" type="radio" name="color" value="blanco" checked="true">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
@@ -171,35 +171,35 @@
                         <div class="form__radioWrap radioWrap">
                             <label class="radioWrap__labelRadio labelRadio">
                                 <p class="labelRadio__p">20px</p>
-                                <input type="radio" name="fontSize" value="azul">
+                                <input class="font-size__input" type="radio" name="fontSize" value="0.85">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
                             <label class="radioWrap__labelRadio labelRadio">
                                 <p class="labelRadio__p">28px</p>
-                                <input type="radio" name="fontSize" value="azul">
+                                <input class="font-size__input" type="radio" name="fontSize" value="0.9">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
                             <label class="radioWrap__labelRadio labelRadio">
                                 <p class="labelRadio__p">32px</p>
-                                <input type="radio" name="fontSize" value="azul">
+                                <input class="font-size__input" type="radio" name="fontSize" value="1" checked="true">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
                             <label class="radioWrap__labelRadio labelRadio">
                                 <p class="labelRadio__p">48px</p>
-                                <input type="radio" name="fontSize" value="azul">
+                                <input class="font-size__input" type="radio" name="fontSize" value="1.5">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
                             <label class="radioWrap__labelRadio labelRadio">
                                 <p class="labelRadio__p">60px</p>
-                                <input type="radio" name="fontSize" value="azul">
+                                <input class="font-size__input" type="radio" name="fontSize" value="2">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
@@ -212,7 +212,7 @@
                     <!----Monto---->
                     <label class="form__texto texto">
                         <p class="form__titulos">Monto $</p>
-                        <input class="texto__input" type="number" required>
+                        <input id="monto__input" class="texto__input" type="text" maxlength="9" required>
                     </label>
                     <!----Monto---->
 
@@ -221,23 +221,23 @@
                     <div class="form__ubicacion">
                         <div class="form__radioWrap radioWrap">
                             <p class="form__titulos">Ubicación</p>
-                            <label class="radioWrap__labelRadio labelRadio">
+                            <label class="radioWrap__labelRadio labelRadio labelRadio__monto-js">
                                 <div class="labelRadio__ubicacion labelRadio__ubicacion--upRight"></div>
-                                <input type="radio" name="ubicacion" value="downRight">
+                                <input class="input__montoPos" type="radio" name="ubicacion" value="montoWrap__upRight" checked="true">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
-                            <label class="radioWrap__labelRadio labelRadio">
+                            <label class="radioWrap__labelRadio labelRadio labelRadio__monto-js">
                                 <div class="labelRadio__ubicacion labelRadio__ubicacion--upLeft"></div>
-                                <input type="radio" name="ubicacion" value="azul">
+                                <input class="input__montoPos" type="radio" name="ubicacion" value="montoWrap__upLeft">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>
                             </label>
-                            <label class="radioWrap__labelRadio labelRadio">
+                            <label class="radioWrap__labelRadio labelRadio labelRadio__monto-js">
                                 <div class="labelRadio__ubicacion labelRadio__ubicacion--downRight"></div>
-                                <input type="radio" name="ubicacion" value="azul">
+                                <input class="input__montoPos" type="radio" name="ubicacion" value="montoWrap__downRight">
                                 <span class="labelRadio__check">
                                     <div class="labelRadio__check--clicked"></div>
                                 </span>

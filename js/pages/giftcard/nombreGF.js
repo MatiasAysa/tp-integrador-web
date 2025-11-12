@@ -1,9 +1,9 @@
 export class NombreGiftacrd {
     constructor() {}
 
-    render() {
+    render(nombreView) {
         const nombreForm = document.querySelector("#texto__input-js");
-        const nombreView = document.querySelector("#background__p--nombre-js");
+        // const nombreView = document.querySelector("#background__p--nombre-js");
 
         let nombreViewText = "";
 
@@ -11,7 +11,7 @@ export class NombreGiftacrd {
 
             nombreViewText = nombreForm.value;
 
-            if (nombreViewText.length < 24) {
+            if (nombreViewText.length < 20) {
                 nombreView.textContent = nombreViewText === "" ? "Nombre" : nombreViewText;
             }
         });

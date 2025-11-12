@@ -4,13 +4,13 @@ export class ColoresGF {
 
     constructor() { }
 
-    render() {
+    render(nombreView) {
 
         const COLORES = new Colores();
 
-        const nombreView = document.querySelector("#background__p--nombre-js");
+        // const nombreView = document.querySelector("#background__p--nombre-js");
 
-        const coloresForm = document.querySelectorAll(".labelRadio__color");
+        const coloresForm = document.querySelectorAll(".radioWrap__labelRadio-js");
         const coloresInput = document.querySelectorAll(".color__input");        
 
         coloresForm.forEach( (color, i) => {
