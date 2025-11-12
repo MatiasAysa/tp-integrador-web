@@ -1,4 +1,3 @@
-import { VALIDITYSINGUP } from './constantsSingUp.js';
 
 const form = document.querySelector('.formWrap__form');
 const submitButton = document.querySelector('.form__button');
@@ -8,12 +7,12 @@ const surnameInput = document.querySelector('#surname');
 const dniInput = document.querySelector('#dni');
 const usernameInput = document.querySelector('#username');
 const passwordInput = document.querySelector('#password');
-emailInput.setCustomValidity(VALIDITYSINGUP[0].emailMessage);
-passwordInput.setCustomValidity(VALIDITYSINGUP[5].passwordMessage);
-dniInput.setCustomValidity(VALIDITYSINGUP[3].dniMessage);
-nameInput.setCustomValidity(VALIDITYSINGUP[1].nameMessage);
-surnameInput.setCustomValidity(VALIDITYSINGUP[2].surnameMessage);
-usernameInput.setCustomValidity(VALIDITYSINGUP[4].usernameMessage);
+emailInput.setCustomValidity('Por favor, ingrese un correo electrónico válido.')
+nameInput.setCustomValidity('El nombre solo debe contener letras y espacios.')
+surnameInput.setCustomValidity('El apellido solo debe contener letras y espacios.')
+usernameInput.setCustomValidity('El nombre de usuario no debe exceder los 40 caracteres.')
+passwordInput.setCustomValidity('La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula y un número.')
+
 
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
@@ -26,10 +25,6 @@ submitButton.addEventListener('click', (e) => {
         return;
     }
     else if (validarPassword(passwordInput.value) === false) {
-        form.reportValidity();
-        return;
-    }
-    else if (validarDNI(dniInput.value) === false) {
         form.reportValidity();
         return;
     }
@@ -80,11 +75,18 @@ function crearUsuario(usernameInput, passwordInput, emailInput, nameInput, surna
         name: nameInput.value,
         surname: surnameInput.value,
         dni: dniInput.value,
+        cursosObtenidos: []
     };
     return usuario;
 }
 function guardarUsuarioEnLocalStorage(usuario) {
     const usuariosGuardados = JSON.parse(localStorage.getItem('usuarios')) || [];
-    usuariosGuardados.push(usuario);
-    localStorage.setItem('usuarios', JSON.stringify(usuariosGuardados));
+
+    if (!usuariosGuardados) {
+        localStorage.setItem('usuarios', JSON.stringify(usuario))
+    }
+    else {
+        usuariosGuardados.push(usuario);
+        localStorage.setItem('usuarios', JSON.stringify(usuariosGuardados));
+    }
 }
