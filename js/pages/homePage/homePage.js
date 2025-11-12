@@ -91,15 +91,6 @@ proximosCursos.forEach(item => {
 const botonDesplazarIzquierda = buscarDom.buscandoElemento(".js-boton-proximosLeft");
 const botonDesplazarDerecha = buscarDom.buscandoElemento(".js-boton-proximosRight");
 
-botonDesplazarIzquierda.addEventListener('click',(event) => {
-    console.log("izqui");
-});
-
-botonDesplazarDerecha.addEventListener('click',(event) => {
-    console.log("puto");
-});
-
-
 const carrusel = new CarruselProximos(
         contenedorCursosProximos, 
         botonDesplazarIzquierda, 
