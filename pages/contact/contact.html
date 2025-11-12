@@ -43,12 +43,12 @@
 
                 <div class="form__label label">
                     <div class="label__usuario usuario">
-                        <input class="usuario__input" type="text" placeholder="Nombre/s" required name="nombre">
-                        <input class="usuario__input" type="text" placeholder="Apellido/s" required name="apellido">
-                        <input class="usuario__input" type="email" placeholder="Correo electrónico" required
+                        <input class="usuario__input js-contactoName" type="text" placeholder="Nombre/s" required name="nombre">
+                        <input class="usuario__input js-contactoName" type="text" placeholder="Apellido/s" required name="apellido">
+                        <input class="usuario__input js-contactoMail" type="email" placeholder="Correo electrónico" required
                             name="email">
                         <input class="usuario__input" type="number" placeholder="Numero de telefono (Opcional)">
-                        <textarea class="usuario__input usuario__input--msj" placeholder="Mensaje" required
+                        <textarea class="usuario__input usuario__input--msj js-contactoMensaje" placeholder="Mensaje" required
                             name="mensaje"></textarea>
                     </div>
                     <div class="label__datos datos">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
 
-                <button class="form__button">ENVIAR</button>
+                <button class="form__button js-contactoSubmit">ENVIAR</button>
 
                 <!-- esto SOLO se ve en celulares -->
                 <p class="texts__p texts__p--3">BÚSCANOS EN</p>
@@ -172,6 +172,7 @@
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
     <script src="../../js/menuNav.js" type="module"></script>
+    <script src="../../js/pages/contacto/contacto.js"></script>
 
 </body>
 

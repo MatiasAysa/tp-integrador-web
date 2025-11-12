@@ -43,7 +43,8 @@ submitButton.addEventListener('click', (e) => {
     else {
         guardarUsuarioEnLocalStorage(crearUsuario(usernameInput, passwordInput, emailInput, nameInput, surnameInput, dniInput));
         alert('¡Registro exitoso! Ahora puedes iniciar sesión.');
-        form.reset();
+        form.submit;
+        window.location.href = "./log-in.html"
     }
 }
 );
@@ -65,7 +66,7 @@ dniInput.addEventListener('input', (event) => {
 
 function validarNombres(nombre) {
     if (typeof nombre !== 'string') return false;
-    return nombre.trim().length > 3 && nombre.length <= 50;
+    return nombre.trim().length > 0 && nombre.length <= 50;
 }
 function crearUsuario(usernameInput, passwordInput, emailInput, nameInput, surnameInput, dniInput) {
     const usuario = {
