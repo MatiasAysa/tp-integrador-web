@@ -17,6 +17,7 @@
     margin-bottom: 0.5em;
 }
 
+
 /*---------------SECTION Mis cursos-------------------*/
 .main_misCursos {
     width: 100%;
@@ -99,17 +100,61 @@
 /*---------------SECTION PROXIMOS LANZAMIENTOS-------------------*/
 .main_proximos {
     width: 100%;
-    display: flex;
+    position: relative;
     padding: 2em 4em;
-    justify-content: center;
     background: white;
     color: var(--color-principal);
-    gap: 2em;
+    overflow: hidden;
+}
+
+.main_contenedorProximos {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.proximos_carrusel {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 3em;
+}
+
+.proximo_boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2em;
+    position: absolute;
+    border-radius: 50px;
+    font-size: 2em;
+    cursor: pointer;
+    border: transparent;
+    background: white;
+    color: var(--color-principal);
+}
+
+.proximo_boton1 {
+    left: 0.1em;
+    top: 50%;
+
+}
+
+.proximo_boton2 {
+    right: 0.1em;
+    top: 50%;
+}
+
+.proximo_boton:hover {
+    background: rgb(219, 219, 219);
 }
 
 .proximo_informacion {
     display: flex;
     flex-direction: column;
+    width: 40%;
 }
 
 .proximo_informacion p {
@@ -163,7 +208,7 @@
     margin-bottom: 0.5em;
 }
 
-#prox_disponible {
+.prox_disponible {
     margin-bottom: 0.5em;
     font-weight: bold;
     color: #244cc2;
@@ -201,13 +246,20 @@
     background: var(--color-principal);
     color: var(--color-texto);
     gap: 2em;
+    align-items: center;
+}
+
+.cursosNuevos_slider {
+    overflow: hidden;
+    width: 90%;
 }
 
 .cursosNuevos_contenido {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1.5em;
+    gap: 2em;
+    width: max-content;
+    animation: srollInfinito 8s linear infinite;
 }
 
 .cursosNuevos_contenido a {
@@ -444,7 +496,7 @@
     gap: 1em;
 }
 
-.curso-card__botones a {
+.boton_cursoCard {
     text-decoration: none;
     text-align: center;
     font-size: 0.95em;
@@ -453,6 +505,7 @@
     flex: 1;
     transition: all 0.3s ease;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .boton_añadir {
@@ -475,6 +528,97 @@
     background: var(--color-principal);
     color: white;
 }
+
+.main_contenido {
+    background: white;
+    width: 35%;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em;
+    position: relative;
+}
+
+.js-seccion3-dialog {
+    border: none;
+    display: none;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.js-seccion3-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.js-seccion3-dialog[open] {
+    display: flex;
+}
+
+.boton_cerrar {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: var(--color-principal);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.boton_cerrar:hover {
+    transform: scale(1.2);
+}
+
+.contenido_titulo {
+    color: var(--color-principal);
+    text-align: center;
+}
+
+.contenido_titulo h2 {
+    font-size: 1.5em;
+
+}
+
+.contenido_botones {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contenido_botones a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.95em;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    height: 3em;
+}
+
+.boton_individual,
+.boton_grupal {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+}
+
+.boton_individual:hover,
+.boton_grupal:hover {
+    background-color: var(--color-secundarioDegradado);
+    transform: translateY(-2px);
+}
+
 
 /*--------------------------------------*/
 /* --- -------CELUS----------- ---*/
@@ -640,15 +784,37 @@
     .proximo_imagen img {
         width: 100%;
     }
-    .main_cursosNuevos{
+
+    .main_cursosNuevos {
         padding: 1em;
         align-items: center;
+    }
+
+    .main_proximos {
+        padding: 1em;
+        background: white;
+        color: var(--color-principal);
+        overflow: hidden;
+    }
+
+    .proximo_informacion h2 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .proximos_carrusel {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .proximo_boton {
+        font-size: 1em;
     }
 
 }
 
 /* --- TABLETS ---*/
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 790px) {
     body {
         font-size: 90%;
     }
@@ -776,8 +942,23 @@
     .proximo_imagen img {
         width: 100%;
     }
-    .main_cursosNuevos{
+
+    .main_cursosNuevos {
         padding: 1em;
         align-items: center;
+    }
+
+    .cursosNuevos_slider {
+        width: 100%;
+    }
+}
+
+@keyframes srollInfinito {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
     }
 }
