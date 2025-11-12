@@ -84,34 +84,38 @@
             <form class="formWrap__form form" action="./succes-sign-up.html" method="get">
 
                 <div class="form__field">
+                    <label class="form__label" for="email">Ingresa tu e-mail</label>
+                    <input class="form__input" type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form__field">
                     <label class="form__label" for="name">Ingresa tu nombre</label>
-                    <input class="form__input" type="text" id="name" name="name" maxlength="40" required>
+                    <input class="form__input" type="text" id="name" name="name" required>
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="surname">Ingresa tu apellido </label>
-                    <input class="form__input" type="text" id="surname" name="surname" maxlength="40" required>
+                    <input class="form__input" type="text" id="surname" name="surname" required>
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="dni">Ingresa tu DNI (sin puntos)</label>
-                    <input class="form__input form__input--number" type="number" id="dni" name="dni" min="1000"
-                        max="999999999" required>
+                    <input class="form__input form__input--number" type="text" id="dni" name="dni" maxlength="10" required>
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="username">Ingresa un nombre de usuario</label>
-                    <input class="form__input" type="text" id="username" name="username" maxlength="40" required>
+                    <input class="form__input" type="text" id="username" name="username" maxlength="40"required>
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="password">Ingresa una contraseña</label>
                     <input class="form__input" type="password" id="password" name="password" minlength="8"
-                        maxlength="20" required>
+                        maxlength="20"required>
                 </div>
 
                 <button class="form__button">CONTINUAR</button>
-                <p class="formWrap__p">¿Ya tienes una cuenta? <a href="./log-in.html" class="formWrap__a">INICIÁ
+                <p class="formWrap__p">¿Ya tienes una cuenta? <a href="./log-in.html" class="formWrap__a">INICIAR
                         SESIÓN</a></p>
             </form>
         </section>
@@ -178,7 +182,7 @@
 
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
-
+    <script src="../../js/Sesion/sign-up.js" type="module"></script>
 </body>
 
 </html>
