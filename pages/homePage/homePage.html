@@ -24,59 +24,11 @@
     <!------------------------------------ HEADER ------------------------------------>
 
     <!---------- BARRA DE LA PAGINA ---------->
-    <header class="barra">
-        <!----Logo de Pagina---->
-        <div class="barra-logo">
-            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
-        </div>
-        <!---------------------->
-
-        <!---Barra de busqueda--->
-        <div class="barra-buscador">
-            <form action="" method="get" autocomplete="off" id="search-form">
-                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
-                <datalist id="cursos">
-                    <option value="Python & Data Science">
-                    <option value="HTML">
-                    <option value="JAVA"></option>
-
-                </datalist>
-                <!--Boton busqueda-->
-                <button type="submit" aria-label="Buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <!------------------>
-            </form>
-        </div>
-        <!-------------------->
-
-        <!---Carrito--->
-        <div class="buscador-carrito">
-            <a href="../courses/carrito.html" aria-label="Carrito de compras">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>1</span>
-            </a>
-        </div>
-        <!------------->
+    <header class="barra js-header">
     </header>
-    <!------------------------------------------------>
-
     <!----------------NAVEGADOR------------------>
-    <nav class="navbar">
-        <ul>
-            <li><a href="./homePage.html">Inicio</a></li>
-            <li><a href="../contact/contact.html">Contacto</a></li>
-            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
-            <li><a href="../courses/cursos.html">Cursos</a></li>
-            <li><a href="../calendar/calendar.html">Calendario</a></li>
-            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
-            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
-        </ul>
+    <nav class="navbar js-nav">
     </nav>
-    <!------------------------------------------------>
-
-    <!------------------------------------ HEADER ------------------------------------>
-
     <!----------------CONTENIDO PRINCIPAL------------------>
     <main>
 
@@ -129,20 +81,13 @@
 
         <!--------Seccion Proximos Lanzamientos---------->
         <section class="main_proximos">
-            <div class="proximo_informacion">
-                <span class="prox_lanzamiento">Proximo Lanzamiento</span>
-                <h2>Curso Completo de React</h2>
-                <span id="prox_disponible">Disponible apartir del 14 de octubre</span>
-                <p>Aprendé React desde cero con proyectos reales, explicaciones claras y
-                    recursos descargables. Ideal para quienes quieren dar el salto al desarrollo
-                    front-end con una de las tecnologías más demandadas del mercado.</p>
-                <span><a href="../courses/Detalles de curso 2.html" id="prox_detalles">Mas Detalles.</a></span>
-                <span class="ver_calendario"><a href="../calendar/calendar.html">Ver Calendario</a></span>
+            <div class="main_contenedorProximos js-proximos">
+
             </div>
-            <div class="proximo_imagen">
-                <a href="../courses/Detalles de curso 3.html"><img src="../../img/cursos/reactCurso.jpg" alt="Imagen del curso React">
-                </a>
-            </div>
+            <button class="proximo_boton1 js-boton-proximosLeft proximo_boton"><i
+                    class="fa-solid fa-arrow-left"></i></button>
+            <button class="proximo_boton2 js-boton-proximosRight proximo_boton"><i
+                    class="fa-solid fa-arrow-right"></i></button>
         </section>
         <!-------------------------------------------->
 
@@ -151,43 +96,9 @@
             <div class="cursosNuevos_titulo">
                 <h2>Ultimos cursos lanzados</h2>
             </div>
-            <div class="cursosNuevos_contenido">
-                <a href="../courses/Detalles de curso 2.html">
-                    <article class="contenido_cardNuevos">
-                        <div class="card_imagenCursoNuevo">
-                            <img src="../../img/cursos/firebase.jpg" alt="">
-                            <span>Nuevo</span>
-                        </div>
-                        <div class="card_infoCursoNuevo">
-                            <h4>Curso de Firebase con Angular 20</h4>
-                            <span>Por Diego Merlo Sogaray</span>
-                        </div>
-                    </article>
-                </a>
-                <a href="../courses/Detalles de curso 2.html">
-                    <article class="contenido_cardNuevos">
-                        <div class="card_imagenCursoNuevo">
-                            <img src="../../img/cursos/unity.jpg" alt="">
-                            <span>Nuevo</span>
-                        </div>
-                        <div class="card_infoCursoNuevo">
-                            <h4>Curso de Unity 1</h4>
-                            <span>Por Moya Sanzone</span>
-                        </div>
-                    </article>
-                </a>
-                <a href="../courses/Detalles de curso 2.html">
-                    <article class="contenido_cardNuevos">
-                        <div class="card_imagenCursoNuevo">
-                            <img src="../../img/cursos/godot.jpg" alt="">
-                            <span>Nuevo</span>
-                        </div>
-                        <div class="card_infoCursoNuevo">
-                            <h4>Curso de Godot completo</h4>
-                            <span>Por Victor Ugarriza</span>
-                        </div>
-                    </article>
-                </a>
+            <div class="cursosNuevos_slider">
+                <div class="cursosNuevos_contenido js-cursosNuevos_contenido">
+                </div>
             </div>
         </section>
         <!-------------------------------------------->
@@ -205,149 +116,24 @@
                 <p>¿Con cuál vas a empezar?</p>
             </div>
             <!---Contenido de la seccion 3--->
-            <div class="main__seccion3__cards">
-                <!--Curso-->
-                <article class="curso-card">
-                    <div class="curso-card__imagen">
-                        <img src="../../img/cursos/jpeg.jpg" alt="Imagen curso Java">
-                    </div>
-                    <div class="curso-card__contenido">
-                        <h3>Desarrolador HTML</h3>
-                        <p>Dominá el lenguaje base de la web. En este curso aprenderás a
-                            estructurar páginas profesionales, aplicar buenas prácticas de accesibilidad y
-                            preparar tu perfil para el mundo del diseño y desarrollo front-end.</p>
-                    </div>
-                    <div class="curso-card__duracion">
-                        <span><i class="fa-solid fa-clock"></i> Duracion: 20 horas</span>
-                    </div>
-                    <div class="curso-card__precio">
-                        <span>$18,990</span>
-                    </div>
-                    <div class="curso-card__botones">
-                        <a class="boton_añadir" href="../courses/add.html">
-                            <i class="fas fa-shopping-cart"></i>Añadir
-                        </a>
-                        <a href="../courses/Detalles de curso 1.html" class="boton_detalle">Ver detalles</a>
-                    </div>
-                </article>
-                <!--Curso-->
-                <article class="curso-card">
-                    <div class="curso-card__imagen">
-                        <img src="../../img/cursos/Python.jpg" alt="Imagen curso Java">
-                    </div>
-                    <div class="curso-card__contenido">
-                        <h3>Curso de Python</h3>
-                        <p>Un programa de estudios intensivo y online que te conectará con el mundo laboral.
-                            En pocos meses sé parte de un mundo lleno de oportunidades.</p>
-                    </div>
-                    <div class="curso-card__duracion">
-                        <span><i class="fa-solid fa-clock"></i> Duracion: 75 horas</span>
-                    </div>
-                    <div class="curso-card__precio">
-                        <span>$29,990</span>
-                    </div>
-                    <div class="curso-card__botones">
-                        <a class="boton_añadir" href="../courses/add.html">
-                            <i class="fas fa-shopping-cart"></i>Añadir
-                        </a>
-                        <a href="../courses/Detalles de curso 2.html" class="boton_detalle">Ver detalles</a>
-                    </div>
-                </article>
-                <!--Curso-->
-                <article class="curso-card">
-                    <div class="curso-card__imagen">
-                        <img src="../../img/cursos/cursoJAVA.jpg" alt="Imagen curso Java">
-                    </div>
-                    <div class="curso-card__contenido">
-                        <h3>Java Developer Professional</h3>
-                        <p>Domina Java desde cero hasta nivel avanzado. Spring Boot, APIs REST y más.</p>
-                    </div>
-                    <div class="curso-card__duracion">
-                        <span><i class="fa-solid fa-clock"></i> Duracion: 45 horas</span>
-                    </div>
-                    <div class="curso-card__precio">
-                        <span>$10000</span>
-                    </div>
-                    <div class="curso-card__botones">
-                        <a class="boton_añadir" href="../courses/add.html">
-                            <i class="fas fa-shopping-cart"></i>Añadir
-                        </a>
-                        <a href="../courses/Detalles de curso 1.html" class="boton_detalle">Ver detalles</a>
-                    </div>
-                </article>
-                <!--Curso-->
-                <article class="curso-card">
-                    <div class="curso-card__imagen">
-                        <img src="../../img/cursos/cursoPYTHON.jpg" alt="Imagen curso Java">
-                    </div>
-                    <div class="curso-card__contenido">
-                        <h3>Experto en Python</h3>
-                        <p>Aprendé a programar con uno de los lenguajes más poderosos y versátiles del mundo.
-                            Este curso te lleva desde los fundamentos hasta técnicas avanzadas en automatización,
-                            análisis de datos y desarrollo de aplicaciones.</p>
-                    </div>
-                    <div class="curso-card__duracion">
-                        <span><i class="fa-solid fa-clock"></i> Duracion: 50 horas</span>
-                    </div>
-                    <div class="curso-card__precio">
-                        <span>$10000</span>
-                    </div>
-                    <div class="curso-card__botones">
-                        <a class="boton_añadir" href="../courses/add.html">
-                            <i class="fas fa-shopping-cart"></i>Añadir
-                        </a>
-                        <a href="../courses/Detalles de curso 2.html" class="boton_detalle">Ver detalles</a>
-                    </div>
-
-                </article>
-                <!--Curso-->
-                <article class="curso-card">
-                    <div class="curso-card__imagen">
-                        <img src="../../img/cursos/cursoSQL.jpg" alt="Imagen curso Java">
-                    </div>
-                    <div class="curso-card__contenido">
-                        <h3>Profesional en SQL</h3>
-                        <p>En este curso aprenderás lo que es una base de datos y los tipos de bases de datos que
-                            existen.</p>
-                    </div>
-                    <div class="curso-card__duracion">
-                        <span><i class="fa-solid fa-clock"></i> Duracion: 60 horas</span>
-                    </div>
-                    <div class="curso-card__precio">
-                        <span>$10000</span>
-                    </div>
-                    <div class="curso-card__botones">
-                        <a class="boton_añadir" href="../courses/add.html">
-                            <i class="fas fa-shopping-cart"></i>Añadir
-                        </a>
-                        <a href="../courses/Detalles de curso 1.html" class="boton_detalle">Ver detalles</a>
-                    </div>
-                </article>
-                <!--Curso-->
-                <article class="curso-card">
-                    <div class="curso-card__imagen">
-                        <img src="../../img/cursos/sharpCurso.jpg" alt="Imagen curso Java">
-                    </div>
-                    <div class="curso-card__contenido">
-                        <h3>C# desde Cero</h3>
-                        <p>Sumergite en el mundo de la programación orientada a objetos con C#.
-                            Aprendé a crear aplicaciones robustas,
-                            seguras y escalables para escritorio, web y más.</p>
-                    </div>
-                    <div class="curso-card__duracion">
-                        <span><i class="fa-solid fa-clock"></i> Duracion: 45 horas</span>
-                    </div>
-                    <div class="curso-card__precio">
-                        <span>$10000</span>
-                    </div>
-                    <div class="curso-card__botones">
-                        <a class="boton_añadir" href="../courses/add.html">
-                            <i class="fas fa-shopping-cart"></i>Añadir
-                        </a>
-                        <a href="../courses/Detalles de curso 2.html" class="boton_detalle">Ver detalles</a>
-                    </div>
-                </article>
+            <div class="main__seccion3__cards js-cursosDestacados">
             </div>
+            <dialog class="js-seccion3-dialog">
+                <div class="main_contenido">
+                    <button class="boton_cerrar js-CloseModal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="contenido_titulo">
+                        <h2>! Elige tipo de compra !</h2>
+                    </div>
+                    <div class="contenido_botones">
+                        <a class="boton_individual" href="../courses/carrito.html">
+                            <i class="fa-solid fa-user"></i></i>Individual</a>
+                        <a href="./grupal-registration.html" class="boton_grupal">
+                            <i class="fa-solid fa-users"></i>Grupal</a>
+                    </div>
+                </div>
+            </dialog>
         </section>
 
 
@@ -361,15 +147,16 @@
                         Regalar giftcard <i class="fa-solid fa-arrow-right"></i></a></span>
             </div>
             <div class="seccionGirfCard-imagen">
-                <a href="../giftcard/giftcard.html"><img src="../../img/homePage/girdCard2.png" alt="Imagen de la Gift Card">
+                <a href="../giftcard/giftcard.html"><img src="../../img/homePage/girdCard2.png"
+                        alt="Imagen de la Gift Card">
                 </a>
             </div>
         </section>
         <!-------------------------------------------->
     </main>
     <!------------------------------------------->
-    
-    
+
+
     <!------------------------------------ FOOTER ------------------------------------>
     <footer class="pie-pagina">
 
@@ -431,6 +218,8 @@
 
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
+    <script src="../../js/menuNav.js" type="module"></script>
+    <script src="../../js/pages/homePage/homePage.js" type="module"></script>
 </body>
 
 </html>

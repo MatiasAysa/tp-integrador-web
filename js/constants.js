@@ -16,6 +16,9 @@ export const NAV_ITEMS_NO_LOGUEADO = [
 export const HEADER_LOGO = [
     {src: '../../img/globals/iconoPage.png', alt: 'Logo Team Queso', link: '../homePage/homePage.html'}
 ];
+export const HEADER_LOGO_NO_LOGUEADO = [
+    {src: '../../img/globals/iconoPage.png', alt: 'Logo Team Queso', link: '../../index.html'}
+]
 export const HEADER_BUSCADOR = [
     {placeholder: 'Buscar cursos...'}
 ]
