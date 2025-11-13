@@ -26,54 +26,12 @@
     <!------------------------------------ HEADER ------------------------------------>
 
     <!---------- BARRA DE LA PAGINA ---------->
-    <header class="barra">
-        <!----Logo de Pagina---->
-        <div class="barra-logo">
-            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
-        </div>
-        <!---------------------->
-
-        <!---Barra de busqueda--->
-        <div class="barra-buscador">
-            <form action="" method="get" autocomplete="off" id="search-form">
-                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
-                <datalist id="cursos">
-                    <option value="Python & Data Science">
-                    <option value="HTML">
-                    <option value="JAVA"></option>
-
-                </datalist>
-                <!--Boton busqueda-->
-                <button type="submit" aria-label="Buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <!------------------>
-            </form>
-        </div>
-        <!-------------------->
-
-        <!---Carrito--->
-        <div class="buscador-carrito">
-            <a href="../courses/carrito.html" aria-label="Carrito de compras">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>1</span>
-            </a>
-        </div>
-        <!------------->
+    <header class="barra js-header">
     </header>
     <!------------------------------------------------>
 
     <!----------------NAVEGADOR------------------>
-    <nav class="navbar">
-        <ul>
-            <li><a href="../homePage/homePage.html">Inicio</a></li>
-            <li><a href="../contact/contact.html">Contacto</a></li>
-            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
-            <li><a href="../courses/cursos.html">Cursos</a></li>
-            <li><a href="../calendar/calendar.html">Calendario</a></li>
-            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
-            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
-        </ul>
+    <nav class="navbar js-nav">
     </nav>
     <!------------------------------------------------>
 
@@ -202,6 +160,7 @@
 
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
+    <script src="../../js/menuNav.js" type="module"></script>
 
 </body>
 

@@ -25,145 +25,72 @@
 
   <!------------------------------------ HEADER ------------------------------------>
 
-    <!---------- BARRA DE LA PAGINA ---------->
-    <header class="barra">
-        <!----Logo de Pagina---->
-        <div class="barra-logo">
-            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
-        </div>
-        <!---------------------->
+  <!---------- BARRA DE LA PAGINA ---------->
+  <header class="barra js-header">
+  </header>
+  <!------------------------------------------------>
 
-        <!---Barra de busqueda--->
-        <div class="barra-buscador">
-            <form action="" method="get" autocomplete="off" id="search-form">
-                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
-                <datalist id="cursos">
-                    <option value="Python & Data Science">
-                    <option value="HTML">
-                    <option value="JAVA"></option>
+  <!----------------NAVEGADOR------------------>
+  <nav class="navbar js-nav">
+  </nav>
+  <!------------------------------------------------>
 
-                </datalist>
-                <!--Boton busqueda-->
-                <button type="submit" aria-label="Buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <!------------------>
-            </form>
-        </div>
-        <!-------------------->
-
-        <!---Carrito--->
-        <div class="buscador-carrito">
-            <a href="../courses/carrito.html" aria-label="Carrito de compras">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>1</span>
-            </a>
-        </div>
-        <!------------->
-    </header>
-    <!------------------------------------------------>
-
-    <!----------------NAVEGADOR------------------>
-    <nav class="navbar">
-        <ul>
-            <li><a href="../homePage/homePage.html">Inicio</a></li>
-            <li><a href="../contact/contact.html">Contacto</a></li>
-            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
-            <li><a href="../courses/cursos.html">Cursos</a></li>
-            <li><a href="../calendar/calendar.html">Calendario</a></li>
-            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
-            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
-        </ul>
-    </nav>
-    <!------------------------------------------------>
-
-    <!------------------------------------ HEADER ------------------------------------>
+  <!------------------------------------ HEADER ------------------------------------>
 
 
   <!---------------------- CONETNIDO ---------------------->
 
   <main class="container">
 
-    <div class="back">
-      <a href="./add.html">
-        <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
-      </a>
-    </div>
-
-    <form class="form" method="get" action="../courses/carrito.html">
-      <h1 class="form__title">TITULO CURSO</h1>
-      <p class="form__subtitle">Inscripción grupal</p>
-      <section class="personas">
-
-        <!--Persona 1-->
-        <article class="person">
-
-          <div class="person__header">
-            <span class="person__index">Persona 1</span>
-            <button type="button" class="btn btn--remove">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-
-          <div class="form__field">
-            <label class="form__label" for="persona1_nombre">
-              <p class="form__p">Ingrese el mail de la persona</p>
-            </label>
-            <input class="form__input" type="email" id="persona1_nombre" name="persona1_nombre" required maxlength="40">
-          </div>
-
-        </article>
-
-        <!--Persona 2-->
-        <article class="person">
-
-          <div class="person__header">
-            <span class="person__index">Persona 2</span>
-            <button type="button" class="btn btn--remove">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-
-          <div class="form__field">
-            <label class="form__label" for="persona1_nombre">
-              <p class="form__p">Ingrese el mail de la persona</p>
-            </label>
-            <input class="form__input" type="email" id="persona2_nombre" name="persona2_nombre" required maxlength="40">
-          </div>
-
-        </article>
-
-        <!--Persona3-->
-        <article class="person">
-
-          <div class="person__header">
-            <span class="person__index">Persona 3</span>
-            <button type="button" class="btn btn--remove">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-
-          <div class="form__field">
-            <label class="form__label" for="persona1_nombre">
-              <p class="form__p">Ingrese el mail de la persona</p>
-            </label>
-            <input class="form__input" type="email" id="persona3_nombre" name="persona3_nombre" required maxlength="40">
-          </div>
-
-        </article>
-
-      </section>
-
-      <button type="button" class="btn btn--add"> Agregar Persona</button>
-
-      <div class="form__total">
-        <p class="form__total-label">Total a pagar:</p>
-        <p class="form__total-amount">$10000.00</p>
+    <section class="backWrap">
+      <div class="back">
+        <a href="./add.html">
+          <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
+        </a>
       </div>
+    </section>
 
-      <button type="submit" class="form__button">INSCRIBIR</button>
+    <section>
+      <form class="form" method="get" action="../courses/carrito.html">
+        <h1 class="form__title">TITULO CURSO</h1>
+        <p class="form__subtitle">Inscripción grupal</p>
+        <section class="personas" id="personas">
 
-    </form>
+          <!--Persona 1-->
+          <article class="person">
+
+            <div class="person__header">
+              <span class="person__index">Persona 1</span>
+              <button type="button" class="btn btn--remove">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="persona1_nombre">
+                <p class="form__p">Ingrese el mail de la persona</p>
+              </label>
+              <input class="form__input" type="email" id="persona1_nombre" name="persona1_nombre" required
+                maxlength="40">
+            </div>
+
+          </article>
+
+        </section>
+
+        <button id="btnAgregar" type="button" class="btn btn--add"> Agregar Persona</button>
+
+        <div class="form__total">
+          <p class="form__total-label">Total a pagar:</p>
+          <p class="form__total-amount">$10000.00</p>
+        </div>
+
+        <button type="submit" class="form__button">INSCRIBIR</button>
+
+      </form>
+    </section>
+
+
 
   </main>
 
@@ -227,8 +154,8 @@
 
   </footer>
   <!------------------------------------ FOOTER ------------------------------------>
-
-
+  <script src="../../js/menuNav.js" type="module"></script>
+  <script src="../../js/pages/group-registration/group.js" type="module"></script>
 </body>
 
 </html>

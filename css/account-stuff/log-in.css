@@ -1,7 +1,7 @@
 .formWrap {
     display: flex;
     justify-content: center;
-    margin: 5% 5%;
+    margin: 3em;
 }
 
 .formWrap__form {
