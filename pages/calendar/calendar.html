@@ -25,41 +25,42 @@
 
   <!------------------------------------ HEADER ------------------------------------>
 
-    <!---------- BARRA DE LA PAGINA ---------->
-    <header class="barra js-header">
-    </header>
-    <!------------------------------------------------>
+  <!---------- BARRA DE LA PAGINA ---------->
+  <header class="barra js-header">
+  </header>
+  <!------------------------------------------------>
 
-    <!----------------NAVEGADOR------------------>
-    <nav class="navbar js-nav">
-    </nav>
-    <!------------------------------------------------>
+  <!----------------NAVEGADOR------------------>
+  <nav class="navbar js-nav">
+  </nav>
+  <!------------------------------------------------>
 
-    <!------------------------------------ HEADER ------------------------------------>
+  <!------------------------------------ HEADER ------------------------------------>
 
 
   <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
 
   <main class="mainCalendar">
 
-    <div class="back">
-      <a href="../homePage/homePage.html">
-        <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
-      </a>
-    </div>
+
 
     <section class="calendar">
 
       <div class="calendar_header">
-        <div class="calender__arrows">
-          <a><i class="hidden fa-regular fa-circle-left"></i></a>
-          <h2 class="calendar_month">Octubre</h2>
-          <a href="./calendarNext.html"><i class="fa-regular fa-circle-right"></i></a>
+        <div class="back">
+          <a href="../homePage/homePage.html">
+            <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
+          </a>
         </div>
-        <span class="calendar_year">2025</span>
+        <div class="calendar__arrows">
+          <button class="js-prev-month"><i class="fa-regular fa-circle-left"></i></button>
+          <h2 class="calendar_month js-calendar-month">Octubre</h2>
+          <button class="js-next-month"><i class="fa-regular fa-circle-right"></i></button>
+        </div>
+        <span class="calendar_year js-calendar-year">2025</span>
       </div>
 
-      <div class="calendar__weekdays">
+      <div class="calendar__weekdays js-calendar-weekdays">
         <p>Lun</p>
         <p>Mar</p>
         <p>Mié</p>
@@ -68,128 +69,10 @@
         <p>Sáb</p>
         <p>Dom</p>
       </div>
-
-      <ol class="calendar__days">
-        <li class="calendar__day empty"></li>
-        <li class="calendar__day empty"></li>
-        <li class="calendar__day ">
-          <h4>1</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>2</h4>
-        </li>
-        <li class="calendar__day ">
-          <h4>3</h4>
-        </li>
-        <li class="calendar__day calendar__day--rojo">
-          <h4>5</h4>
-          <div class="events">
-            <a href="./caducado.html" title="JAVA Programación orientada a objetos">
-              <h4 class="event">JAVA POO</h4>
-            </a>
-          </div>
-        </li>
-        <li class="calendar__day">
-          <h4>5</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>6</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>7</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>8</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>9</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>10</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>11</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>12</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>13</h4>
-        </li>
-        <li class="calendar__day calendar__day--rojo" ">
-          <h4>14</h4>
-          <div class="events">
-            <a href="./caducado.html" title="React">
-              <h4 class="event">React</h4>
-            </a>
-          </div>
-        </li>
-        <li class="calendar__day  today">
-          <h4>15</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>16</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>17</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>18</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>19</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>20</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>21</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>22</h4>
-          <div class="events">
-            <a href="../courses/Detalles de Curso 1.html" title="Curso de HTML y CSS nivel inicial">
-              <h4 class="event">HTML y CSS</h4>
-            </a>
-          </div>
-          <div class="events">
-            <a href="../courses/Detalles de Curso 1.html" title="Curso de HTML y CSS nivel inicial">
-              <h4 class="event">SQL</h4>
-            </a>
-          </div>
-        </li>
-        <li class="calendar__day">
-          <h4>23</h4>
-
-        </li>
-        <li class="calendar__day">
-          <h4>24</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>25</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>26</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>27</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>28</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>29</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>30</h4>
-        </li>
-        <li class="calendar__day">
-          <h4>31</h4>
-        </li>
+      <ol class="calendar__days js-calendar-days">
       </ol>
 
     </section>
-
   </main>
 
   <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
@@ -251,9 +134,28 @@
     </div>
 
   </footer>
-  <!------------------------------------ FOOTER ------------------------------------>
-  <script src="../../js/menuNav.js" type="module"></script>
+  <div class="event" data-titulo="React" data-descripcion="Curso de introducción a React y componentes."
+    data-link="./caducado.html">
+    <h4>React</h4>
+  </div>
 
+  <div class="popup js-popu popup--hidden">
+    <div class="popup__content">
+      <button class="popup__close js-popup-close" aria-label="Cerrar popup">&times;</button>
+      <h3 class="popup__title" id="popup-titulo"></h3>
+      <p class="popup__description" id="popup-descripcion"></p>
+      <a class="popup__link" id="popup-link" href="#" target="_blank">Ver detalle</a>
+    </div>
+  </div>
+
+
+  <!------------------------------------ FOOTER ------------------------------------>
+  <div id="iframe-popup" class="event-iframe-container">
+    <span id="close-iframe" class="close-iframe">&times;</span>
+    <iframe id="event-iframe" class="event-iframe" src="" frameborder="0"></iframe>
+  </div>
+  <script src="../../js/calendar.js" type="module"> </script>
+  <script src="../../js/menuNav.js" type="module"> </script>
 </body>
 
 </html>
