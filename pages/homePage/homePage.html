@@ -52,15 +52,51 @@
 
         <!---Carrito--->
         <div class="buscador-carrito">
-            <a href="../courses/carrito.html" aria-label="Carrito de compras">
+            <button class="js-modalBoton">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>1</span>
-            </a>
+            </button>
         </div>
         <!------------->
     </header>
     <!------------------------------------------------>
+    <dialog class="js-modalCarrito">
+        <div class="contenido_MainCarrito">
+            <div class="contenedorPrincipal">
+                <h1><i class="fa-solid fa-cart-arrow-down"></i> Carrito de compra</h1>
+                <button class="js-closeModalCarrito">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
 
+            <div class="main_contenido">
+                <div class="main_productosCarrito js-contenedor-productos">
+                </div>
+
+                <div class="main_montoTotal">
+                    <h3>Resumen de compra</h3>
+                    <div class="montoTotal_Descripcion">
+                        <div class="montoTotal_elemento">
+                            <span>Cantidad de curso/s</span>
+                            <span>3</span>
+                        </div>
+                        <div class="montoTotal_elemento">
+                            <span>Subtotal</span>
+                            <span id="subtotal"><s>$30.000</s>$17.500</span>
+                        </div>
+                        <div class="montoTotal_elemento total">
+                            <span>Total</span>
+                            <span>$10000</span>
+                        </div>
+                        <div class="montoTotal_elementoComprar">
+                            <a href="./metodoPago.html">Continuar compra</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </dialog>
     <!----------------NAVEGADOR------------------>
     <nav class="navbar">
         <ul>
@@ -167,7 +203,7 @@
             <div class="main__seccion3__cards js-cursosDestacados">
             </div>
             <dialog class="js-seccion3-dialog">
-                <div class="main_contenido">
+                <div class="main_contenido2">
                     <button class="boton_cerrar js-CloseModal">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
@@ -267,6 +303,8 @@
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
     <script src="../../js/pages/homePage/homePage.js" type="module"></script>
+    <script src="../../js/pages/courses/carrito.js" type="module"></script>
+
 </body>
 
 </html>

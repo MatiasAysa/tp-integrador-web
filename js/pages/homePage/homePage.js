@@ -4,11 +4,12 @@ import { cursosDestacados } from "./constantesHomePage.js";
 import { proximosCursos } from "./constantesHomePage.js";
 import { CarruselProximos } from "./carrusel.js";
 import { ModalElegirTipoCompra } from "../../utils/modalElegirTipoCompra.js";
+import { ModalCarrito } from "../../utils/modalCarrito.js";
+
 const buscarDom = new BuscandorElementos();
 const contenedorCursosNuevos = buscarDom.buscandoElemento(".js-cursosNuevos_contenido");
 const contenedorCursosDestacados = buscarDom.buscandoElemento(".js-cursosDestacados");
 const contenedorCursosProximos = buscarDom.buscandoElemento(".js-proximos");
-
 
 
 cursosUltimosLanzados.forEach(item => {
@@ -101,6 +102,8 @@ const modealElegirCompra = buscarDom.buscandoElemento(".js-seccion3-dialog");
 const modal = new ModalElegirTipoCompra(modealElegirCompra);
 modal.render();
 
+const modalCarrito = new ModalCarrito();
+modalCarrito.render();
 
 
 
