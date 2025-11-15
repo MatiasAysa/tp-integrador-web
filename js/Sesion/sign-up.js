@@ -7,11 +7,6 @@ const surnameInput = document.querySelector('#surname');
 const dniInput = document.querySelector('#dni');
 const usernameInput = document.querySelector('#username');
 const passwordInput = document.querySelector('#password');
-emailInput.setCustomValidity('Por favor, ingrese un correo electrónico válido.')
-nameInput.setCustomValidity('El nombre solo debe contener letras y espacios.')
-surnameInput.setCustomValidity('El apellido solo debe contener letras y espacios.')
-usernameInput.setCustomValidity('El nombre de usuario no debe exceder los 40 caracteres.')
-passwordInput.setCustomValidity('La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula y un número.')
 
 
 submitButton.addEventListener('click', (e) => {
@@ -21,22 +16,27 @@ submitButton.addEventListener('click', (e) => {
         return;
     }
     else if (validarEmail(emailInput.value) === false) {
+        emailInput.setCustomValidity('Por favor, ingrese un correo electrónico válido.')
         form.reportValidity();
         return;
     }
     else if (validarPassword(passwordInput.value) === false) {
+        passwordInput.setCustomValidity('La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula y un número.')
         form.reportValidity();
         return;
     }
     else if (validarNombres(nameInput.value) === false) {
+        nameInput.setCustomValidity('El nombre solo debe contener letras y espacios.')
         form.reportValidity();
         return;
     }
     else if (validarNombres(surnameInput.value) === false) {
+        surnameInput.setCustomValidity('El apellido solo debe contener letras y espacios.')
         form.reportValidity();
         return;
     }
     else if (validarNombres(usernameInput.value) === false) {
+        usernameInput.setCustomValidity('El nombre de usuario no debe exceder los 40 caracteres.')
         form.reportValidity();
         return;
     }
@@ -80,14 +80,9 @@ function crearUsuario(usernameInput, passwordInput, emailInput, nameInput, surna
     };
     return usuario;
 }
-function guardarUsuarioEnLocalStorage(usuario) {
-    const usuariosGuardados = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-    if (!usuariosGuardados) {
-        localStorage.setItem('usuarios', JSON.stringify(usuario))
-    }
-    else {
-        usuariosGuardados.push(usuario);
-        localStorage.setItem('usuarios', JSON.stringify(usuariosGuardados));
-    }
+function guardarUsuarioEnLocalStorage(usuario) {
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    usuarios.push(usuario);
+    localStorage.setItem("usuarios", JSON.stringify(usuarios))
 }
