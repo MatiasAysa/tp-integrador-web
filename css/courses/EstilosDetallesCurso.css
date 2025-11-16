@@ -191,8 +191,14 @@ h2 {
     width: 100%;
     margin-bottom: 0.5em;
 }
-.niveles__divide--numNivel{
-    padding-top: 1em;
+.niveles__divide2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0.5em;
+}
+.fa-solid{
+    padding-top: 0.2em;
 }
 .niveles__divide--column{ 
     width: 50%;
@@ -205,8 +211,19 @@ h2 {
     display: flex;
     justify-content: center;
 }
+.niveles__divide.active,
+.contenido-cuatrimestre.active {
+    display: flex;
+    flex-direction: row;
+    height: 33%;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
 
-
+.niveles__divide,
+.contenido-cuatrimestre {
+    display: none;
+}
 
 @media (max-width: 480px) {
     body {

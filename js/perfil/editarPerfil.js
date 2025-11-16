@@ -41,6 +41,7 @@ submitButton.addEventListener('click', (e) => {
         localStorage.setItem("usuarios" , JSON.stringify(usuarios));
         localStorage.setItem('usuarioActual', JSON.stringify(usuarios[indexUsuario]))
         alert("usuario modificado")
+        window.location.href = "./my-profile.html"
     }
 }
 );

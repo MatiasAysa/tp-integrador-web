@@ -27,34 +27,23 @@
     <!---------- BARRA DE LA PAGINA ---------->
     <header class="barra js-header">
     </header>
-    <!------------------------------------------------>
-
     <!----------------NAVEGADOR------------------>
     <nav class="navbar js-nav">
     </nav>
-    <!------------------------------------------------>
-
     <!------------------------------------ HEADER ------------------------------------>
-
-
     <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
 
     <main class="contenido">
 
-        <form action="./succes-tarjeta.html" method="get" class="formWrap">
-
-            <!-- <div class="back">
-                <a href="./my-profile.html">
-                    <button type="button" class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
-                </a>
-            </div> -->
+        <form action="./succes-tarjeta.html" method="get" class="formWrap js-form">
 
             <section class="formWrap__form">
+
                 <h2>INFORMACIÓN DE LA TARJETA</h2>
 
                 <div class="form__field">
                     <label class="form__label" for="tipo">Tipo</label>
-                    <select class="form__input" id="tipo">
+                    <select class="form__input js-select" id="tipo">
                         <option value="visa">Visa</option>
                         <option value="mastercard">Mastercard</option>
                     </select>
@@ -62,19 +51,19 @@
 
                 <div class="form__field">
                     <label class="form__label" for="numero">Número de Tarjeta</label>
-                    <input class="form__input" type="number" id="numero" name="numero" maxlength="20" required>
+                    <input class="form__input js-numTarjeta" type="text" id="numero" name="numero" maxlength="16" required>
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="cvv">Código de Seguridad (CVV)</label>
-                    <input class="form__input form__input--small" type="password" id="cvv" name="cvv" maxlength="3"
+                    <input class="form__input form__input--small js-cod" type="password" id="cvv" name="cvv" maxlength="3"
                         required>
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="vencimiento">Fecha de Vencimiento (MM/AA)</label>
-                    <input class="form__input form__input--date" type="month" id="vencimiento" name="vencimiento"
-                        placeholder="MM/AA" required>
+                    <input class="form__input form__input--date js-vencimiento" type="text" id="vencimiento" name="vencimiento"
+                        placeholder="MM/AA" maxlength="5" required>
                 </div>
 
             </section>
@@ -90,7 +79,7 @@
 
                 <div class="form__field">
                     <label class="form__label" for="cvv">Código postal</label>
-                    <input class="form__input form__input--small" type="number" id="cp" name="cp" maxlength="8"
+                    <input class="form__input form__input--small" type="text" id="cp" name="cp" maxlength="4"
                         required>
                 </div>
 
@@ -173,6 +162,7 @@
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
     <script src="../../js/menuNav.js" type="module"></script>
+    <script src="../../js/perfil/tarjetas.js"></script>
 
 </body>
 
