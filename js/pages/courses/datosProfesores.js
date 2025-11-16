@@ -20,7 +20,7 @@ export const DATOS_PROFES = [
         nombre: "Juan Manuel Ugarriza",
         imagen: 'img/teachers/ruben.png',
         descripcion: 'Profesional versátil que domina tanto el frontend como el backend. Enseña cómo construir aplicaciones web completas, integrando diseño, lógica del servidor y bases de datos para formar desarrolladores integrales.',
-        calificacion: 3.5
+        calificacion: 3
     },
 
     {
@@ -36,7 +36,7 @@ export const DATOS_PROFES = [
         nombre: "Ariana Gameplays",
         imagen: 'img/teachers/ariana.jpg',
         descripcion: 'Docente orientada al pensamiento lógico y la resolución de problemas. Su enfoque se basa en aprender Python desde cero y aplicarlo en automatización, análisis de datos y desarrollo general, promoviendo la creatividad.',
-        clasificaion: 4.5
+        clasificaion: 4
     },
 
     {

@@ -28,8 +28,8 @@
         <section>
             <section class="contenedoresPresentacion">
                 <div class="contenedorImagen">
-                    <img src="" alt="Imagen de Curso HTML y CSS"
-                        class="contenedorImagen__imagenCurso" id="imagenCurso-js">
+                    <img src="" alt="Imagen de Curso HTML y CSS" class="contenedorImagen__imagenCurso"
+                        id="imagenCurso-js">
                     <div class="contenedorImagen__textoPresentacion">
                         <h2 id="nivelCurso-js" class="subtitulo"></h2>
                         <h1 id="nombreCurso-js" class="titulo"></h1>
@@ -37,6 +37,10 @@
                 </div>
 
                 <div class="contenedorTexto">
+                    <div class="contenedorTexto__duracionCurso">
+                        <h2>Fecha de Inicio</h2>
+                        <p id="fechaInicio-js"></p>
+                    </div>
                     <div class="contenedorTexto__duracionCurso">
                         <h2>Duracion del Curso:</h2>
                         <p id="duracionCurso-js"></p>
@@ -64,24 +68,43 @@
             </section>
             <section class="contenedoresInfo">
                 <section class="contenedoresInfo__infoPrincipal">
-                    <div class="objetivo">
-                        <div class="tituloInfo">
-                            <h1> Objetivos de la Cursada</h1>
-                        </div>
-                        <div class="objetivo__texto">
-                            <div class="objetivo__lista">
-                                <ul id="objetivosCurso-js">
+                    <div class="insano">
+                        <div class="objetivo">
+                            <div class="tituloInfo">
+                                <h1> Objetivos de la Cursada</h1>
+                            </div>
+                            <div class="objetivo__texto">
+                                <div class="objetivo__lista">
+                                    <ul id="objetivosCurso-js">
 
-                                </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profesor">
+                            <h1>Profesor</h1>
+                            <div class="contenedorProfesor">
+                                <div class="profesor_foto">
+                                    <img src="" alt="Imagen Profesor" class="foto-perfil js-fotoPerfil ">
+                                </div>
+                                <div class="profesor_info">
+                                    <h2 class=" profesor_texto nombre"></h2>
+                                    <div class="profesor_texto estrellas"> </div>
+                                    <div class="profesor_texto descripcion"> </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+
                     <div class="tituloInfo" name="seccionPrograma" id="seccionPrograma">
                         <h1>Programa Educativo</h1>
                         <div class="programaEdu">
                             <div class="programa__niveles">
-                                <div class="niveles__divide">
+                                <div class="niveles__divide2">
                                     <h2 class="niveles__divide--numNivel">nivel 1</h2>
+                                    <div class="open"><i class="fa-solid fa-angle-down"></i></div>
+                                    <div class="closed"><i class="fa-solid fa-angle-right"></i></div>
                                 </div>
                                 <div class="niveles__divide">
                                     <div class="niveles__divide--column">
@@ -113,8 +136,10 @@
                                 </div>
                             </div>
                             <div class="programa__niveles">
-                                <div class="niveles__divide">
+                                <div class="niveles__divide2">
                                     <h2 class="niveles__divide--numNivel">nivel 2</h2>
+                                    <div class="open"><i class="fa-solid fa-angle-down"></i></div>
+                                    <div class="closed"><i class="fa-solid fa-angle-right"></i></div>
                                 </div>
                                 <div class="niveles__divide">
                                     <div class="niveles__divide--column">
@@ -165,7 +190,7 @@
     <!------------------------------------ JScript ----------------------------------->
     <script src="../../js/components/menuNav-module.js" type="module"></script>
     <script src="../../js/pages/courses/detallesCurso-module.js" type="module"></script>
-    <!------------------------------------ JScript -----------------------------------> 
+    <!------------------------------------ JScript ----------------------------------->
 </body>
 
 </html>

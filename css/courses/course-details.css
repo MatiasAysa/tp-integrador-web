@@ -27,12 +27,13 @@ h2 {
 
 .contenedorImagen__textoPresentacion {
     display: flex;
-    padding: 20% 0 20% 30%;
     flex-direction: column;
     color: var(--color-texto);
+    padding: 0 8em 5em;
     position: absolute;
     height: 90%;
     width: 90%;
+    justify-content: center;
 }
 
 .contenedorImagen__imagenCurso {
@@ -124,9 +125,10 @@ h2 {
 }
 
 .objetivo {
-    width: 100%;
+    width: auto;
     height: auto;
     margin-bottom: 2em;
+    min-width: 30em;
 }
 
 .objetivo__texto {
@@ -196,7 +198,18 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 80%;
+    height: 5em;
+    margin: 2em 1em;
+    padding: 1em 2em;
+    background-color: var(--color-principalDegradado);
+    border-radius: 0.5em;
+}
+
+.programa__niveles.open {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
     margin: 2em 1em;
     padding: 1em 2em;
     background-color: var(--color-principalDegradado);
@@ -206,14 +219,19 @@ h2 {
 .niveles__divide {
     display: flex;
     flex-direction: row;
-    height: 33%;
+    height: auto;
     width: 100%;
-    margin-bottom: 0.5em;
 }
 
-.niveles__divide--numNivel {
-    padding-top: 1em;
+.niveles__divide2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0.5em;
+    cursor: pointer;
 }
+
+
 
 .niveles__divide--column {
     width: 50%;
@@ -228,6 +246,70 @@ h2 {
     justify-content: center;
 }
 
+.fa-solid {
+    padding-top: 0.4em;
+}
+
+.niveles__divide.active,
+.contenido-cuatrimestre.active {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 100%;
+    margin: 1em 0 0.5em;
+}
+
+.niveles__divide,
+.contenido-cuatrimestre,
+.closed.active,
+.open {
+    display: none;
+}
+
+.open.active,
+.closed {
+    display: flex;
+}
+
+.contenedorProfesor {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    max-width: 50em;
+    min-width: none;
+    margin: 1em 2em 1em 0;
+    padding: 1.5em;
+    background-color: var(--color-principalDegradado);
+    border-radius: 0.5em;
+}
+
+.foto-perfil {
+    width: 10em;
+    height: 10em;
+}
+
+.profesor_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profesor_texto {
+    margin: 0.4em 1em;
+}
+
+.insano {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+}
+
+.profesor {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+}
+
 
 
 @media (max-width: 480px) {
@@ -236,7 +318,7 @@ h2 {
     }
 
     .contenedoresPresentacion {
-        height: 70em;
+        height: 60em;
         flex-direction: column;
     }
 
@@ -266,7 +348,8 @@ h2 {
     }
 
     .contenedorImagen__textoPresentacion {
-        padding-left: 27%;
+        padding: 2em 4em 2em;
+        justify-content: center;
     }
 
     .contenedoresInfo {
@@ -306,13 +389,61 @@ h2 {
         height: 50%;
     }
 
+    .programa__niveles.open {
+        margin: 2em 2em 2em 0;
+        width: 100%;
+        height: 50%;
+    }
+
     .objetivo__lista {
         margin-left: 1em;
+    }
+
+    .insano {
+        flex-direction: column;
+    }
+
+    .contenedorProfesor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profesor {
+        margin: 0;
     }
 }
 
 /* --- TABLETS ---*/
-@media (min-width: 481px) and (max-width: 1000px) {
+@media (min-width:1200px) and (max-width: 1400px) {
+    .contenedoresInfo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedoresInfo__infoPrincipal {
+        width: 100%;
+    }
+
+    .contenedoresInfo__infoSecundaria {
+        width: 90%;
+        height: 15em;
+        flex-direction: row;
+        margin: 0 auto;
+    }
+
+    .cursosAlt {
+        height: 90%;
+        width: 33%;
+        margin: 0.5em;
+    }
+
+    .cursosAlt__texto {
+        letter-spacing: normal;
+        line-height: normal;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1200px) {
     body {
         font-size: 70%;
     }
@@ -325,6 +456,7 @@ h2 {
     .contenedorImagen {
         padding: 1em 0;
         width: 100%;
+        max-width: 95em;
         height: 40em;
     }
 
@@ -381,10 +513,29 @@ h2 {
     .programa__niveles {
         margin: 2em 1.5em;
         width: 100%;
-        height: 50%;
+        height: 5em;
+    }
+
+    .programa__niveles.open {
+        margin: 2em 1.5em;
+        width: 100%;
+        height: auto;
     }
 
     .objetivo__lista {
         margin-left: 1em;
+    }
+
+    .insano {
+        flex-direction: column;
+    }
+
+    .contenedorProfesor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profesor {
+        margin: 0;
     }
 }

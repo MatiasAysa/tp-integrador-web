@@ -47,6 +47,10 @@ function ingresarValoresCurso() {
             cuatrimestresCurso[i].appendChild(li);
         });
     })
+
+    const fechaInicio = document.querySelector("#fechaInicio-js");
+    fechaInicio.textContent = datos.fecha_lanzamiento.toLocaleDateString("es-ES", { day: "numeric", month: "numeric", year: "numeric" });
+    ingresarDatosProfesor();
 }
 
 
@@ -63,8 +67,8 @@ DATOS_CURSOS.forEach((item, i) => {
 });
 
 function crearCursoAlt(contenedor, curso) {
-    const templateCursoAlt = 
-    `
+    const templateCursoAlt =
+        `
         <div class="cursosAlt">
             <a href="./course-details.html?id=${curso.id}" target="_self">
                 <img src="../../${curso.imagen}" alt="Imagen de Curso Alt" class="cursosAlt__imagen">
@@ -77,15 +81,42 @@ function crearCursoAlt(contenedor, curso) {
 
     cantidadCursosAlt++;
 }
-//acordeon
+
+// Profesor
+function ingresarDatosProfesor() {
+    const fotoProfesor = document.querySelector(".js-fotoPerfil");
+    fotoProfesor.src = `../../${datos.profesor.imagen}`;
+
+    const nombre = document.querySelector(".nombre");
+    nombre.textContent = datos.profesor.nombre;
+
+    const estrellas = document.querySelector(".estrellas");
+    let totalEstrellas = "";
+    let vacias = 5 - datos.profesor.calificacion;
+    for (let i = 0; i < datos.profesor.calificacion; i++) {
+        totalEstrellas += `<i class="fa-solid fa-star"></i>`;
+    }
+    for (let i = 0; i < vacias; i++) {
+        totalEstrellas += `<i class="fa-regular fa-star"></i>`;
+    }
+    estrellas.innerHTML = `<ul>${totalEstrellas}<ul>`
+
+    const descripcion = document.querySelector(".descripcion");
+    descripcion.textContent = datos.profesor.descripcion;
+}
+
+
+// Acordeon
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".niveles__divide2").forEach(nivelHeader => {
 
         nivelHeader.addEventListener("click", () => {
+            const contenedor = nivelHeader.parentElement;
             const primerBloque = nivelHeader.nextElementSibling;
             const segundoBloque = primerBloque ? primerBloque.nextElementSibling : null;
             const hijo = nivelHeader.querySelector(".open");
             const hijo2 = nivelHeader.querySelector(".closed");
+            if (contenedor) contenedor.classList.toggle("open");
             if (primerBloque) primerBloque.classList.toggle("active");
             if (segundoBloque) segundoBloque.classList.toggle("active");
             if (hijo) hijo.classList.toggle("active");
@@ -94,13 +125,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 });
-/*
 
-                    <div class="cursosAlt">
-                        <a href="./Detalles de Curso 2.html" target="_self">
-                            <img src="../../img/courses/Python.jpg" alt="Imagen de Curso Alt" class="cursosAlt__imagen">
-                            <h5 class="cursosAlt__texto">Curso de Python</h5>
-                        </a>
-                    </div>
 
-*/
