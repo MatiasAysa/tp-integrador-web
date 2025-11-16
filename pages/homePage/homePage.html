@@ -24,40 +24,8 @@
     <!------------------------------------ HEADER ------------------------------------>
 
     <!---------- BARRA DE LA PAGINA ---------->
-    <header class="barra">
-        <!----Logo de Pagina---->
-        <div class="barra-logo">
-            <a href="../homePage/homePage.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
-        </div>
-        <!---------------------->
+    <header class="barra js-header">
 
-        <!---Barra de busqueda--->
-        <div class="barra-buscador">
-            <form action="" method="get" autocomplete="off" id="search-form">
-                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
-                <datalist id="cursos">
-                    <option value="Python & Data Science">
-                    <option value="HTML">
-                    <option value="JAVA"></option>
-
-                </datalist>
-                <!--Boton busqueda-->
-                <button type="submit" aria-label="Buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <!------------------>
-            </form>
-        </div>
-        <!-------------------->
-
-        <!---Carrito--->
-        <div class="buscador-carrito">
-            <button class="js-modalBoton">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>1</span>
-            </button>
-        </div>
-        <!------------->
     </header>
     <!------------------------------------------------>
     <dialog class="js-modalCarrito">
@@ -98,21 +66,8 @@
 
     </dialog>
     <!----------------NAVEGADOR------------------>
-    <nav class="navbar">
-        <ul>
-            <li><a href="./homePage.html">Inicio</a></li>
-            <li><a href="../contact/contact.html">Contacto</a></li>
-            <li><a href="../giftcard/giftcard.html">Giftcard</a></li>
-            <li><a href="../courses/cursos.html">Cursos</a></li>
-            <li><a href="../calendar/calendar.html">Calendario</a></li>
-            <li><a href="../courses/my-courses.html">Mis cursos</a></li>
-            <li><a href="../account-stuff/my-profile.html">Mi perfil</a></li>
-        </ul>
+    <nav class="navbar js-nav">
     </nav>
-    <!------------------------------------------------>
-
-    <!------------------------------------ HEADER ------------------------------------>
-
     <!----------------CONTENIDO PRINCIPAL------------------>
     <main>
 
@@ -203,7 +158,7 @@
             <div class="main__seccion3__cards js-cursosDestacados">
             </div>
             <dialog class="js-seccion3-dialog">
-                <div class="main_contenido2">
+                <div class="main_contenido">
                     <button class="boton_cerrar js-CloseModal">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
@@ -211,10 +166,10 @@
                         <h2>! Elige tipo de compra !</h2>
                     </div>
                     <div class="contenido_botones">
-                        <a class="boton_individual" href="../courses/carrito.html">
-                            <i class="fa-solid fa-user"></i></i>Individual</a>
-                        <a href="./grupal-registration.html" class="boton_grupal">
-                            <i class="fa-solid fa-users"></i>Grupal</a>
+                        <button class="boton_individual js-boton-añadirIndividual">
+                            <i class="fa-solid fa-user"></i></i>Individual</button>
+                        <button class="boton_grupal">
+                            <i class="fa-solid fa-users"></i>Grupal</button>
                     </div>
                 </div>
             </dialog>
@@ -302,9 +257,9 @@
 
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
+    <script src="../../js/menuNav.js" type="module"></script>
     <script src="../../js/pages/homePage/homePage.js" type="module"></script>
     <script src="../../js/pages/courses/carrito.js" type="module"></script>
-
 </body>
 
 </html>

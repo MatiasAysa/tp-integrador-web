@@ -27,49 +27,12 @@
     <!------------------------------------ HEADER ------------------------------------>
 
     <!---------- BARRA DE LA PAGINA ---------->
-    <header class="barra">
-        <!----Logo de Pagina---->
-        <div class="barra-logo">
-            <a href="../../index.html"><img src="../../img/globals/iconoPage.png" alt="Logo Team Queso"></a>
-        </div>
-        <!---------------------->
-
-        <!---Barra de busqueda--->
-        <div class="barra-buscador">
-            <form action="" method="get" autocomplete="off" id="search-form">
-                <input type="search" name="Buscador" id="buscador" list="cursos" placeholder="Buscar cursos...">
-                <datalist id="cursos">
-                    <option value="Python & Data Science">
-                    <option value="HTML">
-                    <option value="JAVA"></option>
-
-                </datalist>
-                <!--Boton busqueda-->
-                <button type="submit" aria-label="Buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <!------------------>
-            </form>
-        </div>
-        <!-------------------->
-
-        <!---Carrito--->
-        <div class="buscador-carrito iniciarSesion">
-            <a href="./log-in.html" aria-label="Carrito de compras">
-                INICIAR SESIÓN
-            </a>
-        </div>
-        <!------------->
+    <header class="barra js-header">
     </header>
     <!------------------------------------------------>
 
     <!----------------NAVEGADOR------------------>
-    <nav class="navbar">
-        <ul>
-            <li><a href="../../index.html">Inicio</a></li>
-            <li><a href="../contact/contact.html">Contacto</a></li>
-            <li><a href="../calendar/calendar.html">Calendario</a></li>
-        </ul>
+    <nav class="navbar js-nav">
     </nav>
     <!------------------------------------------------>
 
@@ -84,37 +47,59 @@
             <form class="formWrap__form form" action="./succes-sign-up.html" method="get">
 
                 <div class="form__field">
+                    <label class="form__label" for="email">Ingresa tu e-mail</label>
+                    <input class="form__input" type="email" id="email" name="email">
+                    <span class="mensaje-error" id="error-email"></span>
+                </div>
+
+                <div class="form__field">
                     <label class="form__label" for="name">Ingresa tu nombre</label>
-                    <input class="form__input" type="text" id="name" name="name" maxlength="40" required>
+                    <input class="form__input" type="text" id="name" name="name" required>
+                    <span class="mensaje-error" id="error-email"></span>
+                    <span class="mensaje-error" id="error-name"></span>
+
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="surname">Ingresa tu apellido </label>
-                    <input class="form__input" type="text" id="surname" name="surname" maxlength="40" required>
+                    <input class="form__input" type="text" id="surname" name="surname" required>
+                    <span class="mensaje-error" id="error-surname"></span>
+
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="dni">Ingresa tu DNI (sin puntos)</label>
-                    <input class="form__input form__input--number" type="number" id="dni" name="dni" min="1000"
-                        max="999999999" required>
+                    <input class="form__input form__input--number" type="text" id="dni" name="dni" maxlength="10"
+                        required>
+                    <span class="mensaje-error" id="error-dni"></span>
+
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="username">Ingresa un nombre de usuario</label>
                     <input class="form__input" type="text" id="username" name="username" maxlength="40" required>
+                    <span class="mensaje-error" id="error-username"></span>
+
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="password">Ingresa una contraseña</label>
                     <input class="form__input" type="password" id="password" name="password" minlength="8"
                         maxlength="20" required>
+                    <span class="mensaje-error" id="error-password"></span>
+
                 </div>
 
                 <button class="form__button">CONTINUAR</button>
-                <p class="formWrap__p">¿Ya tienes una cuenta? <a href="./log-in.html" class="formWrap__a">INICIÁ
+                <p class="formWrap__p">¿Ya tienes una cuenta? <a href="./log-in.html" class="formWrap__a">INICIAR
                         SESIÓN</a></p>
             </form>
         </section>
+
+
+        <dialog>
+
+        </dialog>
     </main>
 
     <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
@@ -178,7 +163,8 @@
 
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
-
+    <script src="../../js/menuNav.js" type="module"></script>
+    <script src="../../js/Sesion/sign-up.js" type="module"></script>
 </body>
 
 </html>

@@ -12,7 +12,6 @@ export class ModalCarrito {
         botonAbrirModal.forEach(element => {
             element.addEventListener("click", (event) => {
                 contenedorModal.showModal();
-                console.log("asd");
             });
         });
 

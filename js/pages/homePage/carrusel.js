@@ -11,7 +11,11 @@ export class CarruselProximos {
     }
     
     inicializarCarrusel() {
-        if (this.totalSlides === 0) return;
+        if (this.totalSlides === 0) {
+            console.error('No se encontraron slides');
+            return;
+        }
+        
         this.actualizarPosicion();
         this.agregarEventListeners();
     }
@@ -29,11 +33,13 @@ export class CarruselProximos {
     slideAnterior() {
         this.currentIndex = (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
         this.actualizarPosicion();
+        console.log("← Slide anterior - Índice:", this.currentIndex);
     }
     
     slideSiguiente() {
         this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
         this.actualizarPosicion();
+        console.log("→ Slide siguiente - Índice:", this.currentIndex);
     }
     
     actualizarPosicion() {

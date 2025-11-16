@@ -593,7 +593,7 @@
     justify-content: space-between;
 }
 
-.contenido_botones a {
+.contenido_botones button {
     text-decoration: none;
     text-align: center;
     font-size: 0.95em;
@@ -605,6 +605,7 @@
     justify-content: center;
     width: 45%;
     height: 3em;
+    cursor: pointer;
 }
 
 .boton_individual,

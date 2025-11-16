@@ -1,9 +1,11 @@
 .main__section {
     font-size: 2em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2%;
     height: 100%;
+    margin: 2em 0em;
 }
 
 
@@ -17,26 +19,48 @@
 }
 
 .card__background {
+    position: relative;
     aspect-ratio: 1 / 1;
     /* siempre cuadrado */
     margin-top: 5%;
     width: 11em;
     background: darkgray;
+    background-image: url(../../img/giftcard/crfondo.png);
+    background-size: cover;
+
 }
 
 .background__p {
-    height: 75%;
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    word-break: break-word;
 }
 
-.background__montoWrap{
+.montoWrap__upRight {
     text-align: right;
+    position: absolute;
+    bottom: 1;
+    right: 0;
 }
 
-.montoWrap__p{
+.montoWrap__upLeft {
+    text-align: right;
+    position: absolute;
+    bottom: 1;
+    right: 1;
+}
+
+.montoWrap__downRight {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.montoWrap__p {
     display: inline-block;
     background-color: rgb(16, 12, 0);
 }
@@ -47,7 +71,7 @@
 }
 
 .background__p--titulo {
-    font-size: .4em;
+    font-size: 50%;
 }
 
 .background__p--nombre {
@@ -184,7 +208,7 @@
 }
 
 .labelRadio__background--tq {
-    background-image: url(../../img/giftcard/teamquesoBG.jpg);
+    background-image: url(../../img/giftcard/teamquesoBG.png);
 }
 
 .labelRadio__background--queso {
@@ -209,9 +233,13 @@
     width: 50%;
 }
 
+.form__titulos-plata {
+    color: rgb(18, 76, 14);
+}
+
 /* ---------------------- TEXTOS (monto y destinatario) ---------------------- */
 
-.form_email{
+.form_email {
     width: 100%;
 }
 
@@ -226,9 +254,6 @@
     font-size: 0.6em;
 }
 
-.article__vistaPrevia--cell {
-    display: none;
-}
 
 /* -------------------- MEDIA QUERIES -------------------- */
 
@@ -238,15 +263,7 @@
         font-size: 40%;
     }
 
-    .form{
-        margin-top: 2em;
-    }
-
     .article__vistaPrevia {
-        display: none;
-    }
-
-    .article__vistaPrevia--cell {
         margin-top: 1em;
         height: 80%;
         font-size: 2em;
@@ -255,13 +272,18 @@
         justify-content: center;
     }
 
-    .article__vistaPrevia--cell .titulos {
+    .article__vistaPrevia .titulos {
         font-size: 1rem;
     }
 
-    .vistaPrevia__cardWrap{
+    .vistaPrevia__cardWrap {
         margin-bottom: 2em;
     }
+
+    .main__formWrap {
+        margin-bottom: 3.5em;
+    }
+
 }
 
 
@@ -270,6 +292,7 @@
     body {
         font-size: 70%;
     }
+
 }
 
 /* -------------------- MEDIA QUERIES -------------------- */
