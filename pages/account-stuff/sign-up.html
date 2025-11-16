@@ -43,38 +43,51 @@
     <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
 
     <main>
-        <section class="formWrap">
-            <form class="formWrap__form form" action="#" method="get">
+                <section class="formWrap">
+            <form class="formWrap__form form" action="./succes-sign-up.html" method="get">
 
                 <div class="form__field">
                     <label class="form__label" for="email">Ingresa tu e-mail</label>
                     <input class="form__input" type="email" id="email" name="email">
+                    <span class="mensaje-error" id="error-email"></span>
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="name">Ingresa tu nombre</label>
                     <input class="form__input" type="text" id="name" name="name" required>
+                    <span class="mensaje-error" id="error-email"></span>
+                    <span class="mensaje-error" id="error-name"></span>
+
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="surname">Ingresa tu apellido </label>
                     <input class="form__input" type="text" id="surname" name="surname" required>
+                    <span class="mensaje-error" id="error-surname"></span>
+
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="dni">Ingresa tu DNI (sin puntos)</label>
-                    <input class="form__input form__input--number" type="text" id="dni" name="dni" maxlength="10" required>
+                    <input class="form__input form__input--number" type="text" id="dni" name="dni" maxlength="10"
+                        required>
+                    <span class="mensaje-error" id="error-dni"></span>
+
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="username">Ingresa un nombre de usuario</label>
-                    <input class="form__input" type="text" id="username" name="username" maxlength="40"required>
+                    <input class="form__input" type="text" id="username" name="username" maxlength="40" required>
+                    <span class="mensaje-error" id="error-username"></span>
+
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="password">Ingresa una contraseña</label>
                     <input class="form__input" type="password" id="password" name="password" minlength="8"
-                        maxlength="20"required>
+                        maxlength="20" required>
+                    <span class="mensaje-error" id="error-password"></span>
+
                 </div>
 
                 <button class="form__button">CONTINUAR</button>
