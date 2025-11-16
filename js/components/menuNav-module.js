@@ -5,13 +5,17 @@ import { HEADER_LOGO, HEADER_LOGO_NO_LOGUEADO} from './constants.js';
 import { barraBuscador } from './buscador.js';
 import { Carrito } from './carrito.js';
 import { IniciarSesionbtn} from './iniciarSesionbtn.js';
+import { Footer } from './footer.js'
 
 const headerLogo = new HeaderLogo();
 const buscador = new barraBuscador();
 const carrito = new Carrito();
 const iniciarSesion = new IniciarSesionbtn()
 const navbar = new Navbar();
+const footer = new Footer();
+footer.addFooter();
 isUserLoggedIn();
+
 
 function isUserLoggedIn() {
     const iniciado = localStorage.getItem('iniciado');
