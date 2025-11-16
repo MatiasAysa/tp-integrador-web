@@ -57,7 +57,7 @@ DATOS_CURSOS.forEach(item => {
                 </div>
                 <div class="card_infoCursoNuevo">
                     <h4>${item.nombre}</h4>
-                    <span>${item.profesor}</span>
+                    <span>${item.profesor.nombre}</span>
                 </div>
             </article>
         </a>`;

@@ -1,3 +1,5 @@
+import { DATOS_PROFES } from "./datosProfesores.js";
+
 export const DATOS_CURSOS = [
     {
         id: "javaScript-principiante",
@@ -10,7 +12,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/js.jpg',
         precio: 15000,
         objetivos: ['Comprender los conceptos básicos de JavaScript.', 'Manipular el DOM.', 'Crear aplicaciones web interactivas.', 'Trabajar con APIs y manejar eventos.'],
-        profesor: 'Diego Merlo Sogaray',
+        profesor: DATOS_PROFES[0],
         fecha_lanzamiento: new Date('2025-10-01'),
         destacado: true,
         cuatrimestres: [
@@ -48,7 +50,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/cursoPYTHON.jpg',
         precio: 20000,
         objetivos: ['Aprender sintaxis y estructuras de Python.', 'Trabajar con bibliotecas populares.', 'Desarrollar proyectos prácticos.'],
-        profesor: 'Kronk Leon',
+        profesor: DATOS_PROFES[1],
         fecha_lanzamiento: new Date('2024-08-15'),
         destacado: true,
         cuatrimestres: [ 
@@ -86,7 +88,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/jpeg.jpg',
         precio: 30000,
         objetivos: ['Aprender desarrollo front-end y back-end.', 'Trabajar con bases de datos.', 'Desarrollar aplicaciones web completas.'],
-        profesor: 'Vistor Ugarriza',
+        profesor: DATOS_PROFES[2],
         fecha_lanzamiento: new Date('2025-11-01'),
         destacado: true,
         cuatrimestres: [ 
@@ -124,7 +126,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/godot.jpg',
         precio: 18000,
         objetivos: ['Comprender el motor Godot y su interfaz.', 'Diseñar y programar mecánicas de juego.', 'Publicar un videojuego completo.'],
-        profesor: 'Ginxu Giñones',
+        profesor: DATOS_PROFES[3],
         fecha_lanzamiento: new Date('2026-03-10'),
         destacado: false,
         cuatrimestres: [
@@ -162,7 +164,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/cursoJAVA.jpg',
         precio: 25000,
         objetivos: ['Aprender sintaxis y estructuras de Java.', 'Programación orientada a objetos.', 'Desarrollar aplicaciones prácticas.'],
-        profesor: 'Pablo Kronksinski',
+        profesor: DATOS_PROFES[4],
         fecha_lanzamiento: new Date('2025-12-20'),
         destacado: false,
         cuatrimestres: [
@@ -200,7 +202,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/sharpCurso.jpg',
         precio: 12000,
         objetivos: ['Aprender sintaxis y estructuras de C#.', 'Programación orientada a objetos.', 'Desarrollar aplicaciones prácticas.'],
-        profesor: 'Todo Code',
+        profesor: DATOS_PROFES[5],
         fecha_lanzamiento: new Date('2025-11-03'),
         destacado: false,
         cuatrimestres: [
@@ -237,7 +239,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/firebase.jpg',
         precio: 22000,
         objetivos: ['Aprender a utilizar Firebase y sus servicios.', 'Gestionar bases de datos en tiempo real.', 'Desarrollar aplicaciones escalables.'],
-        profesor: 'Beniju Beñat',
+        profesor: DATOS_PROFES[6],
         fecha_lanzamiento: new Date('2026-01-15'),
         destacado: false,
         cuatrimestres: [
