@@ -1,4 +1,4 @@
-import { eventos } from "../constants/eventos.js";
+import { eventos } from "./eventos.js";
 
 const monthElement = document.querySelector(".js-calendar-month");
 const yearElement = document.querySelector(".js-calendar-year");
