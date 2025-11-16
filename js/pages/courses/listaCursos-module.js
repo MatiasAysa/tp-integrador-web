@@ -26,6 +26,8 @@ aniadirCursosBtn.forEach(button => {
 
 // lista de cursos dinamica
 import { DATOS_CURSOS } from "./datosCursos.js"
+import { DATOS_CATEGORIAS, DATOS_NIVELES } from "./datosCategorias&Niveles.js";
+
 const paginaCursos = document.querySelector(".pagina");
 const CANTIDAD_MAXIMA_CURSOS = 6;
 let cant = 0;
@@ -49,7 +51,7 @@ do {
                         </div>
                         <div>
                             <h3><i class="fa-regular fa-calendar"></i> Fecha de Inicio</h3>
-                            <h2 class="fechaInicio"> ${datos.fecha_lanzamiento.toLocaleDateString("es-ES", {day: "numeric", month: "numeric", year: "numeric"})} </h2>
+                            <h2 class="fechaInicio"> ${datos.fecha_lanzamiento.toLocaleDateString("es-ES", { day: "numeric", month: "numeric", year: "numeric" })} </h2>
                             
                         </div>
                     </div>
@@ -58,7 +60,7 @@ do {
                             Valor del Curso
                         </h4>
                         <h1 class="precio">
-                            $18990
+                            $${datos.precio}
                         </h1>
                         <a href=""><button id="Mas Informacion" name="Mas Informacion"
                                 class="boton masInfo-js"> Mas Informacion</button></a>
@@ -73,5 +75,24 @@ do {
     cant++;
 
 } while (cant < CANTIDAD_MAXIMA_CURSOS && cant < DATOS_CURSOS.length);
+
+// filtros
+const categoriasCont = document.querySelector(".categorias-js");
+const nivelesCont = document.querySelector(".niveles-js");
+
+crearFiltros(categoriasCont, DATOS_CATEGORIAS);
+crearFiltros(nivelesCont, DATOS_NIVELES);
+
+function crearFiltros(contenedor, datos) {
+    datos.forEach(item => {
+        const templateFiltro = `
+        <div class="filtros__opciones-filtro">
+            <input type="checkbox" id="${item.nombre}" name="${item.nombre}" class="checkbox">
+                <p> ${item.nombre} </p>
+        </div>
+        `
+        contenedor.innerHTML += templateFiltro;
+    });
+}
 
 

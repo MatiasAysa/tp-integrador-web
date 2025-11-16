@@ -126,6 +126,12 @@
     border-color: var(--color-secundarioDegradado);
     font-size: 85%;
     cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.boton:hover{
+    background-color: var(--color-secundarioDegradado);
 }
 
 .pagina {
