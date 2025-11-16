@@ -9,7 +9,6 @@ const contenedorCursosProximos = buscarDom.buscandoElemento(".js-proximos");
 
 let hoy = new Date();
 
-
 // proximos cursos
 DATOS_CURSOS.forEach(item => {
 
@@ -20,7 +19,7 @@ DATOS_CURSOS.forEach(item => {
                 <div class="proximo_informacion">
                     <span class="prox_lanzamiento">Proximo Lanzamiento</span>
                     <h2>${item.nombre}</h2>
-                    <span class="prox_disponible">Disponible apartir del ${item.fecha_lanzamiento.getDay()} de ${item.fecha_lanzamiento.toLocaleString('es-ES', { month: 'long' })} 
+                    <span class="prox_disponible">Disponible apartir del ${item.fecha_lanzamiento.getDate()} de ${item.fecha_lanzamiento.toLocaleString('es-AR', { month: 'long' })} 
                     ${item.fecha_lanzamiento.getFullYear()}</span>
                     <p>${item.descripcion_corta}</p>
                     <span><a href="#" class="clickMasDetalles-js" id="prox_detalles">Mas Detalles.</a></span>

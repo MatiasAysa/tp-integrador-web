@@ -4,7 +4,7 @@ export const DATOS_CURSOS = [
     {
         id: "javaScript-principiante",
         nombre: 'Curso de JavaScript',
-        nivel: 'inicial',
+        nivel: 'Inicial',
         duracion: 40,
         modalidad: 'Virtual',
         descripcion_corta: 'Aprende los fundamentos de JavaScript, el lenguaje de programación más popular para desarrollo web.',
@@ -13,7 +13,7 @@ export const DATOS_CURSOS = [
         precio: 15000,
         objetivos: ['Comprender los conceptos básicos de JavaScript.', 'Manipular el DOM.', 'Crear aplicaciones web interactivas.', 'Trabajar con APIs y manejar eventos.'],
         profesor: DATOS_PROFES[0],
-        fecha_lanzamiento: new Date('2025-10-01'),
+        fecha_lanzamiento: new Date("2025-11-04"),
         destacado: true,
         cuatrimestres: [
             [
@@ -42,7 +42,7 @@ export const DATOS_CURSOS = [
     {
         id: "python-intermedio",
         nombre: 'Curso de Python',
-        nivel: 'intermedio',
+        nivel: 'Intermedio',
         duracion: 30,
         modalidad: 'Presencial',
         descripcion_corta: 'Domina Python y sus aplicaciones en desarrollo web, análisis de datos e inteligencia artificial.',
@@ -53,7 +53,7 @@ export const DATOS_CURSOS = [
         profesor: DATOS_PROFES[1],
         fecha_lanzamiento: new Date('2024-08-15'),
         destacado: true,
-        cuatrimestres: [ 
+        cuatrimestres: [
             [
                 'Fundamentos de Python y configuración del entorno.',
                 'Sintaxis básica: variables, tipos de datos, operadores.',
@@ -80,7 +80,7 @@ export const DATOS_CURSOS = [
     {
         id: "desarrollo-web-fullstack",
         nombre: 'Curso de Desarrollo Web Full Stack',
-        nivel: 'avanzado',
+        nivel: 'Avanzado',
         duracion: 50,
         modalidad: 'Virtual',
         descripcion_corta: 'Conviértete en un desarrollador web full stack dominando tanto el front-end como el back-end.',
@@ -91,7 +91,7 @@ export const DATOS_CURSOS = [
         profesor: DATOS_PROFES[2],
         fecha_lanzamiento: new Date('2025-11-01'),
         destacado: true,
-        cuatrimestres: [ 
+        cuatrimestres: [
             [
                 'Introducción al desarrollo web y herramientas.',
                 'HTML5 avanzado y accesibilidad.',
@@ -118,7 +118,7 @@ export const DATOS_CURSOS = [
     {
         id: "godot-intermedio",
         nombre: 'Curso de Godot',
-        nivel: 'intermedio',
+        nivel: 'Intermedio',
         duracion: 35,
         modalidad: 'presencial',
         descripcion_corta: 'Aprende a crear videojuegos utilizando el motor Godot, desde conceptos básicos hasta técnicas avanzadas.',
@@ -127,7 +127,7 @@ export const DATOS_CURSOS = [
         precio: 18000,
         objetivos: ['Comprender el motor Godot y su interfaz.', 'Diseñar y programar mecánicas de juego.', 'Publicar un videojuego completo.'],
         profesor: DATOS_PROFES[3],
-        fecha_lanzamiento: new Date('2026-03-10'),
+        fecha_lanzamiento: new Date("2026-11-10"),
         destacado: false,
         cuatrimestres: [
             [
@@ -156,7 +156,7 @@ export const DATOS_CURSOS = [
     {
         id: "java-avanzado",
         nombre: 'Curso de Java',
-        nivel: 'avanzado',
+        nivel: 'Avanzado',
         duracion: 45,
         modalidad: 'virtual',
         descripcion_corta: 'Domina Java, uno de los lenguajes de programación más utilizados en el desarrollo de aplicaciones empresariales y móviles.',
@@ -194,7 +194,7 @@ export const DATOS_CURSOS = [
     {
         id: "c-sharp-basico",
         nombre: 'Curso de C#',
-        nivel: 'básico',
+        nivel: 'Inicial',
         duracion: 25,
         modalidad: 'virtual',
         descripcion_corta: 'Inicia tu camino en la programación con C#, un lenguaje potente y versátil utilizado en desarrollo de aplicaciones y videojuegos.',
@@ -214,10 +214,10 @@ export const DATOS_CURSOS = [
             [
                 'Programación orientada a objetos en C#.',
                 'Manejo de excepciones y colecciones.',
-                'Introducción a Windows Forms para interfaces gráficas.'    
+                'Introducción a Windows Forms para interfaces gráficas.'
             ],
             [
-                'Desarrollo de aplicaciones web con ASP.NET.',  
+                'Desarrollo de aplicaciones web con ASP.NET.',
                 'Bases de datos con Entity Framework.',
                 'Introducción a Unity para desarrollo de videojuegos.'
             ],
@@ -225,13 +225,13 @@ export const DATOS_CURSOS = [
                 'Testing y depuración de aplicaciones C#.',
                 'Proyecto final: Desarrollo de una aplicación completa.'
             ]
-        ]   
+        ]
     },
 
     {
         id: "firebase-avanzado",
         nombre: 'Curso de Firebase',
-        nivel: 'avanzado',
+        nivel: 'Avanzado',
         duracion: 20,
         modalidad: 'presencial',
         descripcion_corta: 'Domina Firebase, la plataforma de desarrollo de aplicaciones móviles y web de Google, para crear aplicaciones escalables y en tiempo real.',
