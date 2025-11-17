@@ -219,6 +219,18 @@
     background: white;
     color: var(--color-principal);
 }
+.main_contenidoCompra {
+  width: 35em;
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 2em;
+  gap: 2em;
+  background: white;
+  color: var(--color-principal);
+  position: relative;
+}
 
 .main_productosCarrito {
     display: flex;

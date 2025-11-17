@@ -70,7 +70,7 @@ contenedorPadreHeader.innerHTML += templateModalCarrito;
 //SEGUNDO DIBUJAR EL MODAL PARA ELECCION DEL TIPO 
 const templateElegirTipoCompra = `
         <dialog class="js-seccion3-dialog">
-                <div class="main_contenido">
+                <div class="main_contenidoCompra">
                     <button class="boton_cerrar js-CloseModal">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
