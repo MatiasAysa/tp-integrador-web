@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="stylesheet" href="../../css/courses/courses-list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/globals/footer.css">
+    <link rel="stylesheet" href="../../css/globals/header.css">
+</head>
+
+<body>
+    <!------------------------------------ HEADER ------------------------------------>
+
+    <!---------- BARRA DE LA PAGINA ---------->
+    <header class="barra js-header">
+    </header>
+    <!------------------------------------------------>
+
+    <!----------------NAVEGADOR------------------>
+    <nav class="navbar js-nav">
+    </nav>
+    <!------------------------------------------------>
+
+    <!------------------------------------ HEADER ------------------------------------>
+    <main class="all">
+        <div class="filtrosCelulares">
+            <h3>Filtrar por:</h3>
+            <form action="/buscar" method="get" autocomplete="off" id="search-form">
+                <select name="filtrosCelulares" id="filtrosCelulares" form="search-form" class="boton filtrarCurso">
+                    <datalist id="filtros">
+                        <option selected disabled>Categorias</option>
+                        <option value="administracion">Administracion</option>
+                        <option value="ciencias sociales y derecho">Ciencias Sociales y Derecho</option>
+                        <option value="economia">Economia</option>
+                        <option value="programacion">Programacion</option>
+                        <option value="marketing y comunicacion">Marketing Y Comunicacion</option>
+                    </datalist>
+                </select>
+            </form>
+            <form action="/buscar" method="get" autocomplete="off" id="search-form">
+                <select name="filtrosCelulares" id="filtrosCelulares" form="search-form" class="boton filtrarCurso">
+                    <datalist id="filtros">
+                        <option selected disabled>Niveles</option>
+                        <option value="inicial">Inicial</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                    </datalist>
+                </select>
+            </form>
+        </div>
+        <section class="main">
+
+            <section class="filtros">
+                <h1 class="titulo">Filtros</h1>
+                <br>
+
+                <h3>categorias</h3>
+                <div class="filtros__opciones categorias-js">
+                </div>
+
+                <h3>niveles</h3>
+                <div class="filtros__opciones niveles-js">
+                </div>
+
+            </section>
+
+            <section class="cursos">
+
+                <div class="pagina">
+                    <p>1</p>
+                    <a class="pagina__arrows" href="cursos2.html"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </section>
+        </section>
+    </main>
+    <!------------------------------------ FOOTER ------------------------------------>
+    <footer class="pie-pagina">
+
+    </footer>
+    <!------------------------------------ FOOTER ------------------------------------>
+    <script src="../../js/pages/courses/listaCursos-module.js" type="module"></script>
+    <script src="../../js/pages/courses/pasarCurso-module.js" type="module"></script>
+    <script src="../../js/components/menuNav-module.js" type="module"></script>
+</body>
+
+</html>

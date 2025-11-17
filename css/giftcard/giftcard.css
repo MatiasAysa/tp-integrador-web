@@ -237,7 +237,7 @@
     color: rgb(18, 76, 14);
 }
 
-/* ---------------------- TEXTOS (monto y destinatario) ---------------------- */
+/* ---------------------- Inputs y boton ---------------------- */
 
 .form_email {
     width: 100%;
@@ -252,8 +252,13 @@
     background-color: var(--color-principalDegradado);
     border-color: var(--color-secundarioDegradado);
     font-size: 0.6em;
+
+    transition: background-color 0.3s;
 }
 
+.form__button:hover {
+    background-color: var(--color-secundarioDegradado);
+}
 
 /* -------------------- MEDIA QUERIES -------------------- */
 

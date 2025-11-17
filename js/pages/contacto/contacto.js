@@ -19,7 +19,7 @@ submitButton.addEventListener('click', (a) => {
     else {
         alert("mensaje enviado!");
         form.submit;
-        window.location.href = "./succes-contact.html"
+        window.location.href = "../homePage/homePage.html"
     }
 })
 

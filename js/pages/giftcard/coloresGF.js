@@ -1,4 +1,4 @@
-import { Colores } from '../components/colors.js';
+import { Colores } from '../../components/colors.js';
 
 export class ColoresGF {
 

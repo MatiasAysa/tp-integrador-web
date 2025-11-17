@@ -27,34 +27,23 @@
     <!---------- BARRA DE LA PAGINA ---------->
     <header class="barra js-header">
     </header>
-    <!------------------------------------------------>
-
     <!----------------NAVEGADOR------------------>
     <nav class="navbar js-nav">
     </nav>
-    <!------------------------------------------------>
-
     <!------------------------------------ HEADER ------------------------------------>
-
-
     <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
 
     <main class="contenido">
 
-        <form action="./succes-tarjeta.html" method="get" class="formWrap">
-
-            <!-- <div class="back">
-                <a href="./my-profile.html">
-                    <button type="button" class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
-                </a>
-            </div> -->
+        <form action="./succes-tarjeta.html" method="get" class="formWrap js-form">
 
             <section class="formWrap__form">
+
                 <h2>INFORMACIÓN DE LA TARJETA</h2>
 
                 <div class="form__field">
                     <label class="form__label" for="tipo">Tipo</label>
-                    <select class="form__input" id="tipo">
+                    <select class="form__input js-select" id="tipo">
                         <option value="visa">Visa</option>
                         <option value="mastercard">Mastercard</option>
                     </select>
@@ -62,19 +51,19 @@
 
                 <div class="form__field">
                     <label class="form__label" for="numero">Número de Tarjeta</label>
-                    <input class="form__input" type="number" id="numero" name="numero" maxlength="20" required>
+                    <input class="form__input js-numTarjeta" type="text" id="numero" name="numero" maxlength="16" required>
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="cvv">Código de Seguridad (CVV)</label>
-                    <input class="form__input form__input--small" type="password" id="cvv" name="cvv" maxlength="3"
+                    <input class="form__input form__input--small js-cod" type="password" id="cvv" name="cvv" maxlength="3"
                         required>
                 </div>
 
                 <div class="form__field">
                     <label class="form__label" for="vencimiento">Fecha de Vencimiento (MM/AA)</label>
-                    <input class="form__input form__input--date" type="month" id="vencimiento" name="vencimiento"
-                        placeholder="MM/AA" required>
+                    <input class="form__input form__input--date js-vencimiento" type="text" id="vencimiento" name="vencimiento"
+                        placeholder="MM/AA" maxlength="5" required>
                 </div>
 
             </section>
@@ -90,7 +79,7 @@
 
                 <div class="form__field">
                     <label class="form__label" for="cvv">Código postal</label>
-                    <input class="form__input form__input--small" type="number" id="cp" name="cp" maxlength="8"
+                    <input class="form__input form__input--small" type="text" id="cp" name="cp" maxlength="4"
                         required>
                 </div>
 
@@ -118,61 +107,11 @@
     <!------------------------------------ FOOTER ------------------------------------>
     <footer class="pie-pagina">
 
-        <div class="pie-pagina-contenido">
-            <div class="pie-pagina-nosotros">
-                <h4>Team Queso</h4>
-                <div class="pie-pagina-nosotros-miembros">
-                    <ul>
-                        <li><i class="fa-solid fa-user"></i>Matias&nbsp;Aysa - Dni:&nbsp;46987982</li>
-                        <li><i class="fa-solid fa-user"></i>León&nbsp;Rey - Dni:&nbsp;46874342</li>
-                        <li><i class="fa-solid fa-user"></i>Eric&nbsp;Barrios - Dni:&nbsp;46346348</li>
-                        <li><i class="fa-solid fa-user"></i>Ivan&nbsp;Gamboa&nbsp;- Dni:&nbsp;47791152</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="pie-pagina-navegacion">
-                <div class="pie-pagina-navegacion-soporte">
-                    <h4>Soporte</h4>
-                    <ul>
-                        <li><a href="../pages/footer/soporteYlegal.html">Preguntas Frecuentes</a></li>
-                        <li><a href="">Contactanos</a></li>
-                    </ul>
-                </div>
-                <div class="pie-pagina-navegacion-legal">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="../pages/footer/soporteYlegal.html">Terminos y Condiciones</a></li>
-                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Cookies</a></li>
-                        <li><a href="../pages/footer/soporteYlegal.html">Politica de Privacidad</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="pie-pagina-redes">
-                <h4>Redes Sociales</h4>
-                <div class="pie-pagina-redes-lista">
-                    <ul>
-                        <li><a href="https://www.instagram.com/teamquesogg/" target="_blank"><i
-                                    class="fa-brands fa-square-instagram"></i>Instagram</a></li>
-                        <li><a href="https://www.facebook.com/TeamQueso/" target="_blank"><i
-                                    class="fa-brands fa-square-facebook"></i>Facebook</a></li>
-                        <li><a href="https://www.youtube.com/c/TeamQueso" target="_blank"><i
-                                    class="fa-brands fa-square-youtube"></i>Youtube</a></li>
-                        <li><a href="https://x.com/teamquesogg?lang=es" target="_blank"><i
-                                    class="fa-brands fa-square-x-twitter"></i>Twitter</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="pie-pagina-inferior">
-            <p>&copy; 2025 La Academia Team Queso. Todos los derechos reservados.</p>
-        </div>
-
     </footer>
     <!------------------------------------ FOOTER ------------------------------------>
-    <script src="../../js/menuNav.js" type="module"></script>
+
+    <script src="../../js/components/menuNav-module.js" type="module"></script>
+    <script src="../../js/pages/account-stuff/tarjetas-module.js" type="module"></script>
 
 </body>
 

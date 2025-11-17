@@ -25,103 +25,72 @@
 
   <!------------------------------------ HEADER ------------------------------------>
 
-    <!---------- BARRA DE LA PAGINA ---------->
-    <header class="barra js-header">
-    </header>
-    <!------------------------------------------------>
+  <!---------- BARRA DE LA PAGINA ---------->
+  <header class="barra js-header">
+  </header>
+  <!------------------------------------------------>
 
-    <!----------------NAVEGADOR------------------>
-    <nav class="navbar js-nav">
-    </nav>
-    <!------------------------------------------------>
+  <!----------------NAVEGADOR------------------>
+  <nav class="navbar js-nav">
+  </nav>
+  <!------------------------------------------------>
 
-    <!------------------------------------ HEADER ------------------------------------>
+  <!------------------------------------ HEADER ------------------------------------>
 
 
   <!---------------------- CONETNIDO ---------------------->
 
   <main class="container">
 
-    <div class="back">
-      <a href="./add.html">
-        <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
-      </a>
-    </div>
-
-    <form class="form" method="get" action="../courses/carrito.html">
-      <h1 class="form__title">TITULO CURSO</h1>
-      <p class="form__subtitle">Inscripción grupal</p>
-      <section class="personas">
-
-        <!--Persona 1-->
-        <article class="person">
-
-          <div class="person__header">
-            <span class="person__index">Persona 1</span>
-            <button type="button" class="btn btn--remove">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-
-          <div class="form__field">
-            <label class="form__label" for="persona1_nombre">
-              <p class="form__p">Ingrese el mail de la persona</p>
-            </label>
-            <input class="form__input" type="email" id="persona1_nombre" name="persona1_nombre" required maxlength="40">
-          </div>
-
-        </article>
-
-        <!--Persona 2-->
-        <article class="person">
-
-          <div class="person__header">
-            <span class="person__index">Persona 2</span>
-            <button type="button" class="btn btn--remove">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-
-          <div class="form__field">
-            <label class="form__label" for="persona1_nombre">
-              <p class="form__p">Ingrese el mail de la persona</p>
-            </label>
-            <input class="form__input" type="email" id="persona2_nombre" name="persona2_nombre" required maxlength="40">
-          </div>
-
-        </article>
-
-        <!--Persona3-->
-        <article class="person">
-
-          <div class="person__header">
-            <span class="person__index">Persona 3</span>
-            <button type="button" class="btn btn--remove">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-
-          <div class="form__field">
-            <label class="form__label" for="persona1_nombre">
-              <p class="form__p">Ingrese el mail de la persona</p>
-            </label>
-            <input class="form__input" type="email" id="persona3_nombre" name="persona3_nombre" required maxlength="40">
-          </div>
-
-        </article>
-
-      </section>
-
-      <button type="button" class="btn btn--add"> Agregar Persona</button>
-
-      <div class="form__total">
-        <p class="form__total-label">Total a pagar:</p>
-        <p class="form__total-amount">$10000.00</p>
+    <section class="backWrap">
+      <div class="back">
+        <a href="./add.html">
+          <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
+        </a>
       </div>
+    </section>
 
-      <button type="submit" class="form__button">INSCRIBIR</button>
+    <section>
+      <form class="form" method="get" action="../courses/carrito.html">
+        <h1 class="form__title">TITULO CURSO</h1>
+        <p class="form__subtitle">Inscripción grupal</p>
+        <section class="personas" id="personas">
 
-    </form>
+          <!--Persona 1-->
+          <article class="person">
+
+            <div class="person__header">
+              <span class="person__index">Persona 1</span>
+              <button type="button" class="btn btn--remove">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="persona1_nombre">
+                <p class="form__p">Ingrese el mail de la persona</p>
+              </label>
+              <input class="form__input" type="email" id="persona1_nombre" name="persona1_nombre" required
+                maxlength="40">
+            </div>
+
+          </article>
+
+        </section>
+
+        <button id="btnAgregar" type="button" class="btn btn--add"> Agregar Persona</button>
+
+        <div class="form__total">
+          <p class="form__total-label">Total a pagar:</p>
+          <p class="form__total-amount">$10000.00</p>
+        </div>
+
+        <button type="submit" class="form__button">INSCRIBIR</button>
+
+      </form>
+    </section>
+
+
 
   </main>
 
@@ -131,61 +100,10 @@
   <!------------------------------------ FOOTER ------------------------------------>
   <footer class="pie-pagina">
 
-    <div class="pie-pagina-contenido">
-      <div class="pie-pagina-nosotros">
-        <h4>Team Queso</h4>
-        <div class="pie-pagina-nosotros-miembros">
-          <ul>
-            <li><i class="fa-solid fa-user"></i>Matias&nbsp;Aysa - Dni:&nbsp;46987982</li>
-            <li><i class="fa-solid fa-user"></i>León&nbsp;Rey - Dni:&nbsp;46874342</li>
-            <li><i class="fa-solid fa-user"></i>Eric&nbsp;Barrios - Dni:&nbsp;46346348</li>
-            <li><i class="fa-solid fa-user"></i>Ivan&nbsp;Gamboa&nbsp;- Dni:&nbsp;47791152</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pie-pagina-navegacion">
-        <div class="pie-pagina-navegacion-soporte">
-          <h4>Soporte</h4>
-          <ul>
-            <li><a href="../pages/footer/soporteYlegal.html">Preguntas Frecuentes</a></li>
-            <li><a href="">Contactanos</a></li>
-          </ul>
-        </div>
-        <div class="pie-pagina-navegacion-legal">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="../pages/footer/soporteYlegal.html">Terminos y Condiciones</a></li>
-            <li><a href="../pages/footer/soporteYlegal.html">Politica de Cookies</a></li>
-            <li><a href="../pages/footer/soporteYlegal.html">Politica de Privacidad</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pie-pagina-redes">
-        <h4>Redes Sociales</h4>
-        <div class="pie-pagina-redes-lista">
-          <ul>
-            <li><a href="https://www.instagram.com/teamquesogg/" target="_blank"><i
-                  class="fa-brands fa-square-instagram"></i>Instagram</a></li>
-            <li><a href="https://www.facebook.com/TeamQueso/" target="_blank"><i
-                  class="fa-brands fa-square-facebook"></i>Facebook</a></li>
-            <li><a href="https://www.youtube.com/c/TeamQueso" target="_blank"><i
-                  class="fa-brands fa-square-youtube"></i>Youtube</a></li>
-            <li><a href="https://x.com/teamquesogg?lang=es" target="_blank"><i
-                  class="fa-brands fa-square-x-twitter"></i>Twitter</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="pie-pagina-inferior">
-      <p>&copy; 2025 La Academia Team Queso. Todos los derechos reservados.</p>
-    </div>
-
   </footer>
   <!------------------------------------ FOOTER ------------------------------------>
-  <script src="../../js/menuNav.js" type="module"></script>
+  <script src="../../js/components/menuNav-module.js" type="module"></script>
+  <script src="../../js/pages/group-registration/groupRegistration-module.js" type="module"></script>
 </body>
 
 </html>
