@@ -1,4 +1,5 @@
 import { Contador } from "./contador.js";
+import { modal } from "../../utils/mostrarModal.js";
 
 const form = document.querySelector('#form')
 const nameInput = document.querySelector('.js-contactoName');
@@ -12,7 +13,7 @@ contador.render();
 submitButton.addEventListener('click', (a) => {
     a.preventDefault;
     if (!nameInput.value || !surnameInput.value) {
-        alert("Por favor, complete todos los campos");
+        modal.mostrarMensaje("Por favor, complete todos los campos");
         return;
     }
     else if (validarEmail(emailInput.value) === false) {
@@ -20,9 +21,11 @@ submitButton.addEventListener('click', (a) => {
         return;
     }
     else {
-        alert("mensaje enviado!");
-        form.submit;
-        window.location.href = "../homePage/homePage.html"
+        modal.mostrarMensaje("mensaje enviado!" ,()=>{
+            form.submit();
+            form.reset();
+            return;
+        });
     }
 })
 
