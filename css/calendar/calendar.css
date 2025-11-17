@@ -262,17 +262,6 @@
 
 
 /*--------------POPUP--------------*/
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.411);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .popup {
   position: fixed;
@@ -291,8 +280,8 @@
   background: #ffffff;
   padding: 2em;
   border-radius: 1em;
-  width: 40%;
-  height: 60%;
+  width: 60%;
+  height: 70%;
   position: relative;
 
   display: flex;
