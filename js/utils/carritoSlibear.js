@@ -1,62 +1,134 @@
 import { BuscandorElementos } from "./buscarElementos.js";
 import { DATOS_CURSOS } from "../../js/pages/courses/datosCursos.js";
-const buscadorDom = new BuscandorElementos();
-const contenedorProductos = buscadorDom.buscandoElemento(".js-contenedor-productos");
-const botonesAñadir = document.querySelectorAll(".js-boton-añadirIndividual");
-
-/*
-function obtenerUsuarioDeLocalStorage(email, password) {
-    const usuariosGuardados = JSON.parse(localStorage.getItem('usuarios')) || [];
-    for (const usuario of usuariosGuardados) {
-        if (usuario.email === email && usuario.password === password) {
-            return usuario;
-        }
+import { ModalElegirTipoCompra } from "./modalElegirTipoCompra.js";
+export class CarritoSlibear {
+    constructor() {
     }
+
+    render() {
+        const buscadorDom = new BuscandorElementos();
+        const contenedorProductos = buscadorDom.buscandoElemento(".js-contenedor-productos");
+        const botonesAñadir = document.querySelectorAll(".js-boton-añadirIndividual");
+
+        const modal = new ModalElegirTipoCompra();
+        modal.render();
+        //ESTA PARTE ESTA MEGA HARDCODEADA PERO NO TENGO TIEMPO PARA HACERLO MEJOR
+        //POSIBLE MEJORA ,MODALELEGIRTIPOCOMPRA.JS
+        const usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
+        //BOTON AÑADIR
+        let idCursoSeleccionado = "";
+        const botonAbrirModal = document.querySelectorAll(".js-OpenModal");
+
+        renderCarrito();
+
+        botonAbrirModal.forEach(element => {
+            element.addEventListener("click", (event) => {
+                const cardCursoSeleccionado = event.target.closest(".curso-card");
+                idCursoSeleccionado = cardCursoSeleccionado.dataset.curso;
+                console.log("ID del curso seleccionado:", idCursoSeleccionado);
+            });
+        });
+
+        //BOTONES INDIVIDUAL AL CARRITO ,ES OTRA LOGICA,
+        botonesAñadir.forEach(boton => {
+            /*
+                        boton.addEventListener("click", (event) => {
+                let cursoParaAgregar = DATOS_CURSOS.find(curso => curso.id == idCursoSeleccionado);
+                console.log(cursoParaAgregar);
+                usuarioActual.cursosEnCarrito.push(cursoParaAgregar);
+                localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
+                renderCarrito();
+            });
+            */
+            boton.addEventListener("click", (event) => {
+                let cursoParaAgregar = DATOS_CURSOS.find(curso => curso.id == idCursoSeleccionado);
+                const modealElegirCompra = buscadorDom.buscandoElemento(".js-seccion3-dialog");
+
+                if (!cursoParaAgregar) {
+                    console.warn("Intentaste agregar un curso inexistente o sin seleccionar.");
+                    return;
+                }
+
+                const yaExiste = usuarioActual.cursosEnCarrito.some(c => c.id === cursoParaAgregar.id);
+
+                if (yaExiste) {
+                    mostrarMensajeFinal("Este curso ya está en tu carrito.", "error");
+                    modealElegirCompra.close();
+                    return;
+                }
+
+                usuarioActual.cursosEnCarrito.push(cursoParaAgregar);
+                localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
+                renderCarrito();
+                mostrarMensajeFinal("Feliciadsed","exito");
+                modealElegirCompra.close();
+            });
+        });
+
+        // Delegación de evento para eliminar cursos desde el carrito
+        contenedorProductos.addEventListener("click", (e) => {
+            const eliminarBtn = e.target.closest(".js-EliminarCurso");
+            console.log("sda");
+            if (!eliminarBtn) return;
+
+            const productSection = eliminarBtn.closest(".main_producto");
+            if (!productSection) return;
+
+            const idEliminar = productSection.dataset.curso;
+
+            usuarioActual.cursosEnCarrito =
+                usuarioActual.cursosEnCarrito.filter(c => String(c.id) !== String(idEliminar));
+
+            localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
+            renderCarrito();
+        });
+
+
+function mostrarMensajeFinal(mensaje, tipo = "exito") {
+    const icono = tipo === "exito" ? "fa-check-circle" : "fa-exclamation-triangle";
+    const color = tipo === "exito" ? "#4CAF50" : "#f44336";
+
+    const mensajeDiv = document.createElement("div");
+    mensajeDiv.className = `mensaje-final mensaje-${tipo}`;
+
+    mensajeDiv.innerHTML = `
+        <i class="fa-solid ${icono}"></i>
+        <span>${mensaje}</span>
+    `;
+
+    mensajeDiv.style.cssText = `
+        position: fixed;
+        top: 2em;
+        right: 2em;
+        background: ${color};
+        color: white;
+        padding: 1em 1.3em;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        max-width: 27em;
+        gap: .6em;
+        z-index: 99999;
+        box-shadow: rgba(0,0,0,0.25) 0px 4px 10px;
+        animation: aparecer .2s ease-out;
+    `;
+
+    document.body.appendChild(mensajeDiv);
+
+    setTimeout(() => {
+        mensajeDiv.remove();
+    }, 2000);
 }
 
-const usuarioActual = obtenerUsuarioDeLocalStorage(
-    JSON.parse(localStorage.getItem('usuarioActual'))?.email,
-    JSON.parse(localStorage.getItem('usuarioActual'))?.password
-);
-*/
-//ESTA PARTE ESTA MEGA HARDCODEADA PERO NO TENGO TIEMPO PARA HACERLO MEJOR
-//POSIBLE MEJORA ,MODALELEGIRTIPOCOMPRA.JS
-const usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
-//BOTON AÑADIR
-let idCursoSeleccionado = "";
-const botonAbrirModal = document.querySelectorAll(".js-OpenModal");
-
-renderCarrito();
-
-botonAbrirModal.forEach(element => {
-    element.addEventListener("click", (event) => {
-        const cardCursoSeleccionado = event.target.closest(".curso-card");
-        idCursoSeleccionado = cardCursoSeleccionado.dataset.curso;
-        console.log("ID del curso seleccionado:", idCursoSeleccionado);
-    });
-});
-//dato de color : en elemento que tienen como atributo ej data-curso = "el goat" 
-//data es una palabra resercada que ademas de agregarle al elemento un atributo
-//Permite guardar dicho valor del atributo en el famoso dataset
-
-//BOTONES INDIVIDUAL AL CARRITO ,ES OTRA LOGICA,
-botonesAñadir.forEach(boton => {
-    boton.addEventListener("click", (event) => {
-        let cursoParaAgregar = DATOS_CURSOS.find(curso => curso.id == idCursoSeleccionado);
-        console.log(cursoParaAgregar);
-        usuarioActual.cursosEnCarrito.push(cursoParaAgregar);
-        localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
-        renderCarrito();
-    });
-});
 
 
-function renderCarrito() {
-    contenedorProductos.innerHTML = ""; //reseteo para dibujar en hola limpia,el goat
-    usuarioActual.cursosEnCarrito.forEach(producto => {
-        
-        const templateCursos = `
-                    <section class="main_producto">
+
+        function renderCarrito() {
+            contenedorProductos.innerHTML = ""; //reseteo para dibujar en hola limpia,el goat
+            usuarioActual.cursosEnCarrito.forEach(producto => {
+
+                const templateCursos = `
+                    <section class="main_producto" data-curso="${producto.id}" >
                     <div class="divProductoImagen">
                         <img class="imagenProducto" src="${producto.imagen}" alt="Imagen de producto">
                     </div>
@@ -74,7 +146,12 @@ function renderCarrito() {
                     </div>
                 </section>`;
 
-        contenedorProductos.innerHTML += templateCursos;
-    });
+                contenedorProductos.innerHTML += templateCursos;
+            });
+
+        }
+    }
+
 
 }
+

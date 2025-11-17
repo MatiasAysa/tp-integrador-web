@@ -209,12 +209,12 @@
 }
 
 .main_contenido {
-    width: 35em;
-    height: 10em;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 0 2em;
+    justify-content: space-between;
+    padding: 0;
     gap: 2em;
     background: white;
     color: var(--color-principal);
@@ -286,6 +286,8 @@
     background: none;
     padding: 0;
     text-align: start;
+    display: inline-block;
+    width: 4em;
     cursor: pointer;
 }
 
@@ -352,6 +354,82 @@
     background: var(--color-principal);
 }
 
+.js-seccion3-dialog {
+    border: none;
+    display: none;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.js-seccion3-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.js-seccion3-dialog[open] {
+    display: flex;
+}
+
+.boton_cerrar {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: var(--color-principal);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.boton_cerrar:hover {
+    transform: scale(1.2);
+}
+
+.contenido_titulo {
+    color: var(--color-principal);
+    text-align: center;
+}
+
+.contenido_titulo h2 {
+    font-size: 1.5em;
+
+}
+
+.contenido_botones {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contenido_botones button {
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.95em;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    height: 3em;
+    cursor: pointer;
+}
+
+.boton_individual,
+.boton_grupal {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+}
+
+.boton_individual:hover,
+.boton_grupal:hover {
+    background-color: var(--color-secundarioDegradado);
+    transform: translateY(-2px);
+}
 /*-------------------------------------------*/
 /*------------------NAV-------------------*/
 .navbar {

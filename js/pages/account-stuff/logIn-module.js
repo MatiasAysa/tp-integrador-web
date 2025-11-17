@@ -1,5 +1,3 @@
-import { modal } from "../../utils/mostrarModal.js"
-
 const form = document.querySelector('.formWrap__form');
 const submitButton = document.querySelector('.form__button');
 const emailInput = document.querySelector('#email');
@@ -18,7 +16,7 @@ submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     const usuarioGuardado = obtenerUsuarioDeLocalStorage(emailInput.value, passwordInput.value);
     if (usuarioGuardado === undefined) {
-        modal.mostrarMensaje('Usuario o contraseña incorrectos. Por favor, intente de nuevo.');
+        alert('Usuario o contraseña incorrectos. Por favor, intente de nuevo.');
         return;
     }
     let iniciado = true;

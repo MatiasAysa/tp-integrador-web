@@ -34,7 +34,7 @@ export const DATOS_CATEGORIAS = [
 export const DATOS_NIVELES = [
     {
         indice: 0,
-        nombre: "Incial",
+        nombre: "Inicial",
         id: "inicial"
     },
     {

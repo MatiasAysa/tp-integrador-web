@@ -53,7 +53,7 @@ export const eventos = [
         mes: 11,
         anio: 2025,
         title: "HTML y CSS",
-        link: "../courses/Detalles de Curso 1.html",
+        link: "../../pages/courses/course-details.html?id=desarrollo-web-fullstack",
         descripcion: `
       <h4><strong>Curso HTML y CSS</strong></h4>
 

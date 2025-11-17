@@ -1,33 +1,5 @@
-const aniadirCursosBtn = document.querySelectorAll('.js-aniadir-cursos');
-
-aniadirCursosBtn.forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const cursoId = button.closest('.cursos__contenedor').id;
-        const usuarioActual = JSON.parse(localStorage.getItem('usuarioActual'))
-        let cursosEnCarrito = JSON.parse(localStorage.getItem('cursosEnCarrito')) || [];
-        if (!usuarioActual.cursosObtenidos.includes(cursoId)) {
-            usuarioActual.cursosObtenidos.push(cursoId);
-            cursosEnCarrito.push(cursoId);
-            localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
-            localStorage.setItem('cantidadCursos', usuarioActual.cursosObtenidos.length);
-            window.dispatchEvent(new CustomEvent('actualizarCarrito', { detail: { count: cursosEnCarrito.length } }));
-            alert(`El curso ${cursoId} ha sido añadido al carrito.`);
-        } else {
-            alert(`El curso ${cursoId} ya está en el carrito.`);
-            usuarioActual.cursosObtenidos.length = []
-            localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
-            localStorage.removeItem('cantidadCursos');
-            window.dispatchEvent(new CustomEvent('actualizarCarrito', { detail: { count: 0 } }));
-        }
-    });
-});
-
-
 import { DATOS_CURSOS } from "./datosCursos.js"
 import { DATOS_CATEGORIAS, DATOS_NIVELES } from "./datosCategorias&Niveles.js";
-
-
 // --- LISTA DE CURSOS ---
 
 const sectionCursos = document.querySelector(".cursos");
@@ -39,7 +11,6 @@ let filtrosAplicados = [];
 
 crearFiltros(categoriasCont, DATOS_CATEGORIAS);
 clickearFiltros();
-
 agregarCursosLista();
 
 function agregarCursosLista() {
@@ -56,7 +27,7 @@ function agregarCursosLista() {
         const datos = DATOS_CURSOS[cant];
 
         const templateCurso = `
-                <div class="cursos__contenedor cursoContenedor-js" id="HTML" data-curso='${datos.id}'>
+                <div class="cursos__contenedor cursoContenedor-js curso-card" id="HTML" data-curso='${datos.id}'>
                     <div class="cursos__contenedor-imagen">
                         <img src="../../${datos.imagen}" class="imagen" alt="${datos.nombre}">
                     </div>
@@ -85,8 +56,8 @@ function agregarCursosLista() {
                         </h1>
                         <a href=""><button id="Mas Informacion" name="Mas Informacion"
                                 class="boton masInfo-js"> Mas Informacion</button></a>
-                        <a href="./add.html"><button id="Mas Informacion" name="Mas Informacion"
-                                class="boton js-aniadir-cursos"> Añadir al Carrito</button></a>
+                        <button id="Mas Informacion" name="Mas Informacion"
+                                class="boton js-aniadir-cursos js-OpenModal"> Añadir al Carrito</button>
                     </div>
                 </div>
     `
@@ -126,8 +97,6 @@ function devolverCategoria(categorias) {
     return categoriasSeparadas;
 }
 // ------- Crear los filtros -------
-
-
 // ------- Aplicar los filtros -------
 function clickearFiltros() {
     const filtros = document.querySelectorAll(".checkbox");
@@ -174,9 +143,6 @@ function compararFiltros() {
     agregarCursosLista();
 
 }
-
-
-
 function compararFiltroCategorias(categorias) {
     for (const filtro of filtrosAplicados) {
         for (const categoria of categorias) {
@@ -192,3 +158,4 @@ function compararFiltroCategorias(categorias) {
 // ------- Aplicar los filtros -------
 
 // ---------------------------------- FILTROS ----------------------------------
+
