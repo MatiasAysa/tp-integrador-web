@@ -1,15 +1,19 @@
+import { Contador } from "./contador.js";
+import { modal } from "../../utils/mostrarModal.js";
+
 const form = document.querySelector('#form')
 const nameInput = document.querySelector('.js-contactoName');
 const surnameInput = document.querySelector('.js-contactoSurname');
 const emailInput = document.querySelector('.js-contactoMail')
-const mensajeInput = document.querySelector('.js-contactoMensaje')
+const telefono = document.querySelector('#telefono');
 const submitButton = document.querySelector('#enviar')
 emailInput.setCustomValidity('Por favor, ingrese un correo electrónico válido.');
-
+const contador = new Contador();
+contador.render();
 submitButton.addEventListener('click', (a) => {
     a.preventDefault;
     if (!nameInput.value || !surnameInput.value) {
-        alert("Por favor, complete todos los campos");
+        modal.mostrarMensaje("Por favor, complete todos los campos");
         return;
     }
     else if (validarEmail(emailInput.value) === false) {
@@ -17,12 +21,17 @@ submitButton.addEventListener('click', (a) => {
         return;
     }
     else {
-        alert("mensaje enviado!");
-        form.submit;
-        window.location.href = "../homePage/homePage.html"
+        modal.mostrarMensaje("mensaje enviado!" ,()=>{
+            form.submit();
+            form.reset();
+            return;
+        });
     }
 })
 
+telefono.addEventListener('input', (event) => {
+    telefono.value = telefono.value.replace(/[^0-9]/g, "");
+});
 function validarEmail(email) {
     const restriccionEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return restriccionEmail.test(email);

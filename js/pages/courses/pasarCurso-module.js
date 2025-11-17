@@ -34,6 +34,8 @@ function extraerIdCursoClickeando(elemento, cursos) {
         item.addEventListener('click', (evento) => {
             evento.preventDefault();
             const cursoId = cursos[i].getAttribute('data-curso');
+            console.log(`../courses/course-details.html?id=${cursoId}`);
+            
             window.location.href = `../courses/course-details.html?id=${cursoId}`;
         });
     });

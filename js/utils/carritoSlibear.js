@@ -42,15 +42,26 @@ export class CarritoSlibear {
             */
             boton.addEventListener("click", (event) => {
                 let cursoParaAgregar = DATOS_CURSOS.find(curso => curso.id == idCursoSeleccionado);
+                const modealElegirCompra = buscadorDom.buscandoElemento(".js-seccion3-dialog");
 
                 if (!cursoParaAgregar) {
                     console.warn("Intentaste agregar un curso inexistente o sin seleccionar.");
                     return;
                 }
 
+                const yaExiste = usuarioActual.cursosEnCarrito.some(c => c.id === cursoParaAgregar.id);
+
+                if (yaExiste) {
+                    mostrarMensajeFinal("Este curso ya está en tu carrito.", "error");
+                    modealElegirCompra.close();
+                    return;
+                }
+
                 usuarioActual.cursosEnCarrito.push(cursoParaAgregar);
                 localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
                 renderCarrito();
+                mostrarMensajeFinal("Feliciadsed","exito");
+                modealElegirCompra.close();
             });
         });
 
@@ -73,6 +84,41 @@ export class CarritoSlibear {
         });
 
 
+function mostrarMensajeFinal(mensaje, tipo = "exito") {
+    const icono = tipo === "exito" ? "fa-check-circle" : "fa-exclamation-triangle";
+    const color = tipo === "exito" ? "#4CAF50" : "#f44336";
+
+    const mensajeDiv = document.createElement("div");
+    mensajeDiv.className = `mensaje-final mensaje-${tipo}`;
+
+    mensajeDiv.innerHTML = `
+        <i class="fa-solid ${icono}"></i>
+        <span>${mensaje}</span>
+    `;
+
+    mensajeDiv.style.cssText = `
+        position: fixed;
+        top: 2em;
+        right: 2em;
+        background: ${color};
+        color: white;
+        padding: 1em 1.3em;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        max-width: 27em;
+        gap: .6em;
+        z-index: 99999;
+        box-shadow: rgba(0,0,0,0.25) 0px 4px 10px;
+        animation: aparecer .2s ease-out;
+    `;
+
+    document.body.appendChild(mensajeDiv);
+
+    setTimeout(() => {
+        mensajeDiv.remove();
+    }, 2000);
+}
 
 
 

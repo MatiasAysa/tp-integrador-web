@@ -62,8 +62,11 @@ form {
 .usuario__input--msj {
     height: 6em;
     resize: none;
+    width: 100%;
 }
-
+.mensaje{
+    height: auto;
+}
 /* ---------- FORMULARIO ---------- */
 
 
@@ -117,6 +120,7 @@ form {
 .ubicacionWrapper {
     display: flex;
     justify-content: center;
+    margin-bottom: 1em;
 }
 
 .divUbicacion {
@@ -184,7 +188,6 @@ form {
     }
 
 }
-
 /* --- TABLETS ---*/
 @media (max-width: 768px) {
 

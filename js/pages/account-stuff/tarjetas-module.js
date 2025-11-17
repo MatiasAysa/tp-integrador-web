@@ -54,7 +54,9 @@ surname.addEventListener('input', () => {
 cp.addEventListener('input', (event) => {
     cp.value = cp.value.replace(/[^0-9]/g, "");
 });
-
+numero.addEventListener('input', (event) => {
+    numero.value = numero.value.replace(/[^0-9]/g, "");
+});
 
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
@@ -95,13 +97,14 @@ submitButton.addEventListener('click', (e) => {
         return;
     }
     else {
-        const tarjeta = agregarTarjetas(numero, cod, vencimiento, direccion, cp, nombre, surname);
+        const tarjeta = agregarTarjetas(tipo, numero, cod, vencimiento, direccion, cp, nombre, surname);
         usuarioActual.tarjetas.push(tarjeta);
         usuarios[indexUsuario].tarjetas.push(tarjeta)
         localStorage.setItem('usuarios',JSON.stringify(usuarios));
         localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual))
         form.reset();
         alert("tarjeta creada");
+        window.location.href = `./my-profile.html`
     }
 }
 );
@@ -144,8 +147,9 @@ function validarDireccion(direccion){
     }
     return true;
 }
-function agregarTarjetas(numero, cod, vencimiento, direccion, cp, nombre, surname) {
+function agregarTarjetas(tipo, numero, cod, vencimiento, direccion, cp, nombre, surname) {
     const tarjeta = {
+        tipo: tipo.value,
         numero: numero.value,
         cod: cod.value,
         vencimiento: vencimiento.value,

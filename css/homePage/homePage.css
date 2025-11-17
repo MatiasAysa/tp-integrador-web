@@ -388,6 +388,17 @@
     transition: all 0.3s ease;
     font-weight: 600;
 }
+.boton_cursoCard {
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.95em;
+    border-radius: 8px;
+    padding: 0.75em 1.25em;
+    flex: 1;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    cursor: pointer;
+}
 
 .boton_añadir {
     background-color: var(--color-secundario);
