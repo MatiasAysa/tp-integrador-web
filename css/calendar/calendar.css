@@ -180,6 +180,23 @@
 .calendar__day a {
   text-decoration: none;
 }
+.valido {
+    border: 2px solid #45c649;   
+    background-color: #c4f7bc;   
+}
+
+.invalido {
+    border: 2px solid #f44336;
+    background-color: #eb8282;  
+}
+
+.mensaje-error {
+    color: #f44336;
+    font-size: 0.5em;
+    margin-top: 0.1em;
+    display: block;
+    max-width: 2em;
+}
 
 /* ------------- MEDIA QUERIES ------------- */
 

@@ -44,13 +44,26 @@
 
                 <div class="form__label label">
                     <div class="label__usuario usuario">
-                        <input class="usuario__input js-contactoName" type="text" placeholder="Nombre/s" required
-                            name="nombre">
-                        <input class="usuario__input js-contactoSurname" type="text" placeholder="Apellido/s" required
-                            name="apellido">
-                        <input class="usuario__input js-contactoMail" type="email" placeholder="Correo electrónico"
-                            required name="email">
-                        <input class="usuario__input" type="text" placeholder="Numero de telefono (Opcional)" id="telefono" maxlength="12">
+                        <div class="usuario__input-contenedor">
+                            <input class="usuario__input js-contactoName" type="text" placeholder="Nombre/s" required
+                                name="nombre">
+                            <span class="mensaje-error" id="error-name"></span>
+                        </div>
+                        <div class="usuario__input-contenedor">
+                            <input class="usuario__input js-contactoSurname" type="text" placeholder="Apellido/s"
+                                required name="apellido">
+                            <span class="mensaje-error" id="error-surname"></span>
+                        </div>
+                        <div class="usuario__input-contenedor">
+                            <input class="usuario__input js-contactoMail" type="email" placeholder="Correo electrónico"
+                                required name="email">
+                                <span class="mensaje-error" id="error-email"></span>
+                        </div>
+                        <div class="usuario__input-contenedor">
+                            <input class="usuario__input" type="text" placeholder="Numero de telefono (Opcional)"
+                                id="telefono" maxlength="12">
+                                <span class="mensaje-error" id="error-tel"></span>
+                        </div>
                         <div class="usuario__input mensaje">
                             <textarea class="usuario__input usuario__input--msj js-contactoMensaje"
                                 placeholder="Mensaje" required name="mensaje" maxlength="1000"></textarea>
