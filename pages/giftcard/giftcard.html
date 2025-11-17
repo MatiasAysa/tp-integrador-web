@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giftcard</title>
+
+    <!-- Otros links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+    <link rel="stylesheet" href="../../css/giftcard/giftcard.css">
+    <link rel="stylesheet" href="../../css/globals/header.css">
+    <link rel="stylesheet" href="../../css/globals/footer.css">
+</head>
+
+<body>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+    <!---------- BARRA DE LA PAGINA ---------->
+    <header class="barra js-header">
+    </header>
+    <!------------------------------------------------>
+
+    <!----------------NAVEGADOR------------------>
+    <nav class="navbar js-nav">
+    </nav>
+    <!------------------------------------------------>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+
+
+    <!---------------- CONTENIDO PRINCIPAL ------------------>
+    <main class="main">
+
+        <section class="main__section section">
+
+            <!----Vista previa de la giftcard---->
+
+            <article class="article__vistaPrevia vistaPrevia">
+                <p class="titulos">VISTA PREVIA</p>
+                <div class="vistaPrevia__cardWrap cardWrap">
+                    <div class="cardWrap__card card">
+                        <div class="card__background background">
+                            <div class="montoWrap__upRight">
+                                <p class="montoWrap__p"><span class="form__titulos-plata">$</span> <span id="monto-js">0</span></p>
+                            </div>
+                            <div class="background__p">
+                                <p class="background__p--titulo">GIFTCARD para</p>
+                                <p class="background__p--nombre" id="background__p--nombre-js" >Nombre</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!----Vista previa de la giftcard---->
+
+
+            <!----Personalización de la giftcard---->
+
+            <article class="main__formWrap">
+                <form class="form" name="giftcard" action="./succesGiftcard.html">
+
+                    <p class="titulos">PERSONALIZACIÓN</p>
+
+                    <!----Destinatario---->
+                    <label class="form__texto texto">
+                        <p class="form__titulos">Nombre</p>
+                        <input class="texto__input" id="texto__input-js" type="text" maxlength="19" required>
+                    </label>
+                    <!----Destinatario---->
+
+
+                    <!----Color---->
+                    <div class="form__color">
+                        <div class="form__radioWrap radioWrap">
+                            <p class="form__titulos">Color</p>
+                            <label class="radioWrap__labelRadio radioWrap__labelRadio-js labelRadio">
+                                <div class="labelRadio__color labelRadio__color--azul"></div>
+                                <input class="color__input" type="radio" name="color" value="azul">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio radioWrap__labelRadio-js labelRadio">
+                                <div class="labelRadio__color labelRadio__color--azul2"></div>
+                                <input class="color__input" type="radio" name="color" value="azul2">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio radioWrap__labelRadio-js labelRadio">
+                                <div class="labelRadio__color labelRadio__color--amarillo"></div>
+                                <input class="color__input" class="color__input" type="radio" name="color" value="amarillo">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio radioWrap__labelRadio-js labelRadio">
+                                <div class="labelRadio__color labelRadio__color--amarillo2"></div>
+                                <input class="color__input" type="radio" name="color" value="amarillo2">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio radioWrap__labelRadio-js labelRadio">
+                                <div class="labelRadio__color labelRadio__color--blanco"></div>
+                                <input class="color__input" type="radio" name="color" value="blanco" checked="true">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!----Color---->
+
+
+                    <!----Tamaño del texto---->
+                    <div class="form__fontSize">
+                        <p class="form__titulos">Tamaño del texto</p>
+                        <div class="form__radioWrap radioWrap">
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <p class="labelRadio__p">20px</p>
+                                <input class="font-size__input" type="radio" name="fontSize" value="0.85">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <p class="labelRadio__p">28px</p>
+                                <input class="font-size__input" type="radio" name="fontSize" value="0.9">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <p class="labelRadio__p">32px</p>
+                                <input class="font-size__input" type="radio" name="fontSize" value="1" checked="true">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <p class="labelRadio__p">48px</p>
+                                <input class="font-size__input" type="radio" name="fontSize" value="1.5">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <p class="labelRadio__p">60px</p>
+                                <input class="font-size__input" type="radio" name="fontSize" value="2">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!----Tamaño del texto---->
+
+
+                    <!----Monto---->
+                    <label class="form__texto texto">
+                        <p class="form__titulos">Monto $</p>
+                        <input id="monto__input" class="texto__input" type="text" maxlength="9" required>
+                    </label>
+                    <!----Monto---->
+
+
+                    <!----Ubicación del monto---->
+                    <div class="form__ubicacion">
+                        <div class="form__radioWrap radioWrap">
+                            <p class="form__titulos">Ubicación</p>
+                            <label class="radioWrap__labelRadio labelRadio labelRadio__monto-js">
+                                <div class="labelRadio__ubicacion labelRadio__ubicacion--upRight"></div>
+                                <input class="input__montoPos" type="radio" name="ubicacion" value="montoWrap__upRight" checked="true">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio labelRadio__monto-js">
+                                <div class="labelRadio__ubicacion labelRadio__ubicacion--upLeft"></div>
+                                <input class="input__montoPos" type="radio" name="ubicacion" value="montoWrap__upLeft">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio labelRadio__monto-js">
+                                <div class="labelRadio__ubicacion labelRadio__ubicacion--downRight"></div>
+                                <input class="input__montoPos" type="radio" name="ubicacion" value="montoWrap__downRight">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!----Ubicación del monto---->
+
+
+                    <!----Color de fondo---->
+                    <div class="form__background">
+                        <div class="form__radioWrap radioWrap">
+                            <p class="form__titulos">Fondo</p>
+                            <label class="radioWrap__labelRadio labelRadio__bg-js labelRadio">
+                                <div class="labelRadio__background labelRadio__background--cr"></div>
+                                <input class="input__background" type="radio" name="background" value="crfondo.png" checked="true">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__background labelRadio__background--tq"></div>
+                                <input class="input__background" type="radio" name="background" value="teamquesoBG.png">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                            <label class="radioWrap__labelRadio labelRadio">
+                                <div class="labelRadio__background labelRadio__background--queso"></div>
+                                <input class="input__background" type="radio" name="background" value="cheese.jpg">
+                                <span class="labelRadio__check">
+                                    <div class="labelRadio__check--clicked"></div>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!----Color de fondo---->
+
+                    <!----Email del destinatario---->
+                    <label class="form__texto texto">
+                        <input class="form__email" type="email" placeholder="Email del destinatario" required>
+                    </label>
+                    <!----Email del destinatario---->
+
+                    <button type="submit" class="form__button">AÑADIR AL CARRITO</button>
+                </form>
+            </article>
+
+            <!----Personalización de la giftcard---->
+
+
+        </section>
+
+    </main>
+    <!------------------------------------------------>
+
+
+    <!------------------------------------ FOOTER ------------------------------------>
+    <footer class="pie-pagina">
+
+    </footer>
+    <!------------------------------------ FOOTER ------------------------------------>
+    <script src="../../js/components/menuNav-module.js" type="module"> </script>
+    <script src="../../js/pages/giftcard/giftcard-module.js" type="module"></script>
+</body>
+
+</html>

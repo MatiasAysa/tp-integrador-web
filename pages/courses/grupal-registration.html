@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos</title>
+
+  <!-- Otros links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+  <link rel="stylesheet" href="../../css/globals/header.css">
+  <link rel="stylesheet" href="../../css/globals/footer.css">
+  <link rel="stylesheet" href="../../css/courses/grupal-registration.css">
+
+</head>
+
+<body>
+
+  <!------------------------------------ HEADER ------------------------------------>
+
+  <!---------- BARRA DE LA PAGINA ---------->
+  <header class="barra js-header">
+  </header>
+  <!------------------------------------------------>
+
+  <!----------------NAVEGADOR------------------>
+  <nav class="navbar js-nav">
+  </nav>
+  <!------------------------------------------------>
+
+  <!------------------------------------ HEADER ------------------------------------>
+
+
+  <!---------------------- CONETNIDO ---------------------->
+
+  <main class="container">
+
+    <section class="backWrap">
+      <div class="back">
+        <a href="./add.html">
+          <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <form class="form" method="get" action="../courses/carrito.html">
+        <h1 class="form__title">TITULO CURSO</h1>
+        <p class="form__subtitle">Inscripción grupal</p>
+        <section class="personas" id="personas">
+
+          <!--Persona 1-->
+          <article class="person">
+
+            <div class="person__header">
+              <span class="person__index">Persona 1</span>
+              <button type="button" class="btn btn--remove">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="persona1_nombre">
+                <p class="form__p">Ingrese el mail de la persona</p>
+              </label>
+              <input class="form__input" type="email" id="persona1_nombre" name="persona1_nombre" required
+                maxlength="40">
+            </div>
+
+          </article>
+
+        </section>
+
+        <button id="btnAgregar" type="button" class="btn btn--add"> Agregar Persona</button>
+
+        <div class="form__total">
+          <p class="form__total-label">Total a pagar:</p>
+          <p class="form__total-amount">$10000.00</p>
+        </div>
+
+        <button type="submit" class="form__button">INSCRIBIR</button>
+
+      </form>
+    </section>
+
+
+
+  </main>
+
+  <!------------------------- CONETNIDO ------------------------->
+
+
+  <!------------------------------------ FOOTER ------------------------------------>
+  <footer class="pie-pagina">
+
+  </footer>
+  <!------------------------------------ FOOTER ------------------------------------>
+  <script src="../../js/components/menuNav-module.js" type="module"></script>
+  <script src="../../js/pages/group-registration/groupRegistration-module.js" type="module"></script>
+</body>
+
+</html>

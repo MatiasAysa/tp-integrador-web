@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario</title>
+
+  <!-- Otros links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+  <link rel="stylesheet" href="../../css/globals/header.css">
+  <link rel="stylesheet" href="../../css/globals/footer.css">
+  <link rel="stylesheet" href="../../css/calendar/calendar.css">
+
+</head>
+
+<body>
+
+  <!------------------------------------ HEADER ------------------------------------>
+
+  <!---------- BARRA DE LA PAGINA ---------->
+  <header class="barra js-header">
+  </header>
+  <!------------------------------------------------>
+
+  <!----------------NAVEGADOR------------------>
+  <nav class="navbar js-nav">
+  </nav>
+  <!------------------------------------------------>
+
+  <!------------------------------------ HEADER ------------------------------------>
+
+
+  <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
+  <main class="mainCalendar">
+
+
+
+    <section class="calendar">
+
+      <div class="calendar_header">
+        <div class="back">
+          <a href="../homePage/homePage.html">
+            <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
+          </a>
+        </div>
+        <div class="calendar__arrows">
+          <button class="js-prev-month"><i class="fa-regular fa-circle-left"></i></button>
+          <h2 class="calendar_month js-calendar-month">Octubre</h2>
+          <button class="js-next-month"><i class="fa-regular fa-circle-right"></i></button>
+        </div>
+        <span class="calendar_year js-calendar-year">2025</span>
+      </div>
+
+      <div class="calendar__weekdays js-calendar-weekdays">
+        <p>Lun</p>
+        <p>Mar</p>
+        <p>Mié</p>
+        <p>Jue</p>
+        <p>Vie</p>
+        <p>Sáb</p>
+        <p>Dom</p>
+      </div>
+      <ol class="calendar__days js-calendar-days">
+      </ol>
+
+    </section>
+  </main>
+
+  <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
+
+  <!------------------------------------ FOOTER ------------------------------------>
+  <footer class="pie-pagina">
+
+  </footer>
+  <!------------------------------------ FOOTER ------------------------------------>
+
+  <div class="event" data-titulo="React" data-descripcion="Curso de introducción a React y componentes."
+    data-link="./caducado.html">
+    <h4>React</h4>
+  </div>
+
+  <div class="popup js-popu popup--hidden">
+    <div class="popup__content">
+      <button class="popup__close js-popup-close" aria-label="Cerrar popup">&times;</button>
+      <h3 class="popup__title" id="popup-titulo"></h3>
+      <p class="popup__description" id="popup-descripcion"></p>
+      <a class="popup__link" id="popup-link" href="#" target="_blank">Ver detalle</a>
+    </div>
+  </div>
+
+  <div id="iframe-popup" class="event-iframe-container">
+    <span id="close-iframe" class="close-iframe">&times;</span>
+    <iframe id="event-iframe" class="event-iframe" src="" frameborder="0"></iframe>
+  </div>
+
+  <script src="../../js/pages/calendar/calendar-module.js" type="module"> </script>
+  <script src="../../js/components/menuNav-module.js" type="module"> </script>
+</body>
+
+</html>

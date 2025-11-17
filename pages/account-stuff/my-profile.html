@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil</title>
+
+    <!-- Otros links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+    <link rel="stylesheet" href="../../css/globals/header.css">
+    <link rel="stylesheet" href="../../css/globals/modal.css">
+    <link rel="stylesheet" href="../../css/globals/footer.css">
+    <link rel="stylesheet" href="../../css/account-stuff/my-profile.css">
+
+</head>
+
+<body>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+    <header class="barra js-header">
+    </header>
+
+    <nav class="navbar js-nav">
+    </nav>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
+    <main>
+
+        <div class="back">
+            <a href="../homePage/homePage.html">
+                <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
+            </a>
+        </div>
+
+        <section class="perfilGrid">
+
+            <div class="perfil__item perfil__imgWrap">
+                <img class="perfil__img" src="../../img/account-stuff/withzack.jpg" alt="Foto de perfil">
+            </div>
+
+            <div class="perfil__item perfil__datosWrap">
+                <h2 class="perfil__datos--titulo">DATOS PERSONALES</h2>
+                <div class="perfil__datos"><b>Nombre completo:&nbsp;</b>    <p class="js-name"></p></div>
+                <div class="perfil__datos"><b>Nombre de usuario:&nbsp;</b>  <p class="js-username"></p></div>
+                <div class="perfil__datos"><b>DNI:&nbsp;</b>    <p class="js-dni"></p> </div>
+                <div class="perfil__datos"><b>E-mail:&nbsp;</b> <p class="js-email"></p></div>
+
+                <div class="perfil__buttonWrap">
+                    <a href="./edit-profile.html">
+                        <button class="perfil__button">EDITAR PERFIL</i></button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="perfil__item perfil__metodosPago">
+                <h2 class="perfil__datos--titulo">MÉTODOS DE PAGO</h2>
+                <div class="js-tarjetas"></div>
+                <div class="perfil__buttonWrap">
+                    <a class="js-agregarTarjeta">
+                        <button class="perfil__button">AGREGAR MÉTODOS DE PAGO</i></button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="perfil__item perfil__button perfil__button--cerrarSesion">
+                <a href="./log-in.html">CERRAR SESIÓN</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="contenedor">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item4"></div>
+    </div>
+
+
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
+
+
+    <!------------------------------------ FOOTER ------------------------------------>
+    <footer class="pie-pagina">
+
+    </footer>
+    <!------------------------------------ FOOTER ------------------------------------>
+    <script src="../../js/components/menuNav-module.js" type="module"></script>
+    <script src="../../js/pages/account-stuff/miPerfil-module.js" type="module"></script>
+</body>
+
+</html>
