@@ -24,28 +24,49 @@ aniadirCursosBtn.forEach(button => {
 });
 
 
-// lista de cursos dinamica
 import { DATOS_CURSOS } from "./datosCursos.js"
 import { DATOS_CATEGORIAS, DATOS_NIVELES } from "./datosCategorias&Niveles.js";
 
-const paginaCursos = document.querySelector(".pagina");
-const CANTIDAD_MAXIMA_CURSOS = 6;
+
+// --- LISTA DE CURSOS ---
+
+const sectionCursos = document.querySelector(".cursos");
 let cant = 0;
 
-do {
+const categoriasCont = document.querySelector(".categorias-js");
+const nivelesCont = document.querySelector(".niveles-js");
+let filtrosAplicados = [];
 
-    const datos = DATOS_CURSOS[cant];
+crearFiltros(categoriasCont, DATOS_CATEGORIAS);
+clickearFiltros();
 
-    const templateCurso = `
-                    <div class="cursos__contenedor cursoContenedor-js" id="HTML" data-curso='${datos.id}'>
+agregarCursosLista();
+
+function agregarCursosLista() {
+
+    while (cant < DATOS_CURSOS.length) {
+
+        if (filtrosAplicados.length > 0 &&
+            !compararFiltroCategorias(DATOS_CURSOS[cant].categorias)) {
+
+            cant++;
+            continue; // <-- vuelve a empezar el while
+        }
+
+        const datos = DATOS_CURSOS[cant];
+
+        const templateCurso = `
+                <div class="cursos__contenedor cursoContenedor-js" id="HTML" data-curso='${datos.id}'>
                     <div class="cursos__contenedor-imagen">
                         <img src="../../${datos.imagen}" class="imagen" alt="${datos.nombre}">
                     </div>
                     <div class="cursos__contenedor-descripcion">
-                        <h5 class="categoria"> <i class="fa-regular fa-folder-open"></i>Programacion </h5>
+                        <h5 class="categoria"> <i class="fa-regular fa-folder-open"></i>
+                        ${devolverCategoria(datos.categorias)}
+                        </h5>
                         <h1 class="titulo">${datos.nombre}</h1>
                         <div class="descripcion">
-                            <h3>Nivel: ${datos.nivel}</h3>
+                            <h3>Nivel: ${datos.nivel.nombre}</h3>
                             <h3>Duracion: ${datos.duracion} horas</h3>
                             <h3>Modalidad: ${datos.modalidad}</h3>
                         </div>
@@ -70,24 +91,22 @@ do {
                 </div>
     `
 
-    paginaCursos.insertAdjacentHTML('beforebegin', templateCurso)
+        sectionCursos.innerHTML += templateCurso;
 
-    cant++;
+        cant++;
+    }
 
-} while (cant < CANTIDAD_MAXIMA_CURSOS && cant < DATOS_CURSOS.length);
+}
 
-// filtros
-const categoriasCont = document.querySelector(".categorias-js");
-const nivelesCont = document.querySelector(".niveles-js");
 
-crearFiltros(categoriasCont, DATOS_CATEGORIAS);
-crearFiltros(nivelesCont, DATOS_NIVELES);
+// ---------------------------------- FILTROS ----------------------------------
 
+// ------- Crear los filtros -------
 function crearFiltros(contenedor, datos) {
     datos.forEach(item => {
         const templateFiltro = `
         <div class="filtros__opciones-filtro">
-            <input type="checkbox" id="${item.nombre}" name="${item.nombre}" class="checkbox">
+            <input type="checkbox" id="${item.id}" name="${item.id}" class="checkbox">
                 <p> ${item.nombre} </p>
         </div>
         `
@@ -95,4 +114,81 @@ function crearFiltros(contenedor, datos) {
     });
 }
 
+function devolverCategoria(categorias) {
+    if (categorias.length == 1) return categorias[0].nombre;
 
+    let categoriasSeparadas = "";
+    categorias.forEach((item, i) => {
+        categoriasSeparadas += item.nombre;
+        if (i != categorias.length - 1) { categoriasSeparadas += ", " }
+    });
+
+    return categoriasSeparadas;
+}
+// ------- Crear los filtros -------
+
+
+// ------- Aplicar los filtros -------
+function clickearFiltros() {
+    const filtros = document.querySelectorAll(".checkbox");
+    filtros.forEach((item, i) => {
+        item.addEventListener('click', e => {
+            console.log(item.getAttribute("id"));
+            almacenarFiltros(item.getAttribute("id"));
+            compararFiltros();
+        })
+    });
+
+}
+
+function almacenarFiltros(filtro) {
+    const nombreFiltro = "#" + filtro;
+
+    const filtroInput = document.querySelector(nombreFiltro);
+
+    if (filtroInput.checked) { filtrosAplicados.push(filtro); }
+    else {
+        let indice = filtrosAplicados.indexOf(filtro);
+        filtrosAplicados.splice(indice, 1);
+    }
+
+}
+
+function compararFiltros() {
+
+    let resultado;
+
+    DATOS_CURSOS.forEach(curso => {
+        curso.categorias.forEach(cat => {
+            filtrosAplicados.forEach(filtro => {
+                if (filtro == cat.id) {
+                    resultado = true;
+                }
+            });
+        });
+
+    })
+
+    cant = 0;
+    sectionCursos.querySelectorAll(".cursoContenedor-js").forEach(el => el.remove());
+    agregarCursosLista();
+
+}
+
+
+
+function compararFiltroCategorias(categorias) {
+    for (const filtro of filtrosAplicados) {
+        for (const categoria of categorias) {
+            if (filtro === categoria.id) {
+                return true; // <<-- CORTA TODA LA FUNCIÓN
+            }
+        }
+    }
+
+    return false;
+}
+
+// ------- Aplicar los filtros -------
+
+// ---------------------------------- FILTROS ----------------------------------

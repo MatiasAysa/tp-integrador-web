@@ -2,7 +2,7 @@ export const NAV_ITEMS = [
     { text: 'Inicio', link: '../homePage/homePage.html' },
     { text: 'Contacto', link: '../contact/contact.html' },
     { text: 'Giftcard', link: '../giftcard/giftcard.html' },
-    { text: 'Cursos', link: '../courses/courses-list.html' },
+    { text: 'Cursos', link: '../courses/coursesList.html' },
     { text: 'Calendario', link: '../calendar/calendar.html' },
     { text: 'Mis cursos', link: '../courses/myCourses.html' },
     { text: 'Mi perfil', link: '../account-stuff/my-profile.html' }];

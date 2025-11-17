@@ -1,10 +1,12 @@
-import { DATOS_PROFES } from "./datosProfesores.js";
+import { DATOS_PROFES as PROFES } from "./datosProfesores.js";
+import { DATOS_CATEGORIAS as CATEGORIAS, DATOS_NIVELES as NIVELES } from "./datosCategorias&Niveles.js";
 
 export const DATOS_CURSOS = [
     {
-        id: "javaScript-principiante",
+        id: "javaScript-inicial",
         nombre: 'Curso de JavaScript',
-        nivel: 'Inicial',
+        categorias: [CATEGORIAS[0], CATEGORIAS[4]],
+        nivel: NIVELES[0],
         duracion: 40,
         modalidad: 'Virtual',
         descripcion_corta: 'Aprende los fundamentos de JavaScript, el lenguaje de programación más popular para desarrollo web.',
@@ -12,7 +14,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/js.jpg',
         precio: 15000,
         objetivos: ['Comprender los conceptos básicos de JavaScript.', 'Manipular el DOM.', 'Crear aplicaciones web interactivas.', 'Trabajar con APIs y manejar eventos.'],
-        profesor: DATOS_PROFES[0],
+        profesor: PROFES[0],
         fecha_lanzamiento: new Date("2025-11-04"),
         destacado: true,
         cuatrimestres: [
@@ -42,7 +44,8 @@ export const DATOS_CURSOS = [
     {
         id: "python-intermedio",
         nombre: 'Curso de Python',
-        nivel: 'Intermedio',
+        categorias: [CATEGORIAS[5], CATEGORIAS[3]],
+        nivel: NIVELES[1],
         duracion: 30,
         modalidad: 'Presencial',
         descripcion_corta: 'Domina Python y sus aplicaciones en desarrollo web, análisis de datos e inteligencia artificial.',
@@ -50,7 +53,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/cursoPYTHON.jpg',
         precio: 20000,
         objetivos: ['Aprender sintaxis y estructuras de Python.', 'Trabajar con bibliotecas populares.', 'Desarrollar proyectos prácticos.'],
-        profesor: DATOS_PROFES[1],
+        profesor: PROFES[1],
         fecha_lanzamiento: new Date('2024-08-15'),
         destacado: true,
         cuatrimestres: [
@@ -80,7 +83,8 @@ export const DATOS_CURSOS = [
     {
         id: "desarrollo-web-fullstack",
         nombre: 'Curso de Desarrollo Web Full Stack',
-        nivel: 'Avanzado',
+        categorias: [CATEGORIAS[0], CATEGORIAS[4], CATEGORIAS[3]],
+        nivel: NIVELES[2],
         duracion: 50,
         modalidad: 'Virtual',
         descripcion_corta: 'Conviértete en un desarrollador web full stack dominando tanto el front-end como el back-end.',
@@ -88,7 +92,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/jpeg.jpg',
         precio: 30000,
         objetivos: ['Aprender desarrollo front-end y back-end.', 'Trabajar con bases de datos.', 'Desarrollar aplicaciones web completas.'],
-        profesor: DATOS_PROFES[2],
+        profesor: PROFES[2],
         fecha_lanzamiento: new Date('2025-11-01'),
         destacado: true,
         cuatrimestres: [
@@ -118,7 +122,8 @@ export const DATOS_CURSOS = [
     {
         id: "godot-intermedio",
         nombre: 'Curso de Godot',
-        nivel: 'Intermedio',
+        categorias: [CATEGORIAS[1]],
+        nivel: NIVELES[2],
         duracion: 35,
         modalidad: 'presencial',
         descripcion_corta: 'Aprende a crear videojuegos utilizando el motor Godot, desde conceptos básicos hasta técnicas avanzadas.',
@@ -126,7 +131,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/godot.jpg',
         precio: 18000,
         objetivos: ['Comprender el motor Godot y su interfaz.', 'Diseñar y programar mecánicas de juego.', 'Publicar un videojuego completo.'],
-        profesor: DATOS_PROFES[3],
+        profesor: PROFES[3],
         fecha_lanzamiento: new Date("2026-11-10"),
         destacado: false,
         cuatrimestres: [
@@ -156,7 +161,8 @@ export const DATOS_CURSOS = [
     {
         id: "java-avanzado",
         nombre: 'Curso de Java',
-        nivel: 'Avanzado',
+        categorias: [CATEGORIAS[3]],
+        nivel: NIVELES[2],
         duracion: 45,
         modalidad: 'virtual',
         descripcion_corta: 'Domina Java, uno de los lenguajes de programación más utilizados en el desarrollo de aplicaciones empresariales y móviles.',
@@ -164,7 +170,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/cursoJAVA.jpg',
         precio: 25000,
         objetivos: ['Aprender sintaxis y estructuras de Java.', 'Programación orientada a objetos.', 'Desarrollar aplicaciones prácticas.'],
-        profesor: DATOS_PROFES[4],
+        profesor: PROFES[4],
         fecha_lanzamiento: new Date('2025-12-20'),
         destacado: false,
         cuatrimestres: [
@@ -194,7 +200,8 @@ export const DATOS_CURSOS = [
     {
         id: "c-sharp-basico",
         nombre: 'Curso de C#',
-        nivel: 'Inicial',
+        categorias: [CATEGORIAS[2]],
+        nivel: NIVELES[0],
         duracion: 25,
         modalidad: 'virtual',
         descripcion_corta: 'Inicia tu camino en la programación con C#, un lenguaje potente y versátil utilizado en desarrollo de aplicaciones y videojuegos.',
@@ -202,7 +209,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/sharpCurso.jpg',
         precio: 12000,
         objetivos: ['Aprender sintaxis y estructuras de C#.', 'Programación orientada a objetos.', 'Desarrollar aplicaciones prácticas.'],
-        profesor: DATOS_PROFES[5],
+        profesor: PROFES[5],
         fecha_lanzamiento: new Date('2025-11-03'),
         destacado: false,
         cuatrimestres: [
@@ -231,7 +238,8 @@ export const DATOS_CURSOS = [
     {
         id: "firebase-avanzado",
         nombre: 'Curso de Firebase',
-        nivel: 'Avanzado',
+        categorias: [CATEGORIAS[4], CATEGORIAS[0]],
+        nivel: NIVELES[2],
         duracion: 20,
         modalidad: 'presencial',
         descripcion_corta: 'Domina Firebase, la plataforma de desarrollo de aplicaciones móviles y web de Google, para crear aplicaciones escalables y en tiempo real.',
@@ -239,7 +247,7 @@ export const DATOS_CURSOS = [
         imagen: 'img/courses/firebase.jpg',
         precio: 22000,
         objetivos: ['Aprender a utilizar Firebase y sus servicios.', 'Gestionar bases de datos en tiempo real.', 'Desarrollar aplicaciones escalables.'],
-        profesor: DATOS_PROFES[6],
+        profesor: PROFES[6],
         fecha_lanzamiento: new Date('2026-01-15'),
         destacado: false,
         cuatrimestres: [

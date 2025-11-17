@@ -1,41 +1,50 @@
 export const DATOS_CATEGORIAS = [
     {
         indice: 0,
-        nombre: "Desarrollo Web"
-    },
+        nombre: "Desarrollo Web",
+        id: "desarrollo-web"
+    }, 
     {
         indice: 1,
-        nombre: "Videojuegos"
+        nombre: "Videojuegos",
+        id: "videojuegos"
     },
     {
         indice: 2,
-        nombre: "Frameworks"
+        nombre: "Frameworks",
+        id: "frameworks"
     },
     {
         indice: 3,
-        nombre: "Back-end"
+        nombre: "Back-end",
+        id: "back-end"
     },
     {
         indice: 4,
-        nombre: "Front-end"
+        nombre: "Front-end",
+        id: "front-end"
     },
     {
-        indice: 4,
-        nombre: "Ciencia de datos"
+        indice: 5,
+        nombre: "Ciencia de datos",
+        id: "ciencia-datos"
     }
 ]
 
 export const DATOS_NIVELES = [
     {
         indice: 0,
-        nombre: "Incial"
+        nombre: "Incial",
+        id: "inicial"
     },
     {
         indice: 1,
-        nombre: "Intermedio"
+        nombre: "Intermedio",
+        id: "intermedio"
     },
     {
         indice: 2,
-        nombre: "Avanzado"
+        nombre: "Avanzado",
+        id: "avanzado"
     }
 ]
