@@ -18,7 +18,7 @@ extraerIdCursoClickeando(ultimosCursos, ultimosCursos);
 const btn_detallesCurso = document.querySelectorAll('.boton_detalle');
 const cursosDestacados = document.querySelectorAll('.curso-card');
 extraerIdCursoClickeando(btn_detallesCurso, cursosDestacados);
-extraerIdCursoClickeando(cursosDestacados, cursosDestacados);
+// extraerIdCursoClickeando(cursosDestacados, cursosDestacados);
 
 
 // --- LISTA DE CURSOS ---

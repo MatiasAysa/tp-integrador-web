@@ -11,6 +11,7 @@ const contenedorCursosProximos = buscarDom.buscandoElemento(".js-proximos");
 
 let hoy = new Date();
 
+
 // proximos cursos
 DATOS_CURSOS.forEach(item => {
 
@@ -21,7 +22,7 @@ DATOS_CURSOS.forEach(item => {
                 <div class="proximo_informacion">
                     <span class="prox_lanzamiento">Proximo Lanzamiento</span>
                     <h2>${item.nombre}</h2>
-                    <span class="prox_disponible">Disponible apartir del ${item.fecha_lanzamiento.getDate()} de ${item.fecha_lanzamiento.toLocaleString('es-AR', { month: 'long' })} 
+                    <span class="prox_disponible">Disponible apartir del ${item.fecha_lanzamiento.getDay()} de ${item.fecha_lanzamiento.toLocaleString('es-ES', { month: 'long' })} 
                     ${item.fecha_lanzamiento.getFullYear()}</span>
                     <p>${item.descripcion_corta}</p>
                     <span><a href="#" class="clickMasDetalles-js" id="prox_detalles">Mas Detalles.</a></span>
@@ -37,7 +38,7 @@ DATOS_CURSOS.forEach(item => {
 
     contenedorCursosProximos.innerHTML += templateProximosCursos;
 });
-
+//--------
 
 // ultimos cursos
 DATOS_CURSOS.forEach(item => {
@@ -58,7 +59,7 @@ DATOS_CURSOS.forEach(item => {
                 </div>
                 <div class="card_infoCursoNuevo">
                     <h4>${item.nombre}</h4>
-                    <span>${item.profesor.nombre}</span>
+                    <span>${item.profesor}</span>
                 </div>
             </article>
         </a>`;
@@ -71,7 +72,7 @@ const duplicado = contenedorCursosNuevos.innerHTML;
 contenedorCursosNuevos.innerHTML += duplicado;
 const duplicado2 = contenedorCursosNuevos.innerHTML;
 contenedorCursosNuevos.innerHTML += duplicado2;
-
+//----
 const botonDesplazarIzquierda = buscarDom.buscandoElemento(".js-boton-proximosLeft");
 const botonDesplazarDerecha = buscarDom.buscandoElemento(".js-boton-proximosRight");
 
@@ -80,6 +81,7 @@ const carrusel = new CarruselProximos(
     botonDesplazarIzquierda,
     botonDesplazarDerecha
 );
+
 
 // cursos detacados
 DATOS_CURSOS.forEach(item => {
@@ -121,8 +123,6 @@ modal.render();
 
 const modalCarrito = new ModalCarrito();
 modalCarrito.render();
-
-
 
 
 
