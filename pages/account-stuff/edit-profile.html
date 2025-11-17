@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil</title>
+
+    <!-- Otros links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/globals/globalStyles.css">
+    <link rel="stylesheet" href="../../css/globals/header.css">
+    <link rel="stylesheet" href="../../css/globals/footer.css">
+    <link rel="stylesheet" href="../../css/account-stuff/my-profile.css">
+    <link rel="stylesheet" href="../../css/account-stuff/edit-profile.css">
+
+</head>
+
+<body>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+    <!---------- BARRA DE LA PAGINA ---------->
+    <header class="barra js-header">
+    </header>
+    <!------------------------------------------------>
+
+    <!----------------NAVEGADOR------------------>
+    <nav class="navbar js-nav">
+    </nav>
+    <!------------------------------------------------>
+
+    <!------------------------------------ HEADER ------------------------------------>
+
+
+
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
+    <main>
+
+        <div class="volver">
+            <a href="./my-profile.html">
+                <button class="botonBack"><i class="fa-solid fa-arrow-left"></i></button>
+            </a>
+        </div>
+
+        <section class="sectionWrap perfil">
+
+            <form class="formProfile js-form" action="./succes-edit-profile.html" method="get">
+
+                <div class="perfil__imgWrap">
+                    <div class="perfil__imgBackground">
+                        <img class="perfil__img" src="../../img/account-stuff/withzack.jpg" alt="Foto de perfil">
+                    </div>
+                    <div class="perfil__eliminarImg">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="name">Nombre</label>
+                    <input class="form__input js-name" type="text" id="name" name="name" maxlength="40" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="surname">Apellido </label>
+                    <input class="form__input js-surname" type="text" id="surname" name="surname" maxlength="40" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="dni">DNI (sin puntos)</label>
+                    <input class="form__input form__input--number js-dni" type="text" id="dni" name="dni" maxlength="10" required>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label" for="email">E-mail</label>
+                    <input class="form__input js-email" type="email" id="email" name="email" required
+                        >
+                </div>
+
+                <button class="perfil__button perfil__button--guardar js-submit" type="submit">GUARDAR</button>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!------------------------------------ CONTENIDO DE LA PAGINA ------------------------------------>
+
+
+
+    <!------------------------------------ FOOTER ------------------------------------>
+    <footer class="pie-pagina">
+
+    </footer>
+    <!------------------------------------ FOOTER ------------------------------------>
+
+    <script src="../../js/pages/account-stuff/editarPerfil-module.js" type="module"></script>
+    <script src="../../js/components/menuNav-module.js" type="module"></script>
+</body>
+
+</html>
