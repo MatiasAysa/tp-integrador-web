@@ -97,7 +97,7 @@ export const eventos = [
 
 
     {
-        dia: 15,
+        dia: 27,
         mes: 11,
         anio: 2025,
         title: "Python Avanzado",

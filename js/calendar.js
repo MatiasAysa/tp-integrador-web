@@ -46,6 +46,18 @@ function renderCalendar(fecha) {
 
         let isToday = dia == hoy.getDate() && mes == hoy.getMonth() && anio == hoy.getFullYear();
 
+        //determina si el evento ya paso
+        let caducado = false;
+
+        if (anio < hoy.getFullYear()) {
+            caducado = true;
+        } else if (anio === hoy.getFullYear() && mes < hoy.getMonth()) {
+            caducado = true;
+        } else if (anio === hoy.getFullYear() && mes === hoy.getMonth() && dia < hoy.getDate()) {
+            caducado = true;
+        }
+
+
         //obtiene eventos del dia
         let eventosDelDia = eventos.filter(function (ev) {
             return ev.dia === dia && ev.mes === mes + 1 && ev.anio === anio;
@@ -54,15 +66,19 @@ function renderCalendar(fecha) {
         //crea html de eventos
         let contenidoEventos = "";
         for (let j = 0; j < eventosDelDia.length; j++) {
-            let evento= eventosDelDia[j];
+            let evento = eventosDelDia[j];
             contenidoEventos +=
-            '<div class="event" titulo="' + evento.title +'" descripcion="' + evento.descripcion + '" link="' + evento.link + '">' + '<h4>' + evento.title + '</h4>' + '</div>';
+                '<div class="event" titulo="' + evento.title + '" descripcion="' + evento.descripcion + '" link="' + evento.link + '">' + '<h4>' + evento.title + '</h4>' + '</div>';
 
-            
+
         }
 
         //agregar today y eventos
-        diasDelMes += '<li class="calendar__day' + (isToday ? " today" : "") + '">';
+        let clases = "calendar__day";
+        if (isToday) clases += " today";
+        if (caducado) clases += " calendar__day--rojo";
+        diasDelMes += `<li class="${clases}">`;
+
         diasDelMes += '<h4>' + dia + '</h4>';
         diasDelMes += contenidoEventos;
         diasDelMes += '</li>';
