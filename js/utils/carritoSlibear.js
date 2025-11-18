@@ -9,7 +9,9 @@ export class CarritoSlibear {
         const buscadorDom = new BuscandorElementos();
         const contenedorProductos = buscadorDom.buscandoElemento(".js-contenedor-productos");
         const botonesAñadir = document.querySelectorAll(".js-boton-añadirIndividual");
-
+        const cantCursosSpan = document.querySelectorAll(".js-cantCursos");
+        const totalPrecioSpan = document.querySelectorAll(".js-totalPrecio");
+        
         const modal = new ModalElegirTipoCompra();
         modal.render();
         //ESTA PARTE ESTA MEGA HARDCODEADA PERO NO TENGO TIEMPO PARA HACERLO MEJOR
@@ -20,6 +22,16 @@ export class CarritoSlibear {
         const botonAbrirModal = document.querySelectorAll(".js-OpenModal");
 
         renderCarrito();
+        actualizarResumenCompra();
+
+        function actualizarResumenCompra() {
+            cantCursosSpan.forEach(span => {
+                span.textContent = actualizarCantCursos(usuarioActual);
+            });
+            totalPrecioSpan.forEach(span => {
+                span.textContent = `$${total(usuarioActual)}`;
+            });
+        }
 
         botonAbrirModal.forEach(element => {
             element.addEventListener("click", (event) => {
@@ -60,12 +72,13 @@ export class CarritoSlibear {
                 localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
                 guardarEnUsuarios(usuarioActual);
                 renderCarrito();
+                actualizarResumenCompra();
                 mostrarMensajeFinal("Feliciadsed", "exito");
                 modealElegirCompra.close();
             });
         });
 
-        // Delegación de evento para eliminar cursos desde el carrito
+        //eliminar
         contenedorProductos.addEventListener("click", (e) => {
             const eliminarBtn = e.target.closest(".js-EliminarCurso");
             if (!eliminarBtn) return;
@@ -81,6 +94,7 @@ export class CarritoSlibear {
             localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
             guardarEnUsuarios(usuarioActual);
             renderCarrito();
+            actualizarResumenCompra();
         });
 
 
@@ -158,8 +172,18 @@ export class CarritoSlibear {
             localStorage.setItem("usuarios", JSON.stringify(usuariosActualizados));
         }
 
+        function actualizarCantCursos(usuarioActual) {
+            return usuarioActual.cursosEnCarrito.length;
+        }
+        function total(usuarioActual) {
+            let total = 0;
+            usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
+            usuarioActual.cursosEnCarrito.forEach(curso => {
+                total = total + curso.precio;
+            });
+            return total;
+        }
+            
     }
 
-
 }
-

@@ -99,6 +99,7 @@
 
 /*---------------SECTION PROXIMOS LANZAMIENTOS-------------------*/
 .main_proximos {
+    border-top: 1px solid var(--color-principalDegradado);
     width: 100%;
     position: relative;
     padding: 2em 4em;

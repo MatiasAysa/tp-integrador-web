@@ -19,7 +19,7 @@ const contenedorPadreElegirTipoCompra = document.querySelector(".js-nav");
 const actualizarCarrito = new CarritoSlibear();
 footer.addFooter();
 isUserLoggedIn();
-
+export const ResumenCompra = {valor:0 , cantCursos : 0};
 
 
 function renderModal() {
@@ -43,14 +43,14 @@ function renderModal() {
                     <div class="montoTotal_Descripcion">
                         <div class="montoTotal_elemento">
                             <span>Cantidad de curso/s</span>
-                            <span>${actualizarCantCursos()}</span>
+                            <span class= "js-cantCursos"></span>
                         </div>
                         <div class="montoTotal_elemento total">
                             <span>Total</span>
-                            <span>${total()}</span>
+                            <span class = "js-totalPrecio"></span>
                         </div>
                         <div class="montoTotal_elementoComprar">
-                            <a href="./metodoPago.html">Continuar compra</a>
+                            <a href="../courses/metodoPago.html">Continuar compra</a>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ function renderModal() {
     </dialog>
 
 `;
-    contenedorPadreHeader.innerHTML += templateModalCarrito;
+    contenedorPadreHeader.insertAdjacentHTML('beforeend', templateModalCarrito);
 
 
     //SEGUNDO DIBUJAR EL MODAL PARA ELECCION DEL TIPO 
@@ -86,21 +86,8 @@ function renderModal() {
 
     const modalCarrito = new ModalCarrito();
     modalCarrito.render();
+    actualizarCarrito.render();
 
-}
-
-
-function actualizarCantCursos() {
-    const usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
-    return usuarioActual.cursosEnCarrito.length;
-}
-function total(){
-    let total = 0;
-    const usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
-    usuarioActual.cursosEnCarrito.forEach(curso => {
-        total = total + curso.precio;
-    });
-    return total;
 }
 
 
@@ -112,7 +99,6 @@ function isUserLoggedIn() {
         carrito.render();
         navbar.renderItems(NAV_ITEMS);
         renderModal();
-        actualizarCarrito.render();
     }
     else {
         headerLogo.renderItems(HEADER_LOGO_NO_LOGUEADO);
