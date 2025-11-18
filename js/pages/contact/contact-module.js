@@ -65,9 +65,9 @@ submitButton.addEventListener('click', (a) => {
         return;
     }
     else {
-        alert('Consulta enviada! nos pondremos en contacto');
-        a.submit();
-        window.location.href = "../../pages/homePage/homePage.html";
+        modal.mostrarMensaje('Consulta enviada! nos pondremos en contacto', ()=>{
+            window.location.href = "../../pages/homePage/homePage.html";
+        });
     };
 }
 )
