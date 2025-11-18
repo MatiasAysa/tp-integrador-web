@@ -13,7 +13,6 @@ export class ModalElegirTipoCompra {
         botonAbrirModal.forEach(element => {
             element.addEventListener("click", (event) => {
                 modealElegirCompra.showModal();
-                console.log("sdf");
             });
         });
 

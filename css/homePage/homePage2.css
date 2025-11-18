@@ -99,6 +99,7 @@
 
 /*---------------SECTION PROXIMOS LANZAMIENTOS-------------------*/
 .main_proximos {
+    border-top: 1px solid var(--color-principalDegradado);
     width: 100%;
     position: relative;
     padding: 2em 4em;
@@ -260,7 +261,7 @@
     flex-wrap: wrap;
     gap: 2em;
     width: max-content;
-    animation: srollInfinito 30s linear infinite;
+    animation: srollInfinito 60s linear infinite;
 }
 
 .cursosNuevos_contenido a {

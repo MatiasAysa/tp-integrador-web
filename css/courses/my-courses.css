@@ -1,5 +1,5 @@
 main {
-    padding: 5em 0;
+    margin: 5em 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -8,9 +8,8 @@ main {
 
 .back {
     font-size: 0.5em;
-    margin-right: 113em;
-    margin-top: 1.6em;
     position: absolute;
+    margin: -5em 0 0 -5em;
 }
 
 .botonBack {
@@ -26,7 +25,8 @@ main {
     transition: background-color 0.5s ease;
 }
 
-.botonBack:hover {
+.botonBack:hover,
+button:hover {
     background-color: var(--color-secundarioDegradado);
 }
 
@@ -74,6 +74,34 @@ main {
     border-radius: 15px;
     background-color: var(--color-secundario);
 }
+.contenido{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.noObtenido{
+    display: flex;
+    flex-direction: column;
+    height: 10em;
+    text-align: center;
+    align-items: center;
+    padding-top: 3em;
+    font-size: 1.2em;
+    font-style: italic;
+    gap: 4em;
+}
+.button {
+    height: 3em;
+    width: 10em;
+    padding: 0.5em;
+    border-radius: 2em;
+    color: var(--color-secundario);
+    background-color: var(--color-principalDegradado);
+    border-color: var(--color-secundarioDegradado);
+    font-size: 85%;
+    cursor: pointer;
+}
+
 
 /* -------------------- MEDIA QUERIES -------------------- */
 

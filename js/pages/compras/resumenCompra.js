@@ -1,6 +1,10 @@
 const contenedorCursosDetalle = document.querySelector(".js-detalleCompra");
 const usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
 const botonRealizarCompra = document.querySelector(".js-realizarCompra");
+const contenedorMain = document.querySelector(".js-contenedorPadre");
+const modalCompraExitosa = document.querySelector(".js-mainCompra");
+
+
 usuarioActual.cursosEnCarrito.forEach(curso => {
     const templateCursosDetalle = `
                         <section class="compra_curso">
@@ -15,24 +19,19 @@ usuarioActual.cursosEnCarrito.forEach(curso => {
 `;
     contenedorCursosDetalle.innerHTML += templateCursosDetalle;
 });
-
 botonRealizarCompra.addEventListener("click", (e) => {
-    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     usuarioActual.cursosEnCarrito.forEach(curso => {
         usuarioActual.cursosObtenidos.push(curso);
     });
     usuarioActual.cursosEnCarrito = [];
     localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
     guardarEnUsuarios(usuarioActual);
-
+    modalCompraExitosa.showModal();
 });
 
 function guardarEnUsuarios(usuarioActual) {
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
     const usuariosActualizados = usuarios.map(u =>
-        u.email === usuarioActual.email ? usuarioActual : u
-    );
-
+        u.email === usuarioActual.email ? usuarioActual : u);
     localStorage.setItem("usuarios", JSON.stringify(usuariosActualizados));
 }

@@ -1,6 +1,18 @@
-main {
-    width: 100%;
+.js-mainCompra {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+.js-mainCompra::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+.mainCompra {
+    position: fixed;
     justify-content: center;
     text-align: center;
 }
@@ -29,7 +41,7 @@ main {
     align-items: center;
     justify-content: center;
     animation-name: animacionCirculo;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
 }
 
 .exito_circulo i {

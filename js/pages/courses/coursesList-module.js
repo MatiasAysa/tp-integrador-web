@@ -15,14 +15,7 @@ agregarCursosLista();
 
 function agregarCursosLista() {
 
-    while (cant < DATOS_CURSOS.length) {
-
-        if (filtrosAplicados.length > 0 &&
-            !compararFiltroCategorias(DATOS_CURSOS[cant].categorias)) {
-
-            cant++;
-            continue; // <-- vuelve a empezar el while
-        }
+    do {
 
         const datos = DATOS_CURSOS[cant];
 
@@ -37,7 +30,7 @@ function agregarCursosLista() {
                         </h5>
                         <h1 class="titulo">${datos.nombre}</h1>
                         <div class="descripcion">
-                            <h3>Nivel: ${datos.nivel.nombre}</h3>
+                            <h3>Nivel: ${datos.nivel}</h3>
                             <h3>Duracion: ${datos.duracion} horas</h3>
                             <h3>Modalidad: ${datos.modalidad}</h3>
                         </div>
@@ -65,14 +58,14 @@ function agregarCursosLista() {
         sectionCursos.innerHTML += templateCurso;
 
         cant++;
-    }
+    } while (cant < DATOS_CURSOS.length);
 
 }
 
 
 // ---------------------------------- FILTROS ----------------------------------
 
-// ------- Crear los filtros -------
+// ------- Renderizar los filtros -------
 function crearFiltros(contenedor, datos) {
     datos.forEach(item => {
         const templateFiltro = `
@@ -96,13 +89,13 @@ function devolverCategoria(categorias) {
 
     return categoriasSeparadas;
 }
-// ------- Crear los filtros -------
-// ------- Aplicar los filtros -------
+// ------- Renderizar los filtros -------
+
+// ------- Lógica los filtros -------
 function clickearFiltros() {
     const filtros = document.querySelectorAll(".checkbox");
     filtros.forEach((item, i) => {
         item.addEventListener('click', e => {
-            console.log(item.getAttribute("id"));
             almacenarFiltros(item.getAttribute("id"));
             compararFiltros();
         })
@@ -125,34 +118,51 @@ function almacenarFiltros(filtro) {
 
 function compararFiltros() {
 
-    let resultado;
+    const cursosHTML = document.querySelectorAll(".cursoContenedor-js");
 
-    DATOS_CURSOS.forEach(curso => {
-        curso.categorias.forEach(cat => {
-            filtrosAplicados.forEach(filtro => {
-                if (filtro == cat.id) {
-                    resultado = true;
-                }
-            });
-        });
-
-    })
-
-    cant = 0;
-    sectionCursos.querySelectorAll(".cursoContenedor-js").forEach(el => el.remove());
-    agregarCursosLista();
-
-}
-function compararFiltroCategorias(categorias) {
-    for (const filtro of filtrosAplicados) {
-        for (const categoria of categorias) {
-            if (filtro === categoria.id) {
-                return true; // <<-- CORTA TODA LA FUNCIÓN
-            }
-        }
+    // Si no hay filtros aplicados, cambiarles el display a todos a flex, sex
+    if (filtrosAplicados.length === 0) {
+        cursosHTML.forEach(cursoHTML => cursoHTML.style.display = "flex");
+        return;
     }
 
-    return false;
+    // Si hay filtros aplicados
+    DATOS_CURSOS.forEach(curso => {
+
+        // .map crea un array auxiliar transformando cada elemento de otro array
+        // en este caso, creaemos un arary que contenga la/s categorias de cada curso
+        const categoriasDelCurso = curso.categorias.map(cat => cat.id);
+
+        // .every devuelve true si todos los elementos del array cumplen la condición
+        // en este caso, todos los elementos de los filtros aplicados deberían de econtrarse en los filtros del curso
+        const contieneTodas = filtrosAplicados.every(filtro => 
+            // .includes devuelve true si el array contiene el valor buscado
+            categoriasDelCurso.includes(filtro)
+        );
+
+
+        if (contieneTodas) desocultarCursoPorId(curso.id);
+        else ocultarCursoPorId(curso.id);
+    });
+}
+
+function ocultarCursoPorId(id) {
+    const cursoAocultar = document.querySelectorAll(".cursoContenedor-js");
+    cursoAocultar.forEach(item => {
+        if (item.getAttribute("data-curso") == id) {
+            item.style.display = "none";
+        }
+    })
+}
+
+function desocultarCursoPorId(id) {
+
+    const cursoAocultar = document.querySelectorAll(".cursoContenedor-js");
+    cursoAocultar.forEach(item => {
+        if (item.getAttribute("data-curso") == id) {
+            item.style.display = "flex";
+        }
+    })
 }
 
 // ------- Aplicar los filtros -------

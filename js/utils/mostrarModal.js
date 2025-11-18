@@ -44,11 +44,39 @@ export class Modal {
             </div>`;
 
         this.modal.showModal();
-        
+
         const btnCerrar = this.modal.querySelector('.js-CloseModal')
 
-        btnCerrar.addEventListener('click' , ()=>{
+        btnCerrar.addEventListener('click', () => {
             this.modal.close()
+        })
+
+    }
+    mostrarOpcion(mensaje) {
+        this.modal.innerHTML =
+            `<div class="main_contenidoCompra">
+                <div class="contenido_tituloModal">
+                    <h2 class="h2Modal">${mensaje}</h2>
+                </div>
+                <div class="contenido_botones">
+                    <button class="boton_aceptar">Aceptar</button>
+                    <button class="boton_individual">Cancelar</button>
+                </div>
+            </div>`;
+
+        this.modal.showModal();
+        const btnAceptar = this.modal.querySelector(".boton_aceptar")
+        const btnCerrar = this.modal.querySelector('.boton_individual')
+        return new Promise((resolve) => {
+            btnCerrar.addEventListener('click', () => {
+                this.modal.close();
+                resolve(false);
+            });
+
+            btnAceptar.addEventListener('click', () => {
+                this.modal.close();
+                resolve(true);
+            });
         })
 
     }

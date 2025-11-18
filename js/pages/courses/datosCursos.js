@@ -4,7 +4,7 @@ import { DATOS_CATEGORIAS as CATEGORIAS, DATOS_NIVELES as NIVELES } from "./dato
 export const DATOS_CURSOS = [
     {
         id: "javaScript-inicial",
-        nombre: 'Curso de JavaScript',
+        nombre: 'JavaScript',
         categorias: [CATEGORIAS[0], CATEGORIAS[4]],
         nivel: NIVELES[0].nombre,
         duracion: 40,
@@ -15,7 +15,7 @@ export const DATOS_CURSOS = [
         precio: 15000,
         objetivos: ['Comprender los conceptos básicos de JavaScript.', 'Manipular el DOM.', 'Crear aplicaciones web interactivas.', 'Trabajar con APIs y manejar eventos.'],
         profesor: PROFES[0],
-        fecha_lanzamiento: new Date("2025-11-04"),
+        fecha_lanzamiento: new Date("2025-11-23"),
         destacado: true,
         cuatrimestres: [
             [
@@ -43,7 +43,7 @@ export const DATOS_CURSOS = [
 
     {
         id: "python-intermedio",
-        nombre: 'Curso de Python',
+        nombre: 'Python',
         categorias: [CATEGORIAS[5], CATEGORIAS[3]],
         nivel: NIVELES[1].nombre,
         duracion: 30,
@@ -54,7 +54,7 @@ export const DATOS_CURSOS = [
         precio: 20000,
         objetivos: ['Aprender sintaxis y estructuras de Python.', 'Trabajar con bibliotecas populares.', 'Desarrollar proyectos prácticos.'],
         profesor: PROFES[1],
-        fecha_lanzamiento: new Date('2024-08-15'),
+        fecha_lanzamiento: new Date('2025-11-31'),
         destacado: true,
         cuatrimestres: [
             [
@@ -82,7 +82,7 @@ export const DATOS_CURSOS = [
 
     {
         id: "desarrollo-web-fullstack",
-        nombre: 'Curso de Desarrollo Web Full Stack',
+        nombre: 'Web Full Stack',
         categorias: [CATEGORIAS[0], CATEGORIAS[4], CATEGORIAS[3]],
         nivel: NIVELES[2].nombre,
         duracion: 50,
@@ -93,7 +93,7 @@ export const DATOS_CURSOS = [
         precio: 30000,
         objetivos: ['Aprender desarrollo front-end y back-end.', 'Trabajar con bases de datos.', 'Desarrollar aplicaciones web completas.'],
         profesor: PROFES[2],
-        fecha_lanzamiento: new Date('2025-11-01'),
+        fecha_lanzamiento: new Date('2025-11-21'),
         destacado: true,
         cuatrimestres: [
             [
@@ -121,7 +121,7 @@ export const DATOS_CURSOS = [
 
     {
         id: "godot-intermedio",
-        nombre: 'Curso de Godot',
+        nombre: 'Godot',
         categorias: [CATEGORIAS[1]],
         nivel: NIVELES[2].nombre,
         duracion: 35,
@@ -132,7 +132,7 @@ export const DATOS_CURSOS = [
         precio: 18000,
         objetivos: ['Comprender el motor Godot y su interfaz.', 'Diseñar y programar mecánicas de juego.', 'Publicar un videojuego completo.'],
         profesor: PROFES[3],
-        fecha_lanzamiento: new Date("2026-11-10"),
+        fecha_lanzamiento: new Date("2026-01-10"),
         destacado: false,
         cuatrimestres: [
             [
@@ -160,7 +160,7 @@ export const DATOS_CURSOS = [
 
     {
         id: "java-avanzado",
-        nombre: 'Curso de Java',
+        nombre: 'Java',
         categorias: [CATEGORIAS[3]],
         nivel: NIVELES[2].nombre,
         duracion: 45,
@@ -199,8 +199,8 @@ export const DATOS_CURSOS = [
 
     {
         id: "c-sharp-basico",
-        nombre: 'Curso de C#',
-        categorias: [CATEGORIAS[2]],
+        nombre: 'C#',
+        categorias: [CATEGORIAS[1]],
         nivel: NIVELES[0].nombre,
         duracion: 25,
         modalidad: 'virtual',
@@ -210,7 +210,7 @@ export const DATOS_CURSOS = [
         precio: 12000,
         objetivos: ['Aprender sintaxis y estructuras de C#.', 'Programación orientada a objetos.', 'Desarrollar aplicaciones prácticas.'],
         profesor: PROFES[5],
-        fecha_lanzamiento: new Date('2025-11-03'),
+        fecha_lanzamiento: new Date('2025-12-03'),
         destacado: false,
         cuatrimestres: [
             [
@@ -237,8 +237,8 @@ export const DATOS_CURSOS = [
 
     {
         id: "firebase-avanzado",
-        nombre: 'Curso de Firebase',
-        categorias: [CATEGORIAS[4], CATEGORIAS[0]],
+        nombre: 'Firebase',
+        categorias: [CATEGORIAS[2]],
         nivel: NIVELES[2].nombre,
         duracion: 20,
         modalidad: 'presencial',
@@ -248,7 +248,7 @@ export const DATOS_CURSOS = [
         precio: 22000,
         objetivos: ['Aprender a utilizar Firebase y sus servicios.', 'Gestionar bases de datos en tiempo real.', 'Desarrollar aplicaciones escalables.'],
         profesor: PROFES[6],
-        fecha_lanzamiento: new Date('2026-01-15'),
+        fecha_lanzamiento: new Date('2026-02-15'),
         destacado: false,
         cuatrimestres: [
             [

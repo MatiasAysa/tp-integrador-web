@@ -46,8 +46,6 @@ DATOS_CURSOS.forEach(item => {
     const haceDosMeses = new Date();
     haceDosMeses.setMonth(hoy.getMonth() - 2);
 
-    if (item.fecha_lanzamiento <= haceDosMeses || item.fecha_lanzamiento >= hoy) return;
-
     const templateCurso =
         `<a href="#">
             <article class="contenido_cardNuevos" data-curso='${item.id}'>

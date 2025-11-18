@@ -57,6 +57,7 @@
     text-align: center;
     margin: 2em 1em 0;
     font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
 }
 .cerrar{
     position: absolute;
@@ -88,7 +89,7 @@
     color: var(--color-principal);
 }
 .boton_individual:hover,
-.boton_grupal:hover {
+.boton_grupal:hover{
     background-color: var(--color-secundarioDegradado);
     transform: translateY(-2px);
 }
@@ -120,4 +121,12 @@
     color: var(--color-principal);
     font-size: 1.5em;
 
+}
+.boton_aceptar{
+    border: 2px solid red;
+    color: var(--color-principal);
+}
+.boton_aceptar:hover{
+    background-color: rgb(253, 34, 34);
+    transform: translateY(-2px);
 }

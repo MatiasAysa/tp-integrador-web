@@ -26,8 +26,23 @@ const btn_masInfo = document.querySelectorAll(".masInfo-js")
 const cursosLista = document.querySelectorAll(".cursoContenedor-js");
 extraerIdCursoClickeando(btn_masInfo, cursosLista);
 
+const btn_myCourses = document.querySelectorAll(".curso__nombre")
+const myCourses = document.querySelectorAll(".myCourses-js")
+irAmiCurso(btn_myCourses, myCourses)
 
 // --- funciones ---
+
+function irAmiCurso(elemento, cursos) {
+    elemento.forEach((item, i) => {
+        item.addEventListener('click', (evento) => {
+            evento.preventDefault();
+            const cursoId = cursos[i].getAttribute('data-curso');
+            console.log(`../courses/course-details.html?id=${cursoId}`);
+            
+            window.location.href = `../courses/myCourses-selected.html?id=${cursoId}`;
+        });
+    });
+}
 
 function extraerIdCursoClickeando(elemento, cursos) {
     elemento.forEach((item, i) => {
