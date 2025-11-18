@@ -17,8 +17,8 @@ function mostrarCursos() {
     } else {
         cursosObtenidos.forEach(curso => {
             const fecha = new Date(curso.fecha_lanzamiento)
-            contenedor.innerHTML += `<div class="curso">
-                            <a href="./misCursos.html" class="curso__nombre">${curso.nombre}</a>
+            contenedor.innerHTML += `<div class="curso myCourses-js" data-curso='${curso.id}'>
+                            <a href="./myCourses-selected.html" class="curso__nombre">${curso.nombre}</a>
                             <p class="curso__progreso">Fecha de inicio: ${fecha.toLocaleDateString("es-ES", { day: "numeric", month: "numeric", year: "numeric" })}</p>
                         </div>`
         });

@@ -41,21 +41,16 @@
                     </a>
                 </div>
                 <div class="contenedor contenedor1">
-                    <h1>SQL Desde cero</h1>
+                    <h1 id="titulo"></h1>
                     <div class="contenedor1__descripcion">
                         <div class="contenedor1__profesor">
                             <h2 class="contenedor1__profesor-titulo">Profesor</h2>
                             <div class="contenedor1__profesor-imagen">
-                                <img src="../../img/teachers/profesor.jpg" alt="Imagen Profesor" class="perfil">
+                                <img src="" alt="Imagen Profesor" class="perfil imagenProfesor-js">
                             </div>
                             <div class="contenedor1__profesor-descripcion">
                                 <div class="detalles__nombre">
-                                    <h4>Alvaro Gonzales</h4>
-                                </div>
-                                <div class="detalles__valoracion">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star-half-stroke"></i>
+                                    <h4 id="nombreProfesor"></h4>
                                 </div>
                             </div>
 
@@ -63,7 +58,7 @@
                         </div>
                         <div class="contenedor1__horario">
                             <div class="contenedor1__fecha">
-                                <h3>Fecha de finalizacion: <p><i class="fa-regular fa-calendar"></i>21/08</p>
+                                <h3>Fecha de finalizacion: <p id="fecha"></p>
                                 </h3>
                             </div>
                             <div class="contenedor1__horario-fecha">
@@ -114,60 +109,14 @@
                 </div>
                 <div class="contenedor contenedor3">
                     <h2>Entregados</h2>
-                    <div class="contenedor3__archivos">
-                        <div class="contenedor2__archivos-archivo"> <i class="fa-regular fa-file"></i>
-                            <h6>TP 1</h6>
-                            <h6>11/06</h6>
-                            <h6>
-                                873KB
-                            </h6>
-                        </div>
-                        <div class="contenedor2__archivos-archivo"> <i class="fa-regular fa-file-pdf"></i></i>
-                            <h6> TP 2</h6>
-                            <h6>15/06</h6>
-                            <h6>
-                                804KB
-                            </h6>
-                        </div>
-                        <div class="contenedor2__archivos-archivo"> <i class="fa-regular fa-file-video"></i>
-                            <h6> TP 2 </h6>
-                            <h6>15/06</h6>
-                            <h6>
-                                <i class="fa-regular fa-clock"></i> 2:32
-                            </h6>
-                        </div>
+                    <div class="mensaje">
+                        El curso aun no ha comenzado
                     </div>
-                    <button id="entregar" name="entregar" class="boton">
-                        <h3>Agregar Archivo</h3>
-                    </button>
                 </div>
                 <div class="contenedor contenedor4">
                     <h2>Proximas Entregas</h2>
-                    <div class="contenedor4__archivos">
-                        <div class="contenedor4__archivos-archivo"> <i class="fa-regular fa-file"></i>
-                            <h6>TP 3</h6>
-                            <h6>02/07</h6>
-                            <h6>
-                            </h6>
-                        </div>
-                        <div class="contenedor4__archivos-archivo"> <i class="fa-regular fa-file"></i>
-                            <h6> TP 4 </h6>
-                            <h6>28/07</h6>
-                            <h6>
-                            </h6>
-                        </div>
-                        <div class="contenedor4__archivos-archivo"> <i class="fa-regular fa-file"></i>
-                            <h6> TP 5 </h6>
-                            <h6>07/08</h6>
-                            <h6>
-                            </h6>
-                        </div>
-                        <div class="contenedor4__archivos-archivo"> <i class="fa-regular fa-file"></i>
-                            <h6> TP Integrador </h6>
-                            <h6>21/08</h6>
-                            <h6>
-                            </h6>
-                        </div>
+                    <div class="mensaje">
+                        El curso aun no ha comenzado
                     </div>
                 </div>
         </section>
@@ -179,6 +128,7 @@
     <!------------------------------------ FOOTER ------------------------------------>
 
     <script src="../../js/components/menuNav-module.js" type="module"></script>
+    <script src="../../js/pages/courses/myCourses-success-module.js" type="module"></script>
 </body>
 
 </html>
