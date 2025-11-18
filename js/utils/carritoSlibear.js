@@ -31,15 +31,7 @@ export class CarritoSlibear {
 
         //BOTONES INDIVIDUAL AL CARRITO ,ES OTRA LOGICA,
         botonesAñadir.forEach(boton => {
-            /*
-                        boton.addEventListener("click", (event) => {
-                let cursoParaAgregar = DATOS_CURSOS.find(curso => curso.id == idCursoSeleccionado);
-                console.log(cursoParaAgregar);
-                usuarioActual.cursosEnCarrito.push(cursoParaAgregar);
-                localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
-                renderCarrito();
-            });
-            */
+
             boton.addEventListener("click", (event) => {
                 let cursoParaAgregar = DATOS_CURSOS.find(curso => curso.id == idCursoSeleccionado);
                 const modealElegirCompra = buscadorDom.buscandoElemento(".js-seccion3-dialog");
@@ -57,10 +49,12 @@ export class CarritoSlibear {
                     return;
                 }
 
+
                 usuarioActual.cursosEnCarrito.push(cursoParaAgregar);
                 localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
+                guardarEnUsuarios(usuarioActual);
                 renderCarrito();
-                mostrarMensajeFinal("Feliciadsed","exito");
+                mostrarMensajeFinal("Feliciadsed", "exito");
                 modealElegirCompra.close();
             });
         });
@@ -68,7 +62,6 @@ export class CarritoSlibear {
         // Delegación de evento para eliminar cursos desde el carrito
         contenedorProductos.addEventListener("click", (e) => {
             const eliminarBtn = e.target.closest(".js-EliminarCurso");
-            console.log("sda");
             if (!eliminarBtn) return;
 
             const productSection = eliminarBtn.closest(".main_producto");
@@ -80,23 +73,24 @@ export class CarritoSlibear {
                 usuarioActual.cursosEnCarrito.filter(c => String(c.id) !== String(idEliminar));
 
             localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
+            guardarEnUsuarios(usuarioActual);
             renderCarrito();
         });
 
 
-function mostrarMensajeFinal(mensaje, tipo = "exito") {
-    const icono = tipo === "exito" ? "fa-check-circle" : "fa-exclamation-triangle";
-    const color = tipo === "exito" ? "#4CAF50" : "#f44336";
+        function mostrarMensajeFinal(mensaje, tipo = "exito") {
+            const icono = tipo === "exito" ? "fa-check-circle" : "fa-exclamation-triangle";
+            const color = tipo === "exito" ? "#4CAF50" : "#f44336";
 
-    const mensajeDiv = document.createElement("div");
-    mensajeDiv.className = `mensaje-final mensaje-${tipo}`;
+            const mensajeDiv = document.createElement("div");
+            mensajeDiv.className = `mensaje-final mensaje-${tipo}`;
 
-    mensajeDiv.innerHTML = `
+            mensajeDiv.innerHTML = `
         <i class="fa-solid ${icono}"></i>
         <span>${mensaje}</span>
     `;
 
-    mensajeDiv.style.cssText = `
+            mensajeDiv.style.cssText = `
         position: fixed;
         top: 2em;
         right: 2em;
@@ -107,18 +101,16 @@ function mostrarMensajeFinal(mensaje, tipo = "exito") {
         display: flex;
         align-items: center;
         max-width: 27em;
-        gap: .6em;
-        z-index: 99999;
+        gap: 1em;
         box-shadow: rgba(0,0,0,0.25) 0px 4px 10px;
-        animation: aparecer .2s ease-out;
     `;
 
-    document.body.appendChild(mensajeDiv);
+            document.body.appendChild(mensajeDiv);
 
-    setTimeout(() => {
-        mensajeDiv.remove();
-    }, 2000);
-}
+            setTimeout(() => {
+                mensajeDiv.remove();
+            }, 2000);
+        }
 
 
 
@@ -136,7 +128,7 @@ function mostrarMensajeFinal(mensaje, tipo = "exito") {
                         <span class="descripcionIcono"><i class="fa-solid fa-user"></i></span>
                         <div class="productoDescripcionInfo">
                             <h4>${producto.nombre}</h4>
-                            <span>Profesor : ${producto.profesor}</span>
+                            <span>Profesor : ${producto.profesor.nombre}</span>
                             <span>Horas : ${producto.duracion}</span>
                             <button class="InfoEliminar js-EliminarCurso">Eliminar</button>
                         </div>
@@ -150,6 +142,16 @@ function mostrarMensajeFinal(mensaje, tipo = "exito") {
             });
 
         }
+        function guardarEnUsuarios(usuarioActual) {
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+            const usuariosActualizados = usuarios.map(u =>
+                u.email === usuarioActual.email ? usuarioActual : u
+            );
+
+            localStorage.setItem("usuarios", JSON.stringify(usuariosActualizados));
+        }
+
     }
 
 

@@ -188,7 +188,7 @@
     display: flex;
 }
 
-.montoTotal_elementoComprar a {
+.montoTotal_elementoComprar button {
     text-decoration: none;
     font-weight: bold;
     display: flex;
@@ -199,9 +199,10 @@
     border-radius: 20px;
     font-size: 1.3em;
     background: var(--color-secundario);
+    cursor: pointer;
 }
 
-.montoTotal_elementoComprar a:hover {
+.montoTotal_elementoComprar button:hover {
     background: var(--color-principal);
 }
 
