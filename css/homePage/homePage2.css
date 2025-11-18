@@ -261,7 +261,7 @@
     flex-wrap: wrap;
     gap: 2em;
     width: max-content;
-    animation: srollInfinito 30s linear infinite;
+    animation: srollInfinito 60s linear infinite;
 }
 
 .cursosNuevos_contenido a {
