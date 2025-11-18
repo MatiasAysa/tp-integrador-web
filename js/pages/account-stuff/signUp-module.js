@@ -172,7 +172,7 @@ submitButton.addEventListener('click', (e) => {
     if (formularioValido) {
         guardarUsuarioEnLocalStorage(crearUsuario(usernameInput, passwordInput, emailInput, nameInput, surnameInput, dniInput));
         mostrarMensajeFinal('¡Registro exitoso! Ahora puedes iniciar sesión.', 'exito');
-        setTimeout(() => {window.location.href = "./log-in.html";}, 2000);
+        setTimeout(() => {window.location.href = "./log-in.html";}, 1500);
     } else {
         mostrarMensajeFinal('Por favor, corrige los errores marcados en rojo.', 'error');
     }
