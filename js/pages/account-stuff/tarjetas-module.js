@@ -64,7 +64,7 @@ numero.addEventListener('input', (event) => {
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     if (!numero.value || !cod.value || !vencimiento.value || !direccion.value || !cp.value || !nombre.value || !surname.value) {
-        alert('Por favor, complete todos los campos.');
+        modal.mostrarMensaje('Por favor, complete todos los campos.');
         return;
     }
     else if (validarNumero(numero.value) === false) {

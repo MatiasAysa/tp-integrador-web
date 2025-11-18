@@ -40,7 +40,6 @@ if (form) {
 			const background = document.querySelector('input[name="background"]:checked')?.value || 'crfondo.png';
 			const data = { nombre, color, fontSize, monto, ubicacion, background };
 			localStorage.setItem('giftcardData', JSON.stringify(data));
-			// no preventDefault: dejamos que el formulario envíe y navegue a la página de éxito
 		} catch (err) {
 			console.error('Error guardando datos de giftcard:', err);
 		}

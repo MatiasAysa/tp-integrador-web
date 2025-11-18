@@ -74,7 +74,8 @@ export class CarritoSlibear {
                 guardarEnUsuarios(usuarioActual);
                 renderCarrito();
                 actualizarResumenCompra();
-                mostrarMensajeFinal("Feliciadsed", "exito");
+                const mensaje = `Haz añadido ${cursoParaAgregar.nombre} <br>$ ${cursoParaAgregar.precio}`;
+                mostrarMensajeFinal(mensaje, "exito");
                 modealElegirCompra.close();
             });
         });

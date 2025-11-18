@@ -84,7 +84,10 @@ const carrusel = new CarruselProximos(
 DATOS_CURSOS.forEach(item => {
 
     let contCursos = 0;
-    const templateCursosDestacados = `
+
+    if (item.destacado) {
+
+        const templateCursosDestacados = `
     <article class="curso-card" data-curso='${item.id}'>
                     <div class="curso-card__imagen">
                         <img src="../../${item.imagen}" alt="${item.nombre}">
@@ -107,9 +110,10 @@ DATOS_CURSOS.forEach(item => {
                     </div>
                 </article>
     `;
-    contCursos++;
-    if (contCursos <= 6) {
-        contenedorCursosDestacados.innerHTML += templateCursosDestacados;
+        contCursos++;
+        if (contCursos <= 6) {
+            contenedorCursosDestacados.innerHTML += templateCursosDestacados;
+        }
     }
 });
 
