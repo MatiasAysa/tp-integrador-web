@@ -1,6 +1,5 @@
 import { Contador } from "./contador.js";
 import { modal } from "../../utils/mostrarModal.js";
-
 const form = document.querySelector('#form')
 const nameInput = document.querySelector('.js-contactoName');
 const surnameInput = document.querySelector('.js-contactoSurname');
@@ -56,7 +55,7 @@ surnameInput.addEventListener('input', () => {
 
 //
 submitButton.addEventListener('click', (a) => {
-    a.preventDefault;
+    a.preventDefault();
     if (!nameInput.value || !surnameInput.value) {
         modal.mostrarMensaje("Por favor, complete todos los campos");
         return;
@@ -66,15 +65,13 @@ submitButton.addEventListener('click', (a) => {
         return;
     }
     else {
-        mostrarMensajeFinal('Mensaje enviado! nos pondremos en contacto', 'exito');
-        setTimeout(() => {
-            form.submit();
-            form.reset();
-        }, 2000);
-        return;
+        alert('Consulta enviada! nos pondremos en contacto');
+        a.submit();
+        window.location.href = "../../pages/homePage/homePage.html";
     };
 }
 )
+
 
 telefono.addEventListener('input', (event) => {
     telefono.value = telefono.value.replace(/[^0-9]/g, "");
@@ -88,28 +85,4 @@ function validarNombres(nombre) {
 function validarEmail(email) {
     const restriccionEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return restriccionEmail.test(email);
-}
-function mostrarMensajeFinal(mensaje, tipo) {
-    const mensajeDiv = document.createElement('div');
-    mensajeDiv.className = `mensaje-final mensaje-${tipo}`;
-    mensajeDiv.innerHTML = `
-        <i class="fa-solid ${tipo === 'exito' ? 'fa-check-circle' : 'fa-exclamation-triangle'}"></i>
-        <span>${mensaje}</span>
-    `;
-
-    mensajeDiv.style.cssText = `
-        position: fixed;
-        top: 2em;
-        right: 2em;
-        background: ${tipo === 'exito' ? '#4CAF50' : '#f44336'};
-        color: white;
-        padding: 1em;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        max-width: 27em;
-        gap: 0.5em;
-    `;
-    document.body.appendChild(mensajeDiv);
-    setTimeout(() => { mensajeDiv.remove(); }, 2000);
 }

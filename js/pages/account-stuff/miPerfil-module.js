@@ -1,3 +1,6 @@
+import { modal } from "../../utils/mostrarModal.js";
+
+
 const cerrarSesionBtn = document.querySelector('.perfil__button--cerrarSesion');
 const nombre = document.querySelector('.js-name');
 const username = document.querySelector('.js-username');
@@ -15,7 +18,7 @@ const tarjetaIndex = buscarTarjetaPorNum();
 agregarTarjetaBtn.addEventListener('click', (a) => {
     a.preventDefault;
     if (usuarioActual.tarjetas.length >= 3) {
-        alert("Has llegado al maximo de tarjetas permitidas");
+        modal.mostrarMensaje("Has llegado al maximo de tarjetas permitidas");
         return;
     }
     window.location.href = "./tarjetas.html"
@@ -32,22 +35,27 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 cerrarSesionBtn.addEventListener('click', () => {
-    if (confirm('¿Estás seguro que deseas cerrar sesión?')) {
-        localStorage.setItem('iniciado', JSON.stringify(false));
-        localStorage.removeItem('usuarioActual');
-    } else {
-        return;
-    }
+    modal.mostrarOpcion('¿Deseas cerrar sesion?').then(resultado => {
+        if (resultado) {
+            localStorage.setItem('iniciado', JSON.stringify(false));
+            localStorage.removeItem('usuarioActual');
+            window.location.href = `./log-in.html`
+        } else {
+            return;
+        }
+    })
 });
 
 borrarBtn.addEventListener('click', () => {
-    if (confirm('¿Estás seguro que deseas borrar la cuenta actual? los datos no se recuperaran')) {
-        usuarios.splice(indexUsuario, 1);
-        localStorage.setItem('iniciado', JSON.stringify(false));
-        localStorage.removeItem('usuarioActual');
-        localStorage.setItem('usuarios', JSON.stringify(usuarios))
-        window.location.href = `./log-in.html`
-    }
+    modal.mostrarOpcion('¿Estás seguro que deseas borrar la cuenta actual?').then(resultado => {
+        if (resultado) {
+            usuarios.splice(indexUsuario, 1);
+            localStorage.setItem('iniciado', JSON.stringify(false));
+            localStorage.removeItem('usuarioActual');
+            localStorage.setItem('usuarios', JSON.stringify(usuarios))
+            window.location.href = `./log-in.html`
+        }
+    })
 })
 
 function mostrarTarjetas() {
@@ -66,14 +74,16 @@ function agregarFuncionalidad(botones) {
     botones.forEach(boton => {
         boton.addEventListener('click', () => {
             const numeroTarjeta = boton.getAttribute('data-tarjeta')
-            if (confirm("desea eliminar esta tarjeta?")) {
-                const tarjetaIndex = buscarTarjetaPorNum(numeroTarjeta)
-                usuarios[indexUsuario].tarjetas.splice(tarjetaIndex, 1)
-                usuarioActual.tarjetas.splice(tarjetaIndex, 1)
-                localStorage.setItem("usuarios", JSON.stringify(usuarios))
-                localStorage.setItem("usuarioActual", JSON.stringify(usuarioActual))
-                boton.parentElement.remove();
-            }
+            modal.mostrarOpcion('¿Deseas eliminar esta tarjeta?').then(resultado => {
+                if (resultado) {
+                    const tarjetaIndex = buscarTarjetaPorNum(numeroTarjeta)
+                    usuarios[indexUsuario].tarjetas.splice(tarjetaIndex, 1)
+                    usuarioActual.tarjetas.splice(tarjetaIndex, 1)
+                    localStorage.setItem("usuarios", JSON.stringify(usuarios))
+                    localStorage.setItem("usuarioActual", JSON.stringify(usuarioActual))
+                    boton.parentElement.remove();
+                }
+            })
             return;
         })
     })

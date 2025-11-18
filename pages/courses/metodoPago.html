@@ -43,22 +43,9 @@
             <form action="./resumenCompra.html" method="get" class="main_metodoPago">
                 <h3>Selecciona un metodo de pago</h3>
                 <div class="metodoPago_Opciones">
-                    <section class="metodo_opcion">
-                        <input type="radio" name="metodo-pago" id="visa1" required>
-                        <label for="visa1">
-                            <i class="fa-brands fa-cc-visa"></i>
-                            Visa terminada en 4512
-                        </label>
-                    </section>
-                    <section class="metodo_opcion">
-                        <input type="radio" name="metodo-pago" id="mastercard" required>
-                        <label for="mastercard">
-                            <i class="fa-brands fa-cc-mastercard"></i>
-                            Mastercard terminada en 4512
-                        </label>
-                    </section>
+                    
                 </div>
-                <a href="../account-stuff/tarjetas.html" class="boton_agregar">
+                <a class="boton_agregar" id="agregarTarjeta">
                     Agregar Metodo de Pago
                 </a>
                 <button type="submit" class="boton_pagar">
@@ -75,6 +62,7 @@
     <!------------------------------------ FOOTER ------------------------------------>
     
     <script src="../../js/components/menuNav-module.js" type="module"></script>
+    <script src="../../js/pages/courses/metodoPago-module.js" type="module"></script>
 </body>
 
 </html>

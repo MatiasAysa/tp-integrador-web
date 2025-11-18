@@ -1,3 +1,5 @@
+import { modal } from "../../utils/mostrarModal.js"
+
 const form = document.querySelector('.js-form')
 const tipo = document.querySelector('.js-select');
 const numero = document.querySelector('.js-numTarjeta');
@@ -58,6 +60,7 @@ numero.addEventListener('input', (event) => {
     numero.value = numero.value.replace(/[^0-9]/g, "");
 });
 
+
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     if (!numero.value || !cod.value || !vencimiento.value || !direccion.value || !cp.value || !nombre.value || !surname.value) {
@@ -102,9 +105,8 @@ submitButton.addEventListener('click', (e) => {
         usuarios[indexUsuario].tarjetas.push(tarjeta)
         localStorage.setItem('usuarios',JSON.stringify(usuarios));
         localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual))
-        form.reset();
-        alert("tarjeta creada");
-        window.location.href = `./my-profile.html`
+        mostrarMensajeFinal('¡Tarjeta agregada con exito!', 'exito');
+        setTimeout(() => {window.location.href = "./my-profile.html";}, 1500);
     }
 }
 );
@@ -161,13 +163,31 @@ function agregarTarjetas(tipo, numero, cod, vencimiento, direccion, cp, nombre, 
     return tarjeta;
 }
 
-function guardarTarjetaEnLocalStorage(tarjeta) {
-    const tarjetas = JSON.parse(localStorage.getItem('tarjetas')) || [];
-    tarjetas.push(tarjeta);
-    localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
-}
-
 function buscarUsuarioPorEmail() {
     return usuarios.findIndex(u => u.email === usuarioActual.email);
+}
+function mostrarMensajeFinal(mensaje, tipo) {
+    const mensajeDiv = document.createElement('div');
+    mensajeDiv.className = `mensaje-final mensaje-${tipo}`;
+    mensajeDiv.innerHTML = `
+        <i class="fa-solid ${tipo === 'exito' ? 'fa-check-circle' : 'fa-exclamation-triangle'}"></i>
+        <span>${mensaje}</span>
+    `;
+    
+    mensajeDiv.style.cssText = `
+        position: fixed;
+        top: 2em;
+        right: 2em;
+        background: ${tipo === 'exito' ? '#4CAF50' : '#f44336'};
+        color: white;
+        padding: 1em;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        max-width: 27em;
+        gap: 0.5em;
+    `;
+    document.body.appendChild(mensajeDiv);
+    setTimeout(() => {mensajeDiv.remove();}, 2000);
 }
 
