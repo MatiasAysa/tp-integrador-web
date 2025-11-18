@@ -1,10 +1,10 @@
 import { Navbar } from './navbar.js';
-import { HEADER_BUSCADOR, NAV_ITEMS, NAV_ITEMS_NO_LOGUEADO,} from './constants.js';
+import { HEADER_BUSCADOR, NAV_ITEMS, NAV_ITEMS_NO_LOGUEADO, } from './constants.js';
 import { HeaderLogo } from './header.js';
-import { HEADER_LOGO, HEADER_LOGO_NO_LOGUEADO} from './constants.js';
+import { HEADER_LOGO, HEADER_LOGO_NO_LOGUEADO } from './constants.js';
 import { barraBuscador } from './buscador.js';
 import { Carrito } from './carrito.js';
-import { IniciarSesionbtn} from './iniciarSesionbtn.js';
+import { IniciarSesionbtn } from './iniciarSesionbtn.js';
 import { Footer } from './footer.js'
 import { ModalCarrito } from '../utils/modalCarrito.js';
 import { CarritoSlibear } from '../utils/carritoSlibear.js';
@@ -20,11 +20,11 @@ const actualizarCarrito = new CarritoSlibear();
 footer.addFooter();
 isUserLoggedIn();
 
-actualizarCarrito.render();
 
-function renderModal(){
-//PRIMERO "DIBUJAR" MODAL DEL CARRITO EN EL NAVBAR    
-const templateModalCarrito = `
+
+function renderModal() {
+    //PRIMERO "DIBUJAR" MODAL DEL CARRITO EN EL NAVBAR   
+    const templateModalCarrito = `
 <dialog class="js-modalCarrito">
         <div class="contenido_MainCarrito">
             <div class="contenedorPrincipal">
@@ -43,15 +43,11 @@ const templateModalCarrito = `
                     <div class="montoTotal_Descripcion">
                         <div class="montoTotal_elemento">
                             <span>Cantidad de curso/s</span>
-                            <span>3</span>
-                        </div>
-                        <div class="montoTotal_elemento">
-                            <span>Subtotal</span>
-                            <span id="subtotal"><s>$30.000</s>$17.500</span>
+                            <span>${actualizarCantCursos()}</span>
                         </div>
                         <div class="montoTotal_elemento total">
                             <span>Total</span>
-                            <span>$10000</span>
+                            <span>${total()}</span>
                         </div>
                         <div class="montoTotal_elementoComprar">
                             <a href="./metodoPago.html">Continuar compra</a>
@@ -64,11 +60,11 @@ const templateModalCarrito = `
     </dialog>
 
 `;
-contenedorPadreHeader.innerHTML += templateModalCarrito;
+    contenedorPadreHeader.innerHTML += templateModalCarrito;
 
 
-//SEGUNDO DIBUJAR EL MODAL PARA ELECCION DEL TIPO 
-const templateElegirTipoCompra = `
+    //SEGUNDO DIBUJAR EL MODAL PARA ELECCION DEL TIPO 
+    const templateElegirTipoCompra = `
         <dialog class="js-seccion3-dialog">
                 <div class="main_contenidoCompra">
                     <button class="boton_cerrar js-CloseModal">
@@ -86,15 +82,26 @@ const templateElegirTipoCompra = `
                 </div>
             </dialog>
 `;
-contenedorPadreElegirTipoCompra.innerHTML += templateElegirTipoCompra;
+    contenedorPadreElegirTipoCompra.innerHTML += templateElegirTipoCompra;
 
-const modalCarrito = new ModalCarrito();
-modalCarrito.render();
+    const modalCarrito = new ModalCarrito();
+    modalCarrito.render();
 
 }
 
 
-
+function actualizarCantCursos() {
+    const usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
+    return usuarioActual.cursosEnCarrito.length;
+}
+function total(){
+    let total = 0;
+    const usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
+    usuarioActual.cursosEnCarrito.forEach(curso => {
+        total = total + curso.precio;
+    });
+    return total;
+}
 
 
 function isUserLoggedIn() {
@@ -105,6 +112,7 @@ function isUserLoggedIn() {
         carrito.render();
         navbar.renderItems(NAV_ITEMS);
         renderModal();
+        actualizarCarrito.render();
     }
     else {
         headerLogo.renderItems(HEADER_LOGO_NO_LOGUEADO);
