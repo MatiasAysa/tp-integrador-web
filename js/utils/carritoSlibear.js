@@ -11,7 +11,7 @@ export class CarritoSlibear {
         const botonesAñadir = document.querySelectorAll(".js-boton-añadirIndividual");
         const cantCursosSpan = document.querySelectorAll(".js-cantCursos");
         const totalPrecioSpan = document.querySelectorAll(".js-totalPrecio");
-        
+        const contadorCarrito = buscadorDom.buscandoElemento(".carrito-count");
         const modal = new ModalElegirTipoCompra();
         modal.render();
         //ESTA PARTE ESTA MEGA HARDCODEADA PERO NO TENGO TIEMPO PARA HACERLO MEJOR
@@ -25,6 +25,7 @@ export class CarritoSlibear {
         actualizarResumenCompra();
 
         function actualizarResumenCompra() {
+            contadorCarrito.textContent = actualizarCantCursos(usuarioActual);
             cantCursosSpan.forEach(span => {
                 span.textContent = actualizarCantCursos(usuarioActual);
             });
@@ -137,6 +138,10 @@ export class CarritoSlibear {
 
         function renderCarrito() {
             contenedorProductos.innerHTML = ""; //reseteo para dibujar en hola limpia,el goat
+            if (usuarioActual.cursosEnCarrito.length === 0) {
+                contenedorProductos.innerHTML = `<p class="carrito-vacio">Tu carrito está vacío.</p>`;
+                return;
+            }
             usuarioActual.cursosEnCarrito.forEach(producto => {
 
                 const templateCursos = `
@@ -183,6 +188,8 @@ export class CarritoSlibear {
             });
             return total;
         }
+        
+        
             
     }
 

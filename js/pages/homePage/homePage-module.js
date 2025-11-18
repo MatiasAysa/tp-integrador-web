@@ -13,9 +13,9 @@ let hoy = new Date();
 // proximos cursos
 DATOS_CURSOS.forEach(item => {
 
-    if (item.fecha_lanzamiento <= hoy) return;
+    if (item.fecha_lanzamiento.getFullYear() === 2026) {
 
-    const templateProximosCursos = `
+        const templateProximosCursos = `
             <div class="proximos_carrusel" data-curso='${item.id}'>
                 <div class="proximo_informacion">
                     <span class="prox_lanzamiento">Proximo Lanzamiento</span>
@@ -34,20 +34,20 @@ DATOS_CURSOS.forEach(item => {
             </div>
     `;
 
-    contenedorCursosProximos.innerHTML += templateProximosCursos;
+        contenedorCursosProximos.innerHTML += templateProximosCursos;
+    }
+
+
 });
 
 
 // ultimos cursos
 DATOS_CURSOS.forEach(item => {
 
-    let cantCursosRecientes = 0;
+    if (item.fecha_lanzamiento.getFullYear() != 2026) {
 
-    const haceDosMeses = new Date();
-    haceDosMeses.setMonth(hoy.getMonth() - 2);
-
-    const templateCurso =
-        `<a href="#">
+        const templateCurso =
+            `<a href="#">
             <article class="contenido_cardNuevos" data-curso='${item.id}'>
                 <div class="card_imagenCursoNuevo">
                     <img src="../../${item.imagen}" alt="${item.nombre}">
@@ -60,7 +60,9 @@ DATOS_CURSOS.forEach(item => {
             </article>
         </a>`;
 
-    contenedorCursosNuevos.innerHTML += templateCurso;
+        contenedorCursosNuevos.innerHTML += templateCurso;
+
+    }
 
 });
 
@@ -80,8 +82,7 @@ const carrusel = new CarruselProximos(
 
 // cursos detacados
 DATOS_CURSOS.forEach(item => {
-    if (item.destacado !== true) return;
-    
+
     let contCursos = 0;
     const templateCursosDestacados = `
     <article class="curso-card" data-curso='${item.id}'>
