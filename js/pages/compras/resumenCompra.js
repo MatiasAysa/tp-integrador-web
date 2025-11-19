@@ -9,7 +9,7 @@ usuarioActual.cursosEnCarrito.forEach(curso => {
     const templateCursosDetalle = `
                         <section class="compra_curso">
                             <article class="curso_imagen">
-                                <img src="${curso.imagen}" alt="${curso.nombre}">
+                                <img src="../../${curso.imagen}" alt="${curso.nombre}">
                             </article>
                             <article class="curso_informacion">
                                 <p>${curso.nombre}</p>
@@ -26,6 +26,7 @@ botonRealizarCompra.addEventListener("click", (e) => {
     usuarioActual.cursosEnCarrito = [];
     localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
     guardarEnUsuarios(usuarioActual);
+    modalCompraExitosa.style.display = "flex"
     modalCompraExitosa.showModal();
 });
 

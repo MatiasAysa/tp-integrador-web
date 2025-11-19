@@ -156,7 +156,7 @@ export class CarritoSlibear {
                 const templateCursos = `
                     <section class="main_producto" data-curso="${producto.id}" >
                     <div class="divProductoImagen">
-                        <img class="imagenProducto" src="${producto.imagen}" alt="Imagen de producto">
+                        <img class="imagenProducto" src="../../${producto.imagen}" alt="Imagen de producto">
                     </div>
                     <div class="productoDescripcion">
                         <span class="descripcionIcono"><i class="fa-solid fa-user"></i></span>

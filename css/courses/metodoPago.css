@@ -9,7 +9,7 @@
 .main_contenido {
     width: 100%;
     display: flex;
-    padding: 1em 4em;
+    padding: 8em 4em;
     gap: 2em;
     background: white;
     color: var(--color-principal);
