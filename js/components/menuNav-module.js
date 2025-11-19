@@ -76,7 +76,7 @@ function renderModal() {
                     <div class="contenido_botones">
                         <button class="boton_individual js-boton-añadirIndividual">
                             <i class="fa-solid fa-user"></i></i>Individual</button>
-                        <button class="boton_grupal">
+                        <button class="boton_grupal js-boton-añadirGrupal">
                             <i class="fa-solid fa-users"></i>Grupal</button>
                     </div>
                 </div>

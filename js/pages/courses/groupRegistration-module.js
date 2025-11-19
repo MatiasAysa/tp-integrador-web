@@ -1,8 +1,25 @@
+import { BuscarCurso } from "./buscarCurso.js";
+
+
 const contenedorPersonas = document.getElementById('personas');
 const btnAgregar = document.getElementById('btnAgregar');
-
 let contador = 1;
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const buscador = new BuscarCurso(id);
+const datos = buscador.datos;
+const TARIFA = 10000;
+const PRECIOINICIAL = datos.precio;
+const precio = document.querySelector(".form__total-amount")
 
+llenarEspacios();
+
+function llenarEspacios(){
+    const titulo = document.querySelector(".form__title")
+    titulo.textContent = datos.nombre
+
+    precio.textContent = "$" + (TARIFA+datos.precio) 
+}
 // Agregar persona
 btnAgregar.addEventListener('click', () => {
 
@@ -22,8 +39,8 @@ btnAgregar.addEventListener('click', () => {
 
     const label = nuevaPersona.querySelector('label');
     label.setAttribute('for', `persona${contador}_nombre`);
-
     contenedorPersonas.appendChild(nuevaPersona);
+    precio.textContent = "$" + (TARIFA+(PRECIOINICIAL*contador)) 
 });
 
 // Eliminar persona (delegación de eventos)
@@ -34,6 +51,7 @@ contenedorPersonas.addEventListener('click', (e) => {
             const persona = e.target.closest('.person');
             persona.remove();
             actualizarNumeracion();
+            precio.textContent = "$" + (TARIFA+(PRECIOINICIAL*contador))
         }
     }
 

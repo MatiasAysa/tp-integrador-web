@@ -9,6 +9,7 @@ export class CarritoSlibear {
         const buscadorDom = new BuscandorElementos();
         const contenedorProductos = buscadorDom.buscandoElemento(".js-contenedor-productos");
         const botonesAñadir = document.querySelectorAll(".js-boton-añadirIndividual");
+        const botonesAñadirGrupal = document.querySelectorAll(".js-boton-añadirGrupal");
         const cantCursosSpan = document.querySelectorAll(".js-cantCursos");
         const totalPrecioSpan = document.querySelectorAll(".js-totalPrecio");
         const contadorCarrito = buscadorDom.buscandoElemento(".carrito-count");
@@ -79,7 +80,14 @@ export class CarritoSlibear {
                 modealElegirCompra.close();
             });
         });
+        botonesAñadirGrupal.forEach(boton =>{
+            boton.addEventListener('click' , () => {
+                let cursoParaAgregar = DATOS_CURSOS.find(curso => curso.id == idCursoSeleccionado);
+                window.location.href = `../../pages/courses/grupal-registration.html?id=${cursoParaAgregar.id}`
+            } )
 
+        });
+        
         //eliminar
         contenedorProductos.addEventListener("click", (e) => {
             const eliminarBtn = e.target.closest(".js-EliminarCurso");
